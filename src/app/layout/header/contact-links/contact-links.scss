@@ -1,0 +1,13 @@
+#contact-links{
+  ul{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  li.contactlink{
+    img{
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@use 'styles/mixins' as mx;
+
+header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: fixed;
+  width:100%;
+
+  div.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 5.5rem;
+  }
+}
+
+div.header-right{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
+}

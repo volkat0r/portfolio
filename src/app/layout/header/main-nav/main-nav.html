@@ -1,3 +1,22 @@
-<nav>
-  <span class="burgerMenu"><img src="/assets/images/menu.svg" /></span>
+<nav id="main-menu">
+  <button class="burgerMenu" (click)="toggleNav()">
+    <img src="/assets/images/menu.svg" class="icon-dark-bg" />
+    <img src="/assets/images/menu_black.svg" class="icon-light-bg" />
+    <img src="/assets/images/menu_red.svg" class="icon-hover" />
+  </button>
+  <div class="overlay" [class.is-open]="isNavOpen">
+    <div class="container">
+      <h4>Menu</h4>
+      <a href="javascript:void(0)" class="burgerMenu" (click)="closeNav()">
+        <img src="/assets/images/menu-close.svg"
+      /></a>
+    </div>
+    <ul>
+      <li><a [routerLink]="['/']" fragment="about">About me</a></li>
+      <li><a [routerLink]="['/']" fragment="tech">Skillset</a></li>
+      <li><a [routerLink]="['/']" fragment="work">Portfolio</a></li>
+      <li><a [routerLink]="['/']" fragment="testimonial">References</a></li>
+      <li><a [routerLink]="['/']" fragment="contact">Contact</a></li>
+    </ul>
+  </div>
 </nav>

@@ -1,9 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-language-toggle',
-  imports: [],
+  standalone: true,
   templateUrl: './language-toggle.html',
   styleUrl: './language-toggle.scss',
 })
-export class LanguageToggle {}
+export class LanguageToggle {
+  @Input() theme = 'theme-dark';
+}

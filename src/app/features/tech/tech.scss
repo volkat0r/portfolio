@@ -1,0 +1,8 @@
+@use 'styles/variables' as v;
+
+#tech{
+  background-color: v.$pf-black;
+  color: white;
+  display: flex;
+  align-items: center;
+}

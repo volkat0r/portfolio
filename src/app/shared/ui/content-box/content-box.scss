@@ -1,0 +1,28 @@
+@use 'styles/variables' as v;
+
+.contentBox{
+  padding: 2rem;
+  border-radius: v.$base-border-radius;
+
+  &.cb--black{
+    background-color: v.$pf-black;
+    color: v.$pf-beige;
+  }
+
+  &.cb--blue{
+    background-color: v.$pf-blue;
+    color: v.$pf-beige;
+  }
+  &.cb--work{
+    background-color: v.$pf-black;
+    color: v.$pf-beige;
+    min-height: 23rem;
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+  }
+  &.cb--testimonial{
+    border: 1px solid v.$pf-beige;
+    color: v.$pf-beige;
+  }
+}

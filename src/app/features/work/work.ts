@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
+import { ContentBox } from '../../shared/ui/content-box/content-box';
 
 @Component({
   selector: 'app-work',
-  imports: [],
+  imports: [ContentBox],
   templateUrl: './work.html',
-  styles: ``,
+  styleUrl: `./work.scss`,
 })
-export class Work {
-
-}
+export class Work {}

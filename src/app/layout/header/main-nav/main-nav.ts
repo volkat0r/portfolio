@@ -1,9 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-main-nav',
-  imports: [],
+  standalone: true,
+  imports: [RouterLink],
   templateUrl: './main-nav.html',
   styleUrl: './main-nav.scss',
 })
-export class MainNav {}
+export class MainNav {
+  @Input() theme = 'theme-dark';
+
+  isNavOpen: boolean = false;
+  toggleNav(): void {
+    this.isNavOpen = !this.isNavOpen;
+  }
+  closeNav(): void {
+    this.isNavOpen = false;
+  }
+}

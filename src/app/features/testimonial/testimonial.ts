@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-testimonial',
   imports: [],
   templateUrl: './testimonial.html',
-  styles: ``,
+  styleUrl: `./testimonial.scss`,
 })
-export class Testimonial {
-
-}
+export class Testimonial {}

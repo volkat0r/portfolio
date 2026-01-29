@@ -2,11 +2,11 @@
   <div class="container">
     <app-contact-links></app-contact-links>
     <div id="logo">
-      <a><img src="/assets/images/test_logo.svg" /></a>
+      <a [routerLink]="['/']" fragment=""><img src="/assets/images/test_logo.svg" /></a>
     </div>
     <div class="header-right">
-      <app-language-toggle></app-language-toggle>
-      <app-main-nav></app-main-nav>
+      <app-language-toggle [theme]="activeTheme"></app-language-toggle>
+      <app-main-nav [theme]="activeTheme"></app-main-nav>
     </div>
   </div>
 </header>

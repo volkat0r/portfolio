@@ -1,7 +1,24 @@
-#sidebar-navigation{
-  position: fixed;
-  right:20rem;
-  top: 30%;
-  height: 40%;
-  display: flex;
+#sidebar-navigation {
+  // ... (deine Positionierung)
+
+  ul li a {
+    display: block;
+    width: 20px;  // Etwas größer für "echte" Icons
+    height: 20px;
+    transition: all 0.3s ease;
+
+    // Wir nutzen das Icon als Maske
+    background-color: white; // Standardfarbe für Dark Theme
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+
+    // Hier dein Pfad zum Standard-Icon
+    mask-image: url('/assets/images/sidenav_inactive.svg');
+
+    &.active {
+      background-color: #FFD700; // Dein Gold/Gelb für den aktiven Zustand
+      transform: scale(1.4);
+    }
+  }
 }

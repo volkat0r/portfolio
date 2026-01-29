@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
+import { ContentBox } from '../../shared/ui/content-box/content-box';
 
 @Component({
   selector: 'app-tech',
-  imports: [],
+  imports: [ContentBox],
   templateUrl: './tech.html',
-  styles: ``,
+  styleUrl: './tech.scss',
 })
-export class Tech {
-
-}
+export class Tech {}

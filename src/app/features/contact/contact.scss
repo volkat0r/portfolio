@@ -1,0 +1,11 @@
+@use 'styles/variables' as v;
+
+#contact{
+  background-color: v.$pf-black;
+  color: white;
+  display: flex;
+  align-items: center;
+  h2{
+    color: v.$pf-yellow;
+  }
+}

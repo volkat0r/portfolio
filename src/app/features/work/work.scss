@@ -1,13 +1,9 @@
 @use 'styles/variables' as v;
 
-#about{
+#work{
   background-color: v.$pf-beige;
-  height: 100vh;
+  color: black;
   display: flex;
   align-items: center;
   color: v.$pf-black;
-  .container{
-    display: flex;
-    flex-direction: column;
-  }
 }

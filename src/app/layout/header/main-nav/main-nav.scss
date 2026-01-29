@@ -1,0 +1,98 @@
+@use 'styles/variables' as v;
+
+.burgerMenu{
+  transition: all 0.2s ease-in-out;
+  img.icon-dark-bg{
+    display:block;
+  }
+  img.icon-light-bg{
+    display:none;
+  }
+  img.icon-hover{
+    display:none;
+  }
+  &:hover{
+    img.icon-dark-bg{
+      display:none;
+    }
+    img.icon-light-bg{
+      display:none;
+    }
+    img.icon-hover{
+      display:block;
+    }
+  }
+}
+
+:host-context(.theme-light) {
+  .burgerMenu{
+    img.icon-dark-bg{
+      display:none;
+    }
+    img.icon-light-bg{
+      display:block;
+    }
+  }
+}
+
+.overlay{
+  position: relative;
+  z-index: 20;
+  width: 13rem;
+  position: absolute;
+  background-color: v.$pf-beige;
+  border: 1px solid v.$pf-black;
+  border-radius: v.$base-border-radius;
+  padding: 1rem;
+  right: -0.5rem;
+  top: -0.6rem;
+  transform: translateX(100%);
+  visibility: hidden;
+  transition: transform 0.2s ease-in-out, visibility 0s 0.2s;
+  &.is-open{
+    transform: translateX(0);
+    visibility: visible;
+    transition: transform 0.2s ease-in-out, visibility 0s 0s;
+  }
+  .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  h4{
+    color: v.$pf-blue;
+    font-weight: 700;
+  }
+  li{
+    gap: .5rem;
+    font-weight: 700;
+    a{
+      font-size:  1.125rem;
+      color: v.$pf-black;
+      position: relative;
+      padding-left: 0;
+
+      &:hover,
+      &:focus{
+        color: v.$pf-blue;
+        padding-left:20px;
+        transition: padding-left 0.2s ease-in-out, visibility 0s 0.2s;
+        &:before{
+          visibility: visible;
+        }
+      }
+
+      &:before{
+        content: '';
+        position: absolute;
+        background-image: url(../../../../../public/assets/images/wheel.svg);
+        width: 20px;
+        height:20px;
+        left:-5px;
+        top: 1px;
+        visibility: hidden;
+      }
+    }
+  }
+}

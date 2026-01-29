@@ -1,0 +1,6 @@
+@use 'styles/variables' as v;
+
+footer{
+  background-color: v.$pf-black;
+  color: white;
+}

@@ -1,24 +1,42 @@
+@use 'styles/variables' as v;
+
 #sidebar-navigation {
-  // ... (deine Positionierung)
+  position: fixed;
+  top: 50%;
+  right: 20%;
 
-  ul li a {
-    display: block;
-    width: 20px;  // Etwas größer für "echte" Icons
-    height: 20px;
-    transition: all 0.3s ease;
+  ul{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 1rem;
+    height: auto;
 
-    // Wir nutzen das Icon als Maske
-    background-color: white; // Standardfarbe für Dark Theme
-    mask-repeat: no-repeat;
-    mask-position: center;
-    mask-size: contain;
+    li{
+      display: block;
+      position: relative;
+      a{
+        position: absolute;
+        content:"";
+        height: 0.5rem;
+        width: 0.5rem;
+        border-radius: 100%;
+        background-color: v.$pf-beige;
 
-    // Hier dein Pfad zum Standard-Icon
-    mask-image: url('/assets/images/sidenav_inactive.svg');
+        &.active{
+          background-color: v.$pf-orange;
+          transform: rotate(45);
+          border-radius: 0;
+        }
+      }
+    }
+  }
+}
 
-    &.active {
-      background-color: #FFD700; // Dein Gold/Gelb für den aktiven Zustand
-      transform: scale(1.4);
+:host-context(.theme-light) {
+  #sidebar-navigation {
+    ul li a{
+        background-color: v.$pf-black;
     }
   }
 }

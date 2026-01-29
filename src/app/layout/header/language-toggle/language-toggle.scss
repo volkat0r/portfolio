@@ -23,13 +23,15 @@
       color: white;
     }
   }
+}
 
-  &.theme-light {
+:host-context(.theme-light) {
+  #language-switch {
     li {
       border: 1px solid v.$pf-black;
       color: v.$pf-black;
       &:hover{
-        color: white;
+       color: v.$pf-black;;
       }
     }
   }

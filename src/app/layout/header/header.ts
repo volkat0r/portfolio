@@ -31,7 +31,7 @@ export class Header implements AfterViewInit {
           }
         });
       },
-      { threshold: 0.9 },
+      { threshold: 0.7 },
     );
 
     sections.forEach((section) => observer.observe(section));

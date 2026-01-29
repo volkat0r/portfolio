@@ -15,9 +15,6 @@
     img.icon-dark-bg{
       display:none;
     }
-    img.icon-light-bg{
-      display:none;
-    }
     img.icon-hover{
       display:block;
     }
@@ -31,6 +28,17 @@
     }
     img.icon-light-bg{
       display:block;
+    }
+    img.icon-hover{
+      display:none;
+    }
+    &:hover{
+      img.icon-light-bg{
+        display:none;
+      }
+      img.icon-hover{
+        display:block;
+      }
     }
   }
 }

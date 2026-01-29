@@ -9,8 +9,6 @@ import { RouterLink } from '@angular/router';
   styleUrl: './main-nav.scss',
 })
 export class MainNav {
-  @Input() theme = 'theme-dark';
-
   isNavOpen: boolean = false;
   toggleNav(): void {
     this.isNavOpen = !this.isNavOpen;

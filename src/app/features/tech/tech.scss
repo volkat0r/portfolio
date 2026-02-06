@@ -1,8 +1,67 @@
 @use 'styles/variables' as v;
+@use 'styles/mixins' as *;
 
 #tech{
   background-color: v.$pf-black;
   color: white;
   display: flex;
   align-items: center;
+  .container{
+    padding: 0 v.$space-lg;
+  }
 }
+
+.headline-wrapper{
+  display: block;
+  width: 100%;
+}
+
+.content-wrapper{
+  display: flex;
+  flex-direction: column;
+  @include for-size(tablet-landscape){
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+    height: 70vh;
+  }
+}
+
+#tech-box{
+  display: block;
+  margin: v.$space-xl 0;
+  max-width: 37.5rem;
+}
+
+.techStackIcons{
+  display: grid;
+  width: 100%;
+  grid-gap: 1rem;
+  grid-template-columns: 5rem 5rem 5rem 5rem;
+
+  @include for-size(tablet-landscape){
+    grid-gap: 3rem 2rem;
+    grid-template-columns: 7rem 7rem 7rem 7rem;
+    justify-content: end;
+  }
+
+  .techIcon{
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img{
+      height: 3.5rem;
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+      &:hover{
+        transform: scale(1.25);
+      }
+      @include for-size(tablet-landscape){
+        height: 4.5rem;
+      }
+    }
+  }
+}
+

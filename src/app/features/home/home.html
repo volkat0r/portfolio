@@ -1,10 +1,13 @@
 <section id="home" data-theme="dark">
   <div class="container">
-    <div class="copyText">
-      <p>Hello there! I'm</p>
-      <h1>Umgestalt</h1>
-      <p>Frontend Developer in da making</p>
-      <ui-button variant="primary">Get in Touch</ui-button>
+    <div class="homeText">
+      <p>{{ 'home.copy.hey there' | translate }}</p>
+      <h1>umgestalt</h1>
+      <p>{{ 'home.copy.frontend' | translate }}</p>
+      <ui-button variant="primary">{{ 'home.button.text' | translate }}</ui-button>
+    </div>
+    <div class="homeImg">
+      <img src="/assets/images/umgestalt_v2.webp" />
     </div>
   </div>
 </section>

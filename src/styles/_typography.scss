@@ -1,3 +1,5 @@
+@use 'styles/mixins' as *;
+
 body {
   font-family: 'Quicksand', system-ui, sans-serif;
   line-height: 1.6;
@@ -7,14 +9,23 @@ body {
 h1, h2, h3 {
   font-family: 'Eczar';
   font-weight: 700;
+  line-height: 100%;
 }
 
 h1{
-  font-size: 6rem;
+  font-size: 4.5rem;
+  line-height: 100%;
+
+  @include for-size(tablet-landscape){
+    font-size: 6rem;
+  }
 }
 
 h2{
-  font-size: 4.5rem;
+  font-size: 2.5rem;
+  @include for-size(tablet-landscape){
+    font-size: 4.5rem;
+  }
 }
 
 h3{

@@ -1,37 +1,52 @@
 <section id="contact" data-theme="dark">
   <div class="container">
-    <h2>Contact</h2>
+    <div class="headline-wrapper">
+      <h2>Let's build something Cool together!</h2>
+      <div class="problem">
+        <h3>Got a problem to solve?</h3>
+        <p>
+          Encourage people to contact you and describe what role you are interested in. Show that
+          you will add value to their projects through your work.
+        </p>
+      </div>
+    </div>
+
     <form class="contact">
       <div class="two fields">
         <div class="name">
           <div class="field">
-            <label>What's your name?</label>
-            <input type="text" name="name" placeholder="Your name goes here" />
+            <label>{{ 'contact.form.label.name' | translate }}</label>
+            <input
+              type="text"
+              name="name"
+              placeholder="{{ 'contact.form.placeholder.name' | translate }}"
+            />
           </div>
         </div>
         <div class="email">
           <div class="field">
-            <label>What's your email?</label>
-            <input type="text" name="name" placeholder="yourmail@domain.com" />
+            <label>{{ 'contact.form.label.email' | translate }}</label>
+            <input
+              type="text"
+              name="name"
+              placeholder="{{ 'contact.form.placeholder.email' | translate }}"
+            />
           </div>
         </div>
       </div>
       <div class="field">
         <div class="message">
           <div class="field">
-            <label>How can I help you?</label>
-            <textarea placeholder="Hey, I'm interested in..."></textarea>
+            <label>{{ 'contact.form.label.message' | translate }}</label>
+            <textarea placeholder="{{ 'contact.form.placeholder.message' | translate }}"></textarea>
           </div>
         </div>
       </div>
       <div class="field">
         <input type="checkbox" tabindex="0" class="hidden" />
-        <label
-          >I've read the <a href="">privacy policies</a> and agree to the processing of my
-          data</label
-        >
+        <label [innerHTML]="'contact.form.checkbox.label' | translate"></label>
       </div>
-      <div class="button"></div>
+      <div class="button">Drop a Line</div>
     </form>
   </div>
 </section>

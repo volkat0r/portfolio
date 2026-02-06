@@ -7,16 +7,29 @@
   <div class="overlay" [class.is-open]="isNavOpen">
     <div class="container">
       <h4>Menu</h4>
-      <a href="javascript:void(0)" class="burgerMenu" (click)="closeNav()">
+      <a href="javascript:void(0)" class="closeMenu" (click)="closeNav()">
         <img src="/assets/images/menu-close.svg"
       /></a>
     </div>
-    <ul>
-      <li><a [routerLink]="['/']" fragment="about">About me</a></li>
-      <li><a [routerLink]="['/']" fragment="tech">Skillset</a></li>
-      <li><a [routerLink]="['/']" fragment="work">Portfolio</a></li>
-      <li><a [routerLink]="['/']" fragment="testimonial">References</a></li>
-      <li><a [routerLink]="['/']" fragment="contact">Contact</a></li>
+    <ul class="mainNav">
+      <li><a (click)="scrollToSection('about')" class="about">About me</a></li>
+      <li><a (click)="scrollToSection('tech')" class="tech">Skillset</a></li>
+      <li><a (click)="scrollToSection('work')" class="work">Portfolio</a></li>
+      <li><a (click)="scrollToSection('testimonials')" class="testimonials">References</a></li>
+      <li><a (click)="scrollToSection('contact')" class="contact">Contact</a></li>
     </ul>
+    <nav id="contact-links">
+      <ul>
+        <li class="contactlink github">
+          <a href=""><img src="/assets/images/github_black.svg" /></a>
+        </li>
+        <li class="contactlink linkedin">
+          <a href=""><img src="/assets/images/linkedin_black.svg" /></a>
+        </li>
+        <li class="contactlink mail">
+          <a href=""><img src="/assets/images/mail_black.svg" /></a>
+        </li>
+      </ul>
+    </nav>
   </div>
 </nav>

@@ -1,7 +1,8 @@
 @use 'styles/variables' as v;
+@use 'styles/mixins' as *;
 
 .contentBox{
-  padding: 2rem;
+  padding: v.$space-md;
   border-radius: v.$base-border-radius;
 
   &.cb--black{
@@ -16,13 +17,18 @@
   &.cb--work{
     background-color: v.$pf-black;
     color: v.$pf-beige;
-    min-height: 23rem;
     display:flex;
     flex-direction: column;
     align-content: center;
+    @include for-size(tablet-landscape){
+      min-height: 23rem;
+    }
   }
   &.cb--testimonial{
     border: 1px solid v.$pf-beige;
     color: v.$pf-beige;
+  }
+  @include for-size(tablet-landscape){
+    padding: v.$space-xl;
   }
 }

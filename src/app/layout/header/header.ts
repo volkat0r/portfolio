@@ -1,39 +1,58 @@
 import { Component, AfterViewInit, HostBinding } from '@angular/core';
-import { RouterLink } from '@angular/router';
 import { ContactLinks } from './contact-links/contact-links';
 import { LanguageToggle } from './language-toggle/language-toggle';
 import { MainNav } from './main-nav/main-nav';
+import { ScrollService } from '../../shared/services/scroll.service';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterLink, ContactLinks, LanguageToggle, MainNav],
+  imports: [ContactLinks, LanguageToggle, MainNav],
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })
 export class Header implements AfterViewInit {
+  constructor(private scrollService: ScrollService) {}
+
+  scrollToSection(id: string) {
+    this.scrollService.scrollToElementById(id);
+  }
+
   @HostBinding('class') activeTheme = 'theme-dark';
 
   ngAfterViewInit() {
-    const sections = document.querySelectorAll<HTMLElement>('section[data-theme]');
+    const sections = document.querySelectorAll<HTMLElement>('section[id]');
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const theme = (entry.target as HTMLElement).dataset['theme'];
+            const target = entry.target as HTMLElement;
+            const sectionId = target.id;
+            const theme = target.dataset['theme'];
+            this.updateSectionClass(sectionId);
             if (theme) {
               document.body.classList.remove('theme-light', 'theme-dark');
               document.body.classList.add(`theme-${theme}`);
-
               this.activeTheme = `theme-${theme}`;
             }
           }
         });
       },
-      { threshold: 0.7 },
+      { threshold: 0.6 },
     );
 
     sections.forEach((section) => observer.observe(section));
+  }
+
+  private updateSectionClass(activeId: string) {
+    const body = document.body;
+
+    // Entfernt alle Klassen, die mit "is-viewing-" beginnen
+    const classes = body.className.split(' ').filter((c) => !c.startsWith('sector-'));
+    body.className = classes.join(' ').trim();
+
+    // Fügt die neue spezifische Klasse hinzu
+    body.classList.add(`sector-${activeId}`);
   }
 }

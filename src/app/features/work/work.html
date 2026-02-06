@@ -1,14 +1,34 @@
 <section id="work" data-theme="light">
   <div class="container">
-    <h2>Work</h2>
-    <ui-content-box variant="work">
-      <h4>Pokedex</h4>
-      <span class="technology">CSS + HTML + JS</span>
+    <div class="headline-wrapper">
+      <h2>My Work</h2>
       <p>
-        Emphasise that you have used a variety of front-end technologies in your projects. Where
-        have you used these skills: static or dynamic websites, responsive layouts, data
-        visualization interfaces, smooth cuser experiences?
+        Explore a selection of my work here - Interact with the projects to see my skills in action
       </p>
-    </ui-content-box>
+    </div>
+    <div class="content-wrapper">
+      <div class="showcase-box">
+        <img src="/assets/images/example_work.png" />
+      </div>
+      <div class="reference-details">
+        <ui-content-box variant="work" id="workBox">
+          <h4>Pokedex</h4>
+          <span class="technology">CSS + HTML + JS</span>
+          <p>
+            Emphasise that you have used a variety of front-end technologies in your projects. Where
+            have you used these skills: static or dynamic websites, responsive layouts, data
+            visualization interfaces, smooth cuser experiences?
+          </p>
+          <div class="ref-links">
+            <ui-button variant="primary">{{ 'work.button.github' | translate }}</ui-button>
+            <ui-button variant="primary">{{ 'work.button.livetest' | translate }}</ui-button>
+          </div>
+        </ui-content-box>
+        <ul class="reference-nav">
+          <li class="prev">{{ 'work.button.prev' | translate }}</li>
+          <li class="next">{{ 'work.button.next' | translate }}</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>

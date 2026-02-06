@@ -1,10 +1,12 @@
 <nav id="sidebar-navigation">
-  <ul>
-    <li><a [routerLink]="['/']" fragment="home"></a></li>
-    <li><a [routerLink]="['/']" fragment="about"></a></li>
-    <li><a [routerLink]="['/']" fragment="tech"></a></li>
-    <li><a [routerLink]="['/']" fragment="work"></a></li>
-    <li><a [routerLink]="['/']" fragment="testimonials"></a></li>
-    <li><a [routerLink]="['/']" fragment="contact"></a></li>
-  </ul>
+  <div class="container">
+    <ul id="sidebarList">
+      <li><a (click)="scrollToSection('home')" class="home"></a></li>
+      <li><a (click)="scrollToSection('about')" class="about"></a></li>
+      <li><a (click)="scrollToSection('tech')" class="tech"></a></li>
+      <li><a (click)="scrollToSection('work')" class="work"></a></li>
+      <li><a (click)="scrollToSection('testimonials')" class="testimonials"></a></li>
+      <li><a (click)="scrollToSection('contact')" class="contact"></a></li>
+    </ul>
+  </div>
 </nav>

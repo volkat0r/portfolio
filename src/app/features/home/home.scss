@@ -1,19 +1,73 @@
 @use 'styles/variables' as v;
+@use 'styles/mixins' as *;
 
 #home{
-  background-color: v.$pf-blue;
-  height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: end;
+  justify-content: space-between;
+  height: 100vh;
+  background-color: v.$pf-blue;
   color: v.$pf-beige;
+  @include for-size(tablet-landscape){
+    justify-content:center;
+    align-items: center;
+  }
 
-  .copyText{
-    h1{
-      font-size: 6rem;
-      line-height: 6rem;
+  .container{
+    height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    @include for-size(tablet-landscape){
+      height: 100%;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
     }
+  }
+
+  .homeText{
+    z-index: 1;
+    width: 100%;
     p{
-      font-size: 3rem;
+      font-size: 2rem;
+      @include for-size(tablet-landscape){
+        font-size: 3rem;
+      }
+    }
+  }
+  .homeImg{
+    display: flex;
+    position: relative;
+
+    @include for-size(tablet-landscape){
+      margin-right: 3rem;
+    }
+    img{
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      z-index: 1;
+      @include for-size(tablet-landscape){
+        max-width: 45rem;
+        width: auto;
+        object-fit:contain;
+      }
+    }
+    &:after{
+      position: absolute;
+      content: "";
+      top: -5rem;
+      right: 0;
+      background-image: url(../../../../public/assets/images/wheel_orange_big.svg);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      width: 16.625rem;
+      height: 16.625rem;
+      @include for-size(tablet-landscape){
+        width: 31.25rem;
+        height: 31.25rem;
+      }
     }
   }
 }

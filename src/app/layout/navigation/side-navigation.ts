@@ -1,21 +1,18 @@
 import { Component, HostBinding } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { ScrollService } from '../../shared/services/scroll.service';
 
 @Component({
   selector: 'app-side-navigation',
-  imports: [RouterLink],
+  imports: [],
   templateUrl: './side-navigation.html',
   styleUrl: './side-navigation.scss',
 })
 export class SideNavigation {
   @HostBinding('class') activeTheme = 'theme-dark';
-}
 
-export class AppComponent {
-  currentTheme: string = 'theme-dark';
+  constructor(private scrollService: ScrollService) {}
 
-  // Diese Funktion wird vom Header aufgerufen, wenn das Theme gewechselt wird
-  onThemeChange(newTheme: string) {
-    this.currentTheme = newTheme;
+  scrollToSection(id: string) {
+    this.scrollService.scrollToElementById(id);
   }
 }

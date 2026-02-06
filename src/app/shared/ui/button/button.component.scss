@@ -1,11 +1,14 @@
 @use 'styles/variables' as v;
-@use 'styles/mixins' as m;
+@use 'styles/mixins' as *;
 
 .btn {
-  padding: v.$space-sm v.$space-md;
+  padding: v.$space-sm v.$space-lg;
   border-radius: v.$button-border-radius;
   border: 1px solid white;
   cursor: pointer;
+  margin-top: v.$space-lg;
+  line-height: 1.2;
+  font-weight: 700;
 
   &--primary {
     font-size:1.125rem;
@@ -16,9 +19,5 @@
     &:hover{
       background-color: v.$pf-orange;
     }
-  }
-
-  @include m.mq(md) {
-    padding: v.$space-md v.$space-lg;
   }
 }

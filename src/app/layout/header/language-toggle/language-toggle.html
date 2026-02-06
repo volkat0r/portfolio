@@ -1,6 +1,6 @@
 <div id="language-switch">
   <ul>
-    <li class="languageBtn active">EN</li>
-    <li class="languageBtn">DE</li>
+    <li #enBtn class="languageBtn" (click)="useLanguage('de')">EN</li>
+    <li #deBtn class="languageBtn active" (click)="useLanguage('en')">DE</li>
   </ul>
 </div>

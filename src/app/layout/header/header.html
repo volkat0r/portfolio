@@ -1,8 +1,12 @@
 <header>
   <div class="container">
-    <app-contact-links></app-contact-links>
+    <div class="header-left">
+      <app-contact-links></app-contact-links>
+    </div>
     <div id="logo">
-      <a [routerLink]="['/']" fragment=""><img src="/assets/images/test_logo.svg" /></a>
+      <ul>
+        <li (click)="scrollToSection('home')"><img src="/assets/images/test_logo.svg" /></li>
+      </ul>
     </div>
     <div class="header-right">
       <app-language-toggle></app-language-toggle>

@@ -1,4 +1,7 @@
+@use 'styles/mixins' as *;
+
 #contact-links{
+  display: none;
   ul{
     display: flex;
     flex-direction: row;
@@ -8,6 +11,22 @@
     img{
       width: 1rem;
       height: 1rem;
+      &.active{
+        display:none;
+      }
     }
+    &:hover{
+      img{
+        &.default{
+          display:none;
+        }
+        &.active{
+          display:block;
+        }
+      }
+    }
+  }
+  @include for-size(desktop) {
+    display: block;
   }
 }

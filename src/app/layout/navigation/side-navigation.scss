@@ -1,42 +1,58 @@
 @use 'styles/variables' as v;
+@use 'styles/mixins' as *;
 
 #sidebar-navigation {
-  position: fixed;
-  top: 50%;
-  right: 20%;
-
-  ul{
+  .container{
     display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
-    padding: 1rem;
-    height: auto;
+    align-items: center;
+    justify-content: end;
+  }
+}
 
-    li{
-      display: block;
-      position: relative;
-      a{
-        position: absolute;
-        content:"";
-        height: 0.5rem;
-        width: 0.5rem;
-        border-radius: 100%;
-        background-color: v.$pf-beige;
+#sidebarList{
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: calc(50% - 96px);
+  gap: 2rem;
+  height: auto;
+  width: 2rem;
 
-        &.active{
-          background-color: v.$pf-orange;
-          transform: rotate(45);
-          border-radius: 0;
-        }
+  li{
+    display: block;
+    position: relative;
+    text-align: center;
+    a{
+      cursor: pointer;
+      position: absolute;
+      content:"";
+      height: 0.5rem;
+      width: 0.5rem;
+      border-radius: 100%;
+      background-color: v.$pf-beige;
+      zoom: 1;
+      transition: all 0.2s ease-in-out;
+      &:hover{
+        background-color: v.$pf-yellow;
       }
     }
+  }
+  @include for-size(tablet-landscape){
+    display: flex;
   }
 }
 
 :host-context(.theme-light) {
-  #sidebar-navigation {
-    ul li a{
-        background-color: v.$pf-black;
-    }
+  #sidebarList a{
+    background-color: v.$pf-black;
   }
+}
+
+:host-context(.sector-home) #sidebarList a.home,
+:host-context(.sector-about) #sidebarList a.about,
+:host-context(.sector-tech) #sidebarList a.tech,
+:host-context(.sector-work) #sidebarList a.work,
+:host-context(.sector-testimonials) #sidebarList a.testimonials,
+:host-context(.sector-contact) #sidebarList a.contact{
+  @include activeSideMenu();
 }

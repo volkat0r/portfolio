@@ -1,14 +1,13 @@
 @use 'styles/variables' as v;
+@use 'styles/mixins' as *;
 
 .burgerMenu{
   transition: all 0.2s ease-in-out;
   img.icon-dark-bg{
     display:block;
   }
+  img.icon-hover,
   img.icon-light-bg{
-    display:none;
-  }
-  img.icon-hover{
     display:none;
   }
   &:hover{
@@ -23,12 +22,10 @@
 
 :host-context(.theme-light) {
   .burgerMenu{
-    img.icon-dark-bg{
-      display:none;
-    }
     img.icon-light-bg{
       display:block;
     }
+    img.icon-dark-bg,
     img.icon-hover{
       display:none;
     }
@@ -56,51 +53,96 @@
   top: -0.6rem;
   transform: translateX(100%);
   visibility: hidden;
-  transition: transform 0.2s ease-in-out, visibility 0s 0.2s;
+  transition: all 0.2s ease-in-out;
+  overflow: hidden;
+  border: 1px solid v.$pf-black;
   &.is-open{
     transform: translateX(0);
     visibility: visible;
-    transition: transform 0.2s ease-in-out, visibility 0s 0s;
+    overflow: hidden;
+
+    .mainNav{
+      li{
+        display: block;
+      }
+    }
   }
   .container{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    padding: 0;
   }
   h4{
     color: v.$pf-blue;
     font-weight: 700;
   }
-  li{
-    gap: .5rem;
-    font-weight: 700;
-    a{
-      font-size:  1.125rem;
-      color: v.$pf-black;
-      position: relative;
-      padding-left: 0;
+  .mainNav{
+    li{
+      display:none;
+      gap: .5rem;
+      font-weight: 700;
+      transition: all 0.2s ease-in-out;
+      a{
+        font-size:  1.125rem;
+        color: v.$pf-black;
+        position: relative;
+        padding-left: 0;
+        cursor: pointer;
 
-      &:hover,
-      &:focus{
-        color: v.$pf-blue;
-        padding-left:20px;
-        transition: padding-left 0.2s ease-in-out, visibility 0s 0.2s;
-        &:before{
-          visibility: visible;
+        &:hover{
+          @include activeMainMenu();
         }
-      }
 
-      &:before{
-        content: '';
-        position: absolute;
-        background-image: url(../../../../../public/assets/images/wheel.svg);
-        width: 20px;
-        height:20px;
-        left:-5px;
-        top: 1px;
-        visibility: hidden;
+        &:before{
+          content: '';
+          position: absolute;
+          background-image: url(../../../../../public/assets/images/wheel.svg);
+          width: 20px;
+          height:20px;
+          left:-5px;
+          top: 1px;
+          visibility: hidden;
+        }
       }
     }
   }
+  #contact-links{
+    display:block;
+    ul{
+      margin-top: v.$space-sm;
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+    }
+    li.contactlink{
+      img{
+        width: 1rem;
+        height: 1rem;
+      }
+    }
+    @include for-size(desktop){
+      display:block;
+    }
+  }
+}
+
+:host-context(.sector-home) {
+  .overlay{
+    #contact-links{
+      display: none;
+      @include for-size(desktop){
+        display:block;
+      }
+    }
+  }
+}
+
+:host-context(.sector-about) .overlay .mainNav a.about,
+:host-context(.sector-tech) .overlay .mainNav a.tech,
+:host-context(.sector-work) .overlay .mainNav a.work,
+:host-context(.sector-testimonials) .overlay .mainNav a.testimonials,
+:host-context(.sector-contact) .overlay .mainNav a.contact{
+  @include activeMainMenu();
 }

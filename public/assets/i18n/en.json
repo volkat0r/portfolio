@@ -1,0 +1,39 @@
+{
+  "home":{
+    "copy":{
+      "hey there": "Hello there! I'm",
+      "frontend": "Frontend-Developer"
+    },
+    "button":{
+      "text": "Get in touch"
+    }
+  },
+  "contact":{
+    "form":{
+      "label":{
+        "name": "What's your name?",
+        "email": "What's your email?",
+        "message": "How can I help you?"
+      },
+      "placeholder":{
+        "name": "Your name goes here",
+        "email": "yourmail@domain.com",
+        "message": "Hey, I'm interested in..."
+      },
+      "checkbox":{
+        "label": "I've read the <a href='/test'>privacy policy</a> and agree to the processing of my data."
+      },
+      "button":{
+        "github": "Get in touch"
+      }
+    }
+  },
+  "work":{
+    "button":{
+      "github": "Github",
+      "livetest": "Live Test",
+      "prev": "<< Previous project",
+      "next": "Next project >>"
+    }
+  }
+}

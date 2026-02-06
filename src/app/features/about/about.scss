@@ -1,13 +1,84 @@
 @use 'styles/variables' as v;
+@use 'styles/mixins' as *;
 
 #about{
-  background-color: v.$pf-beige;
-  height: 100vh;
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  background-color: v.$pf-beige;
   color: v.$pf-black;
+  height: 100vh;
+
+  @include for-size(tablet-landscape){
+    justify-content:center;
+    align-items: flex-end;
+  }
   .container{
+    display: block;
+    padding: 20% 0;
+    @include for-size(tablet-landscape){
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding:0;
+    }
+  }
+}
+
+.headline-wrapper{
+  display: block;
+  text-align: right;
+  width: 100%;
+  padding: 0 v.$space-xl;
+  margin-bottom: v.$space-xl;
+}
+
+.about_container{
+  display: block;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 v.$space-lg;
+  @include for-size(tablet-landscape){
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 0 5%;
+  }
+}
+
+#about-image{
+  display: flex;
+  width: 80%;
+  img{
+    height: auto;
+    width: 80%;
+    @include for-size(tablet-landscape){
+      height: 80vh;
+      width: auto;
+    }
+  }
+  @include for-size(tablet-landscape){
+    width: 100%;
+  }
+}
+
+#about-text{
+  display: flex;
+  width: 80%;
+  margin-top: -30%;
+  margin-left: 20%;
+  .contentbox-wrapper{
+    display: flex;
+    #aboutText{
+      @include for-size(tablet-landscape){
+        max-width: 37.5rem;
+      }
+    }
+  }
+  @include for-size(tablet-landscape){
+    margin-left: -10rem;
+    margin-top: 0;
+    width: 100%;
   }
 }

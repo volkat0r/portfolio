@@ -5,7 +5,14 @@
   color: white;
   display: flex;
   align-items: center;
+
   h2{
     color: v.$pf-yellow;
+  }
+
+  form{
+    div.field{
+      display: flex;
+    }
   }
 }

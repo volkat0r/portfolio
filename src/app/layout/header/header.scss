@@ -13,8 +13,11 @@ header{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    height: 5.5rem;
+    height: 4.5rem;
     padding: 1rem;
+    @include for-size(tablet-landscape){
+      height: 5.5rem;
+    }
   }
 }
 

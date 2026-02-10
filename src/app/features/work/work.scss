@@ -45,6 +45,7 @@
       content: "";
       bottom: 0rem;
       left: 0;
+      animation: turning 8s linear infinite;
       background-image: url(../../../../public/assets/images/wheel_orange_big.svg);
       background-repeat: no-repeat;
       background-size: 100%;
@@ -68,6 +69,75 @@
   @include for-size(tablet-landscape){
     flex-direction: row;
     align-items: center;
+  }
+  .work1{
+    .showcase-box{
+      background: v.$pf-yellow;
+    }
+  }
+  .work2{
+    .showcase-box{
+      background: v.$pf-blue;
+    }
+  }
+  .work3{
+    .showcase-box{
+      background: v.$pf-orange;
+      &:before{
+        animation: turning 8s linear infinite;
+        background-image: url(../../../../public/assets/images/wheel_yellow.svg);
+      }
+    }
+  }
+}
+
+.technology{
+  color: v.$pf-blue;
+  margin: 1rem 0;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+.ref-links{
+  display: flex;
+  gap: 2rem;
+}
+
+#carousel-wrapper{
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  position: relative;
+  flex-wrap: wrap;
+  @include for-size(tablet-landscape){
+    flex-direction: column;
+  }
+
+  .slide{
+    display: flex;
+    width: 100%;
+    gap: 2rem;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left:0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.6s ease-in-out, visibility 0.6s;
+    z-index: 1;
+    flex-direction: column;
+
+    @include for-size(tablet-landscape){
+      flex-direction: row;
+    }
+
+    &.active{
+      opacity: 1;
+      visibility: visible;
+      z-index: 2;
+      position: relative;
+    }
   }
 }
 

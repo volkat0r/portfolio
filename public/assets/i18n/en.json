@@ -9,6 +9,11 @@
     }
   },
   "contact":{
+    "intro":{
+      "headline":"Let's build something Cool together!",
+      "subheadline": "Got a problem to solve?",
+      "introtext": "Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work."
+    },
     "form":{
       "label":{
         "name": "What's your name?",
@@ -21,10 +26,10 @@
         "message": "Hey, I'm interested in..."
       },
       "checkbox":{
-        "label": "I've read the <a href='/test'>privacy policy</a> and agree to the processing of my data."
+        "label": "I've read the <a href='https://www.google.com' target='_blank'>privacy policy</a> and agree to the processing of my data."
       },
       "button":{
-        "github": "Get in touch"
+        "text": "Get in touch"
       }
     }
   },
@@ -34,6 +39,29 @@
       "livetest": "Live Test",
       "prev": "<< Previous project",
       "next": "Next project >>"
+    }
+  },
+  "testimonial":{
+    "headline":{
+      "text": "What my colleagues say about me"
+    },
+    "link":{
+      "text": "Zum Linked-In Profil >>"
+    },
+    "ref1":{
+      "name": "Arno Nym",
+      "text": "Moep moep",
+      "position": "Frontend Developer"
+    },
+    "ref2":{
+      "name": "Max Mustermann",
+      "text": "Mustertext",
+      "position": "Frontend Developer"
+    },
+    "ref3":{
+      "name": "Lirum Larum",
+      "text": "Löffelstiel",
+      "position": "Frontend Developer"
     }
   }
 }

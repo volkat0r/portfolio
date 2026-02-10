@@ -1,0 +1,12 @@
+@use 'styles/variables' as v;
+@use 'styles/mixins' as *;
+
+#legal{
+  display: flex;
+  background-color: v.$pf-black;
+  color: v.$pf-beige;
+
+  h4{
+    color: v.$pf-yellow;
+  }
+}

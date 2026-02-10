@@ -9,4 +9,22 @@ import { TranslatePipe } from '@ngx-translate/core';
   templateUrl: './work.html',
   styleUrl: `./work.scss`,
 })
-export class Work {}
+export class Work {
+  current_slide_index: number = 0;
+  readonly total_slides: number = 3;
+
+  btnNext() {
+    if (this.current_slide_index < this.total_slides - 1) {
+      this.current_slide_index++;
+    } else {
+      this.current_slide_index = 0;
+    }
+  }
+  btnPrev() {
+    if (this.current_slide_index > 0) {
+      this.current_slide_index--;
+    } else {
+      this.current_slide_index = this.total_slides - 1;
+    }
+  }
+}

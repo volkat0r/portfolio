@@ -1,6 +1,33 @@
 @use 'styles/variables' as v;
+@use 'styles/mixins' as *;
 
 footer{
   background-color: v.$pf-black;
   color: white;
+  height: auto;
+  display: block;
+  padding: v.$space-md 0;
+
+  div.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include for-size(tablet-landscape){
+      flex-direction: row;
+    }
+  }
+  div.corporateInfo{
+    display: flex;
+    justify-content: center;
+  }
+  ul{
+    display: flex;
+    justify-content: space-between;
+    a{
+      color: v.$pf-beige;
+      &:hover{
+        color: v.$pf-orange;
+      }
+    }
+  }
 }

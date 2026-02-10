@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { Layout } from './layout/layout';
+import { Legal } from './features/legal/legal';
 
 export const routes: Routes = [
   {
@@ -14,4 +15,5 @@ export const routes: Routes = [
   },
   { path: '', redirectTo: 'de', pathMatch: 'full' },
   { path: '**', redirectTo: 'de' },
+  { path: 'legal', component: Legal },
 ];

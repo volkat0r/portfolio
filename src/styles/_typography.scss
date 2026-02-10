@@ -34,5 +34,8 @@ h3{
 
 h4{
   font-family: 'Quicksand', system-ui, sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  @include for-size(tablet-landscape){
+    font-size: 1.5rem;
+  }
 }

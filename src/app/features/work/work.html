@@ -7,26 +7,74 @@
       </p>
     </div>
     <div class="content-wrapper">
-      <div class="showcase-box">
-        <img src="/assets/images/example_work.png" />
-      </div>
-      <div class="reference-details">
-        <ui-content-box variant="work" id="workBox">
-          <h4>Pokedex</h4>
-          <span class="technology">CSS + HTML + JS</span>
-          <p>
-            Emphasise that you have used a variety of front-end technologies in your projects. Where
-            have you used these skills: static or dynamic websites, responsive layouts, data
-            visualization interfaces, smooth cuser experiences?
-          </p>
-          <div class="ref-links">
-            <ui-button variant="primary">{{ 'work.button.github' | translate }}</ui-button>
-            <ui-button variant="primary">{{ 'work.button.livetest' | translate }}</ui-button>
+      <div id="carousel-wrapper">
+        <ul>
+          <div class="slide work1" [class.active]="current_slide_index === 0">
+            <div class="showcase-box">
+              <img src="/assets/images/example_work.png" />
+            </div>
+            <div class="reference-details">
+              <ui-content-box variant="work" id="workBox">
+                <h4>Slide 1</h4>
+                <span class="technology">CSS + HTML + JS</span>
+                <p>
+                  Emphasise that you have used a variety of front-end technologies in your projects.
+                  Where have you used these skills: static or dynamic websites, responsive layouts,
+                  data visualization interfaces, smooth cuser experiences?
+                </p>
+                <div class="ref-links">
+                  <ui-button variant="primary">{{ 'work.button.github' | translate }}</ui-button>
+                  <ui-button variant="primary">{{ 'work.button.livetest' | translate }}</ui-button>
+                </div>
+              </ui-content-box>
+            </div>
           </div>
-        </ui-content-box>
+
+          <li class="slide work2" [class.active]="current_slide_index === 1">
+            <div class="showcase-box">
+              <img src="/assets/images/example_work.png" />
+            </div>
+            <div class="reference-details">
+              <ui-content-box variant="work" id="workBox">
+                <h4>Slide 2</h4>
+                <span class="technology">CSS + HTML + JS</span>
+                <p>
+                  Emphasise that you have used a variety of front-end technologies in your projects.
+                  Where have you used these skills: static or dynamic websites, responsive layouts,
+                  data visualization interfaces, smooth cuser experiences?
+                </p>
+                <div class="ref-links">
+                  <ui-button variant="primary">{{ 'work.button.github' | translate }}</ui-button>
+                  <ui-button variant="primary">{{ 'work.button.livetest' | translate }}</ui-button>
+                </div>
+              </ui-content-box>
+            </div>
+          </li>
+
+          <li class="slide work3" [class.active]="current_slide_index === 2">
+            <div class="showcase-box">
+              <img src="/assets/images/example_work.png" />
+            </div>
+            <div class="reference-details">
+              <ui-content-box variant="work" id="workBox">
+                <h4>Slide 3</h4>
+                <span class="technology">CSS + HTML + JS</span>
+                <p>
+                  Emphasise that you have used a variety of front-end technologies in your projects.
+                  Where have you used these skills: static or dynamic websites, responsive layouts,
+                  data visualization interfaces, smooth cuser experiences?
+                </p>
+                <div class="ref-links">
+                  <ui-button variant="primary">{{ 'work.button.github' | translate }}</ui-button>
+                  <ui-button variant="primary">{{ 'work.button.livetest' | translate }}</ui-button>
+                </div>
+              </ui-content-box>
+            </div>
+          </li>
+        </ul>
         <ul class="reference-nav">
-          <li class="prev">{{ 'work.button.prev' | translate }}</li>
-          <li class="next">{{ 'work.button.next' | translate }}</li>
+          <li (click)="btnPrev()" class="prev">{{ 'work.button.prev' | translate }}</li>
+          <li (click)="btnNext()" class="next">{{ 'work.button.next' | translate }}</li>
         </ul>
       </div>
     </div>

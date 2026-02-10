@@ -21,16 +21,23 @@ body {
 .container{
   @include container();
 
-  @include for-size(desktop) {
-    padding: 0 v.$space-lg;
-  }
   @include for-size(tablet-landscape) {
     padding: 0 v.$space-md;
+  }
+
+  @include for-size(desktop) {
+    padding: 0 v.$space-xxxl 0 v.$space-xxl;
   }
 }
 
 section{
-  height: 100vh;
+  padding-top: 4.5rem;
+  min-height: 100vh;
+  @include for-size(tablet-landscape) {
+    height: 100vh;
+    min-height: auto;
+    padding-top: 5.5rem;
+  }
 }
 
 .d-none{
@@ -40,4 +47,12 @@ section{
 a{
   text-decoration: none;
   color: v.$pf-orange;
+}
+
+form{
+  input,
+  textarea{
+    border: 0;
+    background-color: transparent;
+  }
 }

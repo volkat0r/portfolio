@@ -41,7 +41,11 @@
     position: relative;
 
     @include for-size(tablet-landscape){
-      margin-right: 3rem;
+      margin-right: 10rem;
+      margin-top: 10rem;
+    }
+    @include for-size(big-desktop){
+      margin-right:3rem;
     }
     img{
       width: 100%;
@@ -69,5 +73,27 @@
         height: 31.25rem;
       }
     }
+  }
+}
+
+div.rotatingWheel{
+  margin-top: v.$space-xxxl;
+  position: relative;
+  width: 9rem;
+  height: 9rem;
+  display: flex;
+  img{
+    animation: turning 8s linear infinite;
+  }
+
+  &:before{
+    content: "";
+    position: absolute;
+    background-image: url(../../../../public/assets/images/arrow_down.svg);
+    z-index: 2;
+    left: calc(50% - 1.25rem);
+    top: calc(50% - 1.3125rem);
+    width: 2.5rem;
+    height: 2.625rem;
   }
 }

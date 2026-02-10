@@ -1,52 +1,89 @@
 <section id="contact" data-theme="dark">
   <div class="container">
     <div class="headline-wrapper">
-      <h2>Let's build something Cool together!</h2>
+      <h2>{{ 'contact.intro.headline' | translate }}</h2>
       <div class="problem">
-        <h3>Got a problem to solve?</h3>
-        <p>
-          Encourage people to contact you and describe what role you are interested in. Show that
-          you will add value to their projects through your work.
-        </p>
+        <h4>{{ 'contact.intro.subheadline' | translate }}</h4>
+        <p>{{ 'contact.intro.introtext' | translate }}</p>
       </div>
     </div>
-
-    <form class="contact">
-      <div class="two fields">
-        <div class="name">
-          <div class="field">
-            <label>{{ 'contact.form.label.name' | translate }}</label>
-            <input
-              type="text"
-              name="name"
-              placeholder="{{ 'contact.form.placeholder.name' | translate }}"
-            />
+    <div class="content-warpper">
+      <form (ngSubmit)="onSubmit(contactForm)" class="contact" #contactForm="ngForm">
+        <div class="two fields">
+          <div class="name">
+            <div class="field">
+              <label for="name">{{ 'contact.form.label.name' | translate }}</label>
+              <input
+                name="name"
+                type="text"
+                id="name"
+                [(ngModel)]="contactData.name"
+                required
+                #name="ngModel"
+                placeholder="{{ 'contact.form.placeholder.name' | translate }}"
+              />
+            </div>
+          </div>
+          @if (!name.valid && name.touched && !name.disabled) {
+            <span class="formError">Wie Name?</span>
+          }
+          <div class="email">
+            <div class="field">
+              <label for="email">{{ 'contact.form.label.email' | translate }}</label>
+              <input
+                name="email"
+                type="email"
+                id="email"
+                required
+                pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                [(ngModel)]="contactData.email"
+                #email="ngModel"
+                placeholder="{{ 'contact.form.placeholder.email' | translate }}"
+              />
+            </div>
+          </div>
+          @if (!email.valid && email.touched && !email.disabled) {
+            <span class="formError">Eeeej dooo, isch brauch deine E-Mail-Adresse!</span>
+          }
+        </div>
+        <div class="field">
+          <div class="message">
+            <div class="field">
+              <label for="message">{{ 'contact.form.label.message' | translate }}</label>
+              <textarea
+                name="message"
+                id="message"
+                [(ngModel)]="contactData.message"
+                required
+                #message="ngModel"
+                placeholder="{{ 'contact.form.placeholder.message' | translate }}"
+              ></textarea>
+            </div>
           </div>
         </div>
-        <div class="email">
-          <div class="field">
-            <label>{{ 'contact.form.label.email' | translate }}</label>
-            <input
-              type="text"
-              name="name"
-              placeholder="{{ 'contact.form.placeholder.email' | translate }}"
-            />
-          </div>
+        <div class="field">
+          <input
+            type="checkbox"
+            id="privacypolicy"
+            name="privacypolicy"
+            [(ngModel)]="contactData.privacypolicy"
+            #privacypolicy="ngModel"
+            required
+          />
+          @if (!privacypolicy.valid && privacypolicy.touched) {
+            <span class="formError"
+              >Bidde die Datenschutzbestimmungen durchlesen und bestätigen!</span
+            >
+          }
+          <label for="tc" [innerHTML]="'contact.form.checkbox.label' | translate"></label>
         </div>
-      </div>
-      <div class="field">
-        <div class="message">
-          <div class="field">
-            <label>{{ 'contact.form.label.message' | translate }}</label>
-            <textarea placeholder="{{ 'contact.form.placeholder.message' | translate }}"></textarea>
-          </div>
-        </div>
-      </div>
-      <div class="field">
-        <input type="checkbox" tabindex="0" class="hidden" />
-        <label [innerHTML]="'contact.form.checkbox.label' | translate"></label>
-      </div>
-      <div class="button">Drop a Line</div>
-    </form>
+        <button class="btn--primary" type="submit">
+          {{ 'contact.form.button.text' | translate }}
+        </button>
+        <button class="scroll-up" (click)="scrollToSection('home')">
+          {{ 'contact.form.button.text' | translate }}
+        </button>
+      </form>
+    </div>
   </div>
 </section>

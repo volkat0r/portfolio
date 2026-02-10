@@ -6,6 +6,7 @@ import { Work } from '../work/work';
 import { Testimonial } from '../testimonial/testimonial';
 import { Contact } from '../contact/contact';
 import { TranslatePipe } from '@ngx-translate/core';
+import { ScrollService } from '../../shared/services/scroll.service';
 
 @Component({
   selector: 'app-home',
@@ -13,4 +14,10 @@ import { TranslatePipe } from '@ngx-translate/core';
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
-export class Home {}
+export class Home {
+  constructor(private scrollService: ScrollService) {}
+
+  scrollToSection(id: string) {
+    this.scrollService.scrollToElementById(id);
+  }
+}

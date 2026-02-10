@@ -4,7 +4,12 @@
       <p>{{ 'home.copy.hey there' | translate }}</p>
       <h1>umgestalt</h1>
       <p>{{ 'home.copy.frontend' | translate }}</p>
-      <ui-button variant="primary">{{ 'home.button.text' | translate }}</ui-button>
+      <ui-button variant="primary" (click)="scrollToSection('contact')">{{
+        'home.button.text' | translate
+      }}</ui-button>
+      <div class="rotatingWheel">
+        <img src="/assets/images/turning_wheel_hero.svg" />
+      </div>
     </div>
     <div class="homeImg">
       <img src="/assets/images/umgestalt_v2.webp" />

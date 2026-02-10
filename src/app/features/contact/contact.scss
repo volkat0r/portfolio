@@ -1,4 +1,5 @@
 @use 'styles/variables' as v;
+@use 'styles/mixins' as *;
 
 #contact{
   background-color: v.$pf-black;
@@ -10,9 +11,88 @@
     color: v.$pf-yellow;
   }
 
+  .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+    height: 80vh;
+    @include for-size(tablet-landscape){
+      flex-direction: row;
+      height: 80vh;
+    }
+
+    .headline-wrapper{
+      flex: 0 0 30%;
+      h2{
+        margin-bottom: v.$space-xl;
+      }
+      h4{
+        margin-bottom: v.$space-md;
+        color: v.$pf-orange;
+      }
+    }
+    .content-warpper{
+      flex: 0 0 50%;
+      align-self: flex-end;
+    }
+  }
+
   form{
     div.field{
       display: flex;
+      flex-direction: column;
+
+      @include for-size(tablet-landscape){
+        max-width: 37.5rem;
+      }
+    }
+    .name,
+    .email,
+    .message{
+      margin-top: v.$space-xl;
+      border-bottom: 1px solid v.$pf-yellow;
+      label{
+        margin-bottom: v.$space-md;
+        font-size: 1.25rem;
+        font-weighT: 700;
+        @include for-size(tablet-landscape){
+          font-size: 1.5rem;
+        }
+      }
+      input, textarea{
+        padding: v.$space-md;
+        min-height: 3rem;
+        color: white;
+        font-size: 1rem;
+        line-height: 1.4;
+
+        &::placeholder{
+          font-size: 1rem;
+        }
+      }
     }
   }
+}
+
+.btn--primary{
+  padding: v.$space-sm v.$space-lg;
+  border-radius: v.$button-border-radius;
+  border: 1px solid white;
+  color: white;
+  cursor: pointer;
+  margin-top: v.$space-lg;
+  line-height: 1.2;
+  font-weight: 700;
+  font-size:1.125rem;
+  transition: all 0.125s ease-in;
+  &:hover{
+    background-color: v.$pf-orange;
+  }
+}
+
+span.formError{
+  color: v.$pf-orange;
+  font-size: 0.8rem;
+  margin: v.$space-sm 0;
 }

@@ -3,7 +3,76 @@
 
 #testimonials{
   background-color: v.$pf-blue;
-  color: white;
+  color: v.$pf-beige;
   display: flex;
   align-items: center;
+
+  div.headline-wrapper{
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    margin-bottom: v.$space-xl;
+    @include for-size(tablet-landscape){
+      height: 10vh;
+      margin-bottom: auto;
+    }
+  }
+
+  div.content-wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 10rem;
+    height: auto;
+    align-items: center;
+    @include for-size(tablet-landscape){
+      height: 40vh;
+      flex-direction: row;
+      gap: 2rem;
+    }
+
+    h4{
+      font-weight: bold;
+    }
+
+    .position,
+    a.linkedinLink{
+      font-weight: bold;
+      font-size: 1.125rem;
+      line-height: 1.2;
+      color: v.$pf-beige;
+    }
+    .position{
+      display: flex;
+      margin-top: v.$space-sm;
+    }
+    a.linkedinLink{
+      display: flex;
+      margin-top: v.$space-lg;
+
+      @include for-size(tablet-landscape){
+        margin-top: v.$space-xl;
+      }
+    }
+
+
+    div.testimonial-wrapper{
+      max-width: 100%;
+      display: flex;
+      margin-bottom: v.$space-xl;
+      flex-direction: column;
+      @include for-size(tablet-landscape){
+        max-width: 24rem;
+      }
+
+      &.ref1{
+        align-self: flex-start;
+      }
+      &.ref2{
+        align-self: center;
+      }
+      &.ref3{
+        align-self: flex-end;
+      }
+    }
+  }
 }

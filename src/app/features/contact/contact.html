@@ -7,75 +7,84 @@
         <p>{{ 'contact.intro.introtext' | translate }}</p>
       </div>
     </div>
-    <div class="content-warpper">
+    <div class="content-wrapper">
       <form (ngSubmit)="onSubmit(contactForm)" class="contact" #contactForm="ngForm">
-        <div class="two fields">
+        <div class="two-fields">
           <div class="name">
-            <div class="field">
+            <div class="field" [class.input-error]="!name.valid && name.touched">
               <label for="name">{{ 'contact.form.label.name' | translate }}</label>
               <input
                 name="name"
                 type="text"
-                id="name"
                 [(ngModel)]="contactData.name"
                 required
                 #name="ngModel"
-                placeholder="{{ 'contact.form.placeholder.name' | translate }}"
+                [placeholder]="
+                  !name.valid && name.touched
+                    ? ('contact.form.placeholder.name-error' | translate)
+                    : ('contact.form.placeholder.name' | translate)
+                "
               />
             </div>
           </div>
-          @if (!name.valid && name.touched && !name.disabled) {
-            <span class="formError">Wie Name?</span>
-          }
           <div class="email">
-            <div class="field">
+            <div class="field" [class.input-error]="!email.valid && email.touched">
               <label for="email">{{ 'contact.form.label.email' | translate }}</label>
               <input
                 name="email"
                 type="email"
-                id="email"
                 required
                 pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
                 [(ngModel)]="contactData.email"
                 #email="ngModel"
-                placeholder="{{ 'contact.form.placeholder.email' | translate }}"
+                [placeholder]="
+                  !email.valid && email.touched
+                    ? ('contact.form.placeholder.email-error' | translate)
+                    : ('contact.form.placeholder.email' | translate)
+                "
               />
             </div>
           </div>
-          @if (!email.valid && email.touched && !email.disabled) {
-            <span class="formError">Eeeej dooo, isch brauch deine E-Mail-Adresse!</span>
-          }
         </div>
-        <div class="field">
+        <div class="field message">
           <div class="message">
-            <div class="field">
+            <div class="field" [class.input-error]="!message.valid && message.touched">
               <label for="message">{{ 'contact.form.label.message' | translate }}</label>
               <textarea
                 name="message"
-                id="message"
                 [(ngModel)]="contactData.message"
                 required
                 #message="ngModel"
-                placeholder="{{ 'contact.form.placeholder.message' | translate }}"
+                minlength="4"
+                [placeholder]="
+                  !message.valid && message.touched
+                    ? ('contact.form.placeholder.message-error' | translate)
+                    : ('contact.form.placeholder.message' | translate)
+                "
               ></textarea>
             </div>
           </div>
         </div>
-        <div class="field">
+        <div
+          class="field checkbox"
+          [class.input-error]="!privacypolicy.valid && privacypolicy.touched"
+        >
           <input
             type="checkbox"
-            id="privacypolicy"
             name="privacypolicy"
-            [(ngModel)]="contactData.privacypolicy"
             #privacypolicy="ngModel"
+            [(ngModel)]="contactData.privacypolicy"
             required
           />
+          <label
+            for="privacypolicy"
+            [innerHTML]="'contact.form.checkbox.label' | translate"
+          ></label>
           @if (!privacypolicy.valid && privacypolicy.touched) {
             <span class="formError"
               >Bidde die Datenschutzbestimmungen durchlesen und bestätigen!</span
             >
           }
-          <label for="tc" [innerHTML]="'contact.form.checkbox.label' | translate"></label>
         </div>
         <button class="btn--primary" type="submit">
           {{ 'contact.form.button.text' | translate }}

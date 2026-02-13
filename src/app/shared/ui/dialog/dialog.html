@@ -1,0 +1,6 @@
+<dialog #dialogElement [class]="'dialog dl--' + variant" (click)="onDialogClick($event)">
+  <button type="button" id="close" (click)="closeDialog()">
+    <img src="/assets/images/close.svg" />
+  </button>
+  <ng-content></ng-content>
+</dialog>

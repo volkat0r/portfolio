@@ -15,15 +15,20 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-content: space-between;
-    height: 80vh;
+    align-content: center;
+    max-height: 80vh;
     @include for-size(tablet-landscape){
       flex-direction: row;
-      height: 80vh;
+      height: 70vh;
+      gap: v.$space-xxl;
+    }
+    @include for-size(big-desktop){
+      flex-direction: row;
+      height: 60vh;
     }
 
     .headline-wrapper{
-      flex: 0 0 30%;
+      flex: 0 0 100%;
       h2{
         margin-bottom: v.$space-xl;
       }
@@ -31,10 +36,15 @@
         margin-bottom: v.$space-md;
         color: v.$pf-orange;
       }
+      @include for-size(tablet-landscape){
+        flex: 0 0 40%;
+      }
     }
-    .content-warpper{
-      flex: 0 0 50%;
-      align-self: flex-end;
+    .content-wrapper{
+      flex: 0 0 100%;
+      @include for-size(tablet-landscape){
+        flex: 0 0 50%;
+      }
     }
   }
 
@@ -43,19 +53,69 @@
       display: flex;
       flex-direction: column;
 
+      &.message,
+      &.checkbox{
+        flex-direction: row;
+        margin-top: v.$space-xl;
+      }
+      &.message{
+        flex-direction: row;
+        display: block;
+        width: 100%;
+        margin-top: v.$space-xl;
+      }
+      &.checkbox{
+        margin-top: v.$space-xl;
+      }
+
       @include for-size(tablet-landscape){
         max-width: 37.5rem;
+      }
+    }
+    div.two-fields{
+      display: flex;
+      gap: 0;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      @include for-size(tablet-landscape){
+        flex-wrap: nowrap;
+        gap: v.$space-xl;
+      }
+      div{
+        flex: auto;
+        @include for-size(tablet-landscape){
+          flex: 0 0 50%;
+        }
       }
     }
     .name,
     .email,
     .message{
       margin-top: v.$space-xl;
-      border-bottom: 1px solid v.$pf-yellow;
+      div.field{
+        width: 100%;
+        &.input-error{
+          label{
+            color: v.$pf-orange;
+          }
+          input,
+          textarea{
+            &::placeholder{
+              font-size: v.$pf-red;
+            }
+            &.ng-invalid{
+              &::placeholder{
+                font-size: v.$pf-red;
+              }
+            }
+          }
+        }
+      }
       label{
-        margin-bottom: v.$space-md;
         font-size: 1.25rem;
         font-weighT: 700;
+        padding: 0 v.$space-md;
         @include for-size(tablet-landscape){
           font-size: 1.5rem;
         }
@@ -66,10 +126,42 @@
         color: white;
         font-size: 1rem;
         line-height: 1.4;
-
-        &::placeholder{
-          font-size: 1rem;
+        border-bottom: 1px solid v.$pf-yellow;
+      }
+    }
+    .checkbox{
+      display: flex;
+      gap: 1rem;
+      .formError{
+        display: flex;
+        flex-wrap: wrap;
+      }
+      input{
+        background-color: none;
+        border: 0;
+        position: relative;
+        visibility: hidden;
+        cursor: pointer;
+        &:before{
+          visibility: visible;
+          position: absolute;
+          content: "";
+          top: 0.2rem;
+          left: 0;
+          background-image: url(../../../../public/assets/images/checkox_unchecked.svg);
+          background-repeat: no-repeat;
+          background-size: 100%;
+          width: 1rem;
+          height: 1rem;
         }
+        &.ng-valid{
+          &:before{
+            background-image: url(../../../../public/assets/images/checkox_checked.svg);
+          }
+        }
+      }
+      label{
+
       }
     }
   }

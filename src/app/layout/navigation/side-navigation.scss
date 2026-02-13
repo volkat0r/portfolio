@@ -6,7 +6,9 @@
     display: flex;
     align-items: center;
     justify-content: end;
-    margin-left: 2rem;
+    @include for-size(tablet-landscape){
+      padding-right: v.$space-lg;
+    }
   }
 }
 

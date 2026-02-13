@@ -1,13 +1,47 @@
 <section id="testimonials" data-theme="dark">
   <div class="container">
-    <h2>{{ 'testimonial.headline.text' | translate }}</h2>
-    <ui-content-box variant="testimonial" id="testimonialBox">
-      <h3>{{ 'testimonial.headline.text' | translate }}</h3>
-      <p>
-        {{ 'testimonial.headline.text' | translate }}
-      </p>
-      <span class="position">unemployed 4ever!!!</span>
-      <a href="">{{ 'testimonial.headline.text' | translate }}</a>
-    </ui-content-box>
+    <div class="headline-wrapper">
+      <h2>{{ 'testimonial.headline.text' | translate }}</h2>
+    </div>
+    <div class="content-wrapper">
+      <div class="testimonial-wrapper ref1">
+        <ui-content-box variant="testimonial" id="testimonialBox">
+          <h4>{{ 'testimonial.ref1.name' | translate }}</h4>
+          <p>
+            {{ 'testimonial.ref1.text' | translate }}
+          </p>
+          <span class="position">{{ 'testimonial.ref1.position' | translate }}</span>
+        </ui-content-box>
+        <a class="linkedinLink" href="https://www.linkedin.com/" target="_blank"
+          >{{ 'testimonial.link.text' | translate }} >></a
+        >
+      </div>
+
+      <div class="testimonial-wrapper ref2">
+        <ui-content-box variant="testimonial" id="testimonialBox">
+          <h4>{{ 'testimonial.ref2.name' | translate }}</h4>
+          <p>
+            {{ 'testimonial.ref2.text' | translate }}
+          </p>
+          <span class="position">{{ 'testimonial.ref2.position' | translate }}</span>
+        </ui-content-box>
+        <a class="linkedinLink" href="https://www.linkedin.com/" target="_blank"
+          >{{ 'testimonial.link.text' | translate }} >></a
+        >
+      </div>
+
+      <div class="testimonial-wrapper ref3">
+        <ui-content-box variant="testimonial" id="testimonialBox">
+          <h4>{{ 'testimonial.ref3.name' | translate }}</h4>
+          <p>
+            {{ 'testimonial.ref3.text' | translate }}
+          </p>
+          <span class="position">{{ 'testimonial.ref3.position' | translate }}</span>
+        </ui-content-box>
+        <a class="linkedinLink" href="https://www.linkedin.com/" target="_blank"
+          >{{ 'testimonial.link.text' | translate }} >></a
+        >
+      </div>
+    </div>
   </div>
 </section>

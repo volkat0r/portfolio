@@ -17,7 +17,22 @@
             </p>
             <br />
             <p>Let's connect if you also hate chickens!</p>
-            <ui-button (click)="scrollToSection('contact')">Let's cook some chickens!</ui-button>
+            <div class="btn-wrapper">
+              <ui-button (click)="scrollToSection('contact')">Let's talk!</ui-button>
+              <span class="icon" (click)="aboutDialog.openDialog()">
+                <img src="/assets/images/smiley_mute.svg" />
+                <ui-dialog #aboutDialog variant="blue" id="aboutDialog">
+                  <h4>More about me</h4>
+                  <ul id="social">
+                    <li>Team Player</li>
+                    <li>Continuosly learning</li>
+                    <li>Creative Mind</li>
+                    <li>Base in Cologne</li>
+                    <li>Open to work remote</li>
+                  </ul>
+                </ui-dialog>
+              </span>
+            </div>
           </ui-content-box>
         </div>
       </div>

@@ -9,7 +9,6 @@
   color: v.$pf-black;
   .container{
     display: block;
-    padding: 0 v.$space-xl;;
   }
 }
 
@@ -45,12 +44,12 @@
       content: "";
       bottom: 0rem;
       left: 0;
-      animation: turning 8s linear infinite;
       background-image: url(../../../../public/assets/images/wheel_orange_big.svg);
       background-repeat: no-repeat;
       background-size: 100%;
       width: 16.625rem;
       height: 16.625rem;
+      animation: turning 8s linear infinite;
       @include for-size(tablet-landscape){
         width: 16.625rem;
         height: 16.625rem;

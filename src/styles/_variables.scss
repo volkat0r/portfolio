@@ -1,6 +1,7 @@
 // Colors
 $pf-black: #1D1D1D;
 $pf-beige: #F8F7E5;
+$pf-red: #EC7B7B;
 $pf-orange: #FF834F;
 $pf-blue: #679AAC;
 $pf-yellow: #F9AF42;
@@ -26,4 +27,24 @@ $space-xxxl: 6rem;
   to {
       transform: rotate(360deg);
     }
+}
+
+@keyframes homeIconMoveUpDown {
+  0%, 100% {
+    bottom: -2rem;
+  }
+  50% {
+    bottom: -1rem;
+  }
+}
+
+@keyframes tooltipAnimation {
+  0%{
+    bottom: -20rem;
+    opacity: 0;
+  }
+  100% {
+    bottom: -0rem;
+    opacity: 1;
+  }
 }

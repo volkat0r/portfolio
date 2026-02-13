@@ -1,0 +1,55 @@
+@use 'styles/variables' as v;
+@use 'styles/mixins' as *;
+
+dialog{
+  position: fixed;
+  display: block;
+  opacity: 0;
+  top:0;
+  transform: translateY(20rem);
+  transition: all 0.4s ease-out;
+  padding: v.$space-xl;
+
+  &[open]{
+    opacity: 1;
+    transform: translate(0);
+  }
+
+  @include for-size(tablet-landscape){
+    width: 17rem;
+  }
+
+  &.dl--blue{
+    background-color: v.$pf-blue;
+    color: v.$pf-beige;
+    border-radius: v.$base-border-radius;
+    border: 1px solid v.$pf-black;
+    left: 43%;
+    top: 47%;
+  }
+
+  &.dl--yellow{
+    background-color: v.$pf-yellow;
+    color: v.$pf-beige;
+    border-radius: v.$base-border-radius;
+    border: 1px solid v.$pf-beige;
+  }
+
+  h4{
+    color: v.$pf-beige;
+    line-height: 1.2;
+  }
+  #close{
+    display: block;
+    right: v.$space-xl;;
+    top: v.$space-xl;;
+    position: absolute;
+    cursor: pointer;
+    border:0;
+    background: none;
+
+    @include for-size(tablet-landscape){
+      display: none;
+    }
+  }
+}

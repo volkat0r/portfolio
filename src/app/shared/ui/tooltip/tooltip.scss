@@ -1,0 +1,31 @@
+@use 'styles/variables' as v;
+@use 'styles/mixins' as *;
+
+div.tooltip{
+  padding: v.$space-xl;
+  position: absolute;
+  width: auto;
+  right: 0;
+  @include for-size(tablet-landscape){
+    width: 17rem;
+  }
+
+  &.tt--blue{
+    background-color: v.$pf-blue;
+    color: v.$pf-beige;
+    border-radius: v.$base-border-radius;
+    border: 1px solid v.$pf-black;
+  }
+
+  &.tt--yellow{
+    background-color: v.$pf-yellow;
+    color: v.$pf-beige;
+    border-radius: v.$base-border-radius;
+    border: 1px solid v.$pf-beige;
+  }
+
+  h4{
+    color: v.$pf-beige;
+    line-height: 1.2;
+  }
+}

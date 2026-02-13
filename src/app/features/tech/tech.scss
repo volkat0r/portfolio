@@ -6,9 +6,6 @@
   color: white;
   display: flex;
   align-items: center;
-  .container{
-    padding: 0 v.$space-lg;
-  }
 }
 
 .headline-wrapper{
@@ -65,3 +62,33 @@
   }
 }
 
+.infoIcon{
+
+  #open{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 7.5rem;
+    height: 7.5rem;
+    img{
+      z-index: 2;
+    }
+    .wheel{
+      z-index: 1;
+      &:after{
+        position: absolute;
+        content: "";
+        bottom: 0rem;
+        left: 0;
+        background-image: url(../../../../public/assets/images/wheel_orange_big.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        width: 7.5rem;
+        height: 7.5rem;
+        z-index: 1;
+        animation: turning 8s linear infinite;
+      }
+    }
+  }
+}

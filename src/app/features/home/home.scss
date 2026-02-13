@@ -14,10 +14,11 @@
   }
 
   .container{
-    height: 80vh;
+    height: 90vh;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    position: relative;
     @include for-size(tablet-landscape){
       height: 100%;
       flex-direction: row;
@@ -78,10 +79,18 @@
 
 div.rotatingWheel{
   margin-top: v.$space-xxxl;
-  position: relative;
-  width: 9rem;
-  height: 9rem;
+  width: 5rem;
+  height: 5rem;
   display: flex;
+  position: absolute;
+  bottom: v.$space-xl;
+
+  @include for-size(tablet-landscape){
+    margin-top: v.$space-xxxl;
+    width: 9rem;
+    height: 9rem;
+    position: relative;
+  }
   img{
     animation: turning 8s linear infinite;
   }
@@ -90,10 +99,18 @@ div.rotatingWheel{
     content: "";
     position: absolute;
     background-image: url(../../../../public/assets/images/arrow_down.svg);
+    background-size: contain;
     z-index: 2;
-    left: calc(50% - 1.25rem);
-    top: calc(50% - 1.3125rem);
-    width: 2.5rem;
-    height: 2.625rem;
+    left: calc(50% - 0.9rem);
+    top: calc(50% - 1rem);
+    width: 1.8rem;
+    height: 2rem;
+
+    @include for-size(tablet-landscape){
+      width: 2.5rem;
+      height: 2.625rem;
+      left: calc(50% - 1.25rem);
+      top: calc(50% - 1.312rem);
+    }
   }
 }

@@ -7,4 +7,8 @@ import { ContentBox } from '../../shared/ui/content-box/content-box';
   templateUrl: './tech.html',
   styleUrl: './tech.scss',
 })
-export class Tech {}
+export class Tech {
+  dialog = document.getElementById('dialog');
+  openBtn = document.getElementById('open');
+  closeBtn = document.getElementById('close');
+}

@@ -1,22 +1,23 @@
 @use 'styles/variables' as v;
 @use 'styles/mixins' as *;
 
-#tech{
+#tech {
   background-color: v.$pf-black;
   color: white;
   display: flex;
   align-items: center;
 }
 
-.headline-wrapper{
+.headline-wrapper {
   display: block;
   width: 100%;
 }
 
-.content-wrapper{
+.content-wrapper {
   display: flex;
   flex-direction: column;
-  @include for-size(tablet-landscape){
+
+  @include for-size(tablet-landscape) {
     flex-direction: row;
     flex-wrap: wrap;
     align-content: space-between;
@@ -24,62 +25,68 @@
   }
 }
 
-#tech-box{
+#tech-box {
   display: block;
   margin: v.$space-xl 0;
   max-width: 37.5rem;
 }
 
-.techStackIcons{
+.techStackIcons {
   display: grid;
   width: 100%;
-  grid-gap: 1rem;
+  gap: 1rem;
   grid-template-columns: 5rem 5rem 5rem 5rem;
 
-  @include for-size(tablet-landscape){
-    grid-gap: 3rem 2rem;
+  @include for-size(tablet-landscape) {
+    gap: 3rem 2rem;
     grid-template-columns: 7rem 7rem 7rem 7rem;
     justify-content: end;
   }
 
-  .techIcon{
+  .techIcon {
     display: flex;
     gap: 1rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    img{
+
+    img {
       height: 3.5rem;
       transition: all 0.2s ease-in-out;
       cursor: pointer;
-      &:hover{
+
+      &:hover {
         transform: scale(1.25);
       }
-      @include for-size(tablet-landscape){
+
+      @include for-size(tablet-landscape) {
         height: 4.5rem;
       }
     }
   }
 }
 
-.infoIcon{
-
-  #open{
+.infoIcon {
+  .icon {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     width: 7.5rem;
     height: 7.5rem;
-    img{
+    cursor: pointer;
+
+    img {
       z-index: 2;
     }
-    .wheel{
+
+    .wheel {
       z-index: 1;
-      &:after{
+
+      &:after {
         position: absolute;
-        content: "";
-        bottom: 0rem;
+        content: '';
+        bottom: 0;
         left: 0;
         background-image: url(../../../../public/assets/images/wheel_orange_big.svg);
         background-repeat: no-repeat;
@@ -90,5 +97,41 @@
         animation: turning 8s linear infinite;
       }
     }
+  }
+}
+
+#techDialog {
+  ::ng-deep dialog.dl--yellow {
+    position: absolute;
+    top: auto;
+    left: 50%;
+    bottom: 100%;
+    width: min(26rem, 88vw);
+    transform: translate(-50%, 2.5rem);
+  }
+
+  ::ng-deep dialog.dl--yellow[open] {
+    transform: translate(-50%, 0);
+  }
+}
+
+.tech-learning-list {
+  display: flex;
+  align-items: center;
+  gap: v.$space-md;
+  padding: 0;
+  margin: v.$space-md 0 0;
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+  }
+
+  img {
+    width: 2rem;
+    height: 2rem;
+    object-fit: contain;
   }
 }

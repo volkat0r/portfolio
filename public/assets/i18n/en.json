@@ -8,6 +8,30 @@
       "text": "Get in touch"
     }
   },
+  "about":{
+    "headline": "About me",
+    "text": "Hey there, I'm Pepe and I hate chickens. Espacially the huge moron at the end of my game. I like to jump on chickens aswell and throw around random salsa bottles... I also like to sleep & running around in the desert.",
+    "connect": "Let's connect if you also hate chickens!",
+    "button": "To the contact form",
+    "dialog": {
+      "headline": "More about me",
+      "list": {
+        "teamPlayer": "Team Player",
+        "learning": "Continuously learning",
+        "creativeMind": "Creative mind",
+        "base": "Based in Cologne",
+        "remote": "Open to remote work"
+      }
+    }
+  },
+  "tech":{
+    "headline" :"Tech",
+    "text": "Emphasise that you have used a variety of front-end technologies in your projects. Where have you used these skills: static or dynamic websites, responsive layouts, data visualization interfaces, smooth user experiences?",
+    "dialog": {
+      "headline": "Don't see the skill you are looking for?",
+      "text": "Feel free to contact me. I look forward to expanding on my previous knowledge. Also I have a special interest in learning:"
+    }
+  },
   "contact":{
     "intro":{
       "headline":"Let's build something Cool together!",
@@ -38,6 +62,23 @@
     }
   },
   "work":{
+    "headline": "Projects",
+    "intro": "Here you can find a selection of my previous projects.",
+    "project01":{
+      "headline": "El Pollo Loco",
+      "tech": "HTML, CSS, JavaScript",
+      "description": "El Polo Loco is a browser‑based jump‑and‑run game I built during my training at the Developer Akademie. The project showcases my skills in JavaScript, object‑oriented architecture, and implementing animations and game logic in the frontend. The goal was to create a lightweight, responsive game with clean and maintainable code."
+    },
+    "project02":{
+      "headline": "Join",
+      "tech": "HTML, SCSS, Angular",
+      "description": "Join is a collaborative task‑management application that I developed as part of a team during my training at the Developer Akademie. The project replicates core workflows of modern web applications, including a Kanban board, user management, and dynamic UI interactions. Our focus was on clean code architecture, agile teamwork, and building a scalable JavaScript‑based frontend."
+    },
+    "project03":{
+      "headline": "DailyDash",
+      "tech": "HTML, CSS, Vue.js",
+      "description": "DailyDash is a personal dashboard project I’m building to organize my daily schedule, tasks, and athletic goals in one clean interface. It is designed to integrate multiple data sources such as calendar, weather, and fitness APIs into a modern, streamlined UI. The project is still in an early development phase, but initial screen designs and API concepts are already in place."
+    },
     "button":{
       "github": "Github",
       "livetest": "Live Test",
@@ -50,7 +91,7 @@
       "text": "What my colleagues say about me"
     },
     "link":{
-      "text": "Zum Linked-In Profil"
+      "text": "To Linked-In Profile"
     },
     "ref1":{
       "name": "Arno Nym",
@@ -64,7 +105,7 @@
     },
     "ref3":{
       "name": "Lirum Larum",
-      "text": "Our project benefited enormously from Simon efficient way of working.",
+      "text": "Our project benefited enormously from Simon's efficient way of working.",
       "position": "Graphic Designer"
     }
   }

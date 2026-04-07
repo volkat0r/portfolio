@@ -1,9 +1,9 @@
 <section id="work" data-theme="light">
   <div class="container">
     <div class="headline-wrapper">
-      <h2>My Work</h2>
+      <h2>{{ 'work.headline' | translate }}</h2>
       <p>
-        Explore a selection of my work here - Interact with the projects to see my skills in action
+        {{ 'work.intro' | translate }}
       </p>
     </div>
     <div class="content-wrapper">
@@ -15,16 +15,21 @@
             </div>
             <div class="reference-details">
               <ui-content-box variant="work" id="workBox">
-                <h4>Slide 1</h4>
-                <span class="technology">CSS + HTML + JS</span>
+                <h4>{{ 'work.project01.headline' | translate }}</h4>
+                <span class="technology">{{ 'work.project01.tech' | translate }}</span>
                 <p>
-                  Emphasise that you have used a variety of front-end technologies in your projects.
-                  Where have you used these skills: static or dynamic websites, responsive layouts,
-                  data visualization interfaces, smooth cuser experiences?
+                  {{ 'work.project01.description' | translate }}
                 </p>
                 <div class="ref-links">
-                  <ui-button variant="primary">{{ 'work.button.github' | translate }}</ui-button>
-                  <ui-button variant="primary">{{ 'work.button.livetest' | translate }}</ui-button>
+                  <ui-button
+                    variant="primary"
+                    target="_blank"
+                    href="https://github.com/volkat0r/el_polo_loco"
+                    >{{ 'work.button.github' | translate }}</ui-button
+                  >
+                  <ui-button variant="primary" target="_blank" href="http://epl.umgestalt.de/">
+                    {{ 'work.button.livetest' | translate }}</ui-button
+                  >
                 </div>
               </ui-content-box>
             </div>
@@ -36,12 +41,10 @@
             </div>
             <div class="reference-details">
               <ui-content-box variant="work" id="workBox">
-                <h4>Slide 2</h4>
-                <span class="technology">CSS + HTML + JS</span>
+                <h4>{{ 'work.project02.headline' | translate }}</h4>
+                <span class="technology">{{ 'work.project02.tech' | translate }}</span>
                 <p>
-                  Emphasise that you have used a variety of front-end technologies in your projects.
-                  Where have you used these skills: static or dynamic websites, responsive layouts,
-                  data visualization interfaces, smooth cuser experiences?
+                  {{ 'work.project02.description' | translate }}
                 </p>
                 <div class="ref-links">
                   <ui-button variant="primary">{{ 'work.button.github' | translate }}</ui-button>
@@ -57,12 +60,10 @@
             </div>
             <div class="reference-details">
               <ui-content-box variant="work" id="workBox">
-                <h4>Slide 3</h4>
-                <span class="technology">CSS + HTML + JS</span>
+                <h4>{{ 'work.project03.headline' | translate }}</h4>
+                <span class="technology">{{ 'work.project03.tech' | translate }}</span>
                 <p>
-                  Emphasise that you have used a variety of front-end technologies in your projects.
-                  Where have you used these skills: static or dynamic websites, responsive layouts,
-                  data visualization interfaces, smooth cuser experiences?
+                  {{ 'work.project03.description' | translate }}
                 </p>
                 <div class="ref-links">
                   <ui-button variant="primary">{{ 'work.button.github' | translate }}</ui-button>

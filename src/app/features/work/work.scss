@@ -30,9 +30,10 @@
 
   .showcase-box{
     display: flex;
-    max-width: 30.5rem;
+    max-width: 40%;
     aspect-ratio: 1 / 1;
     width: 100%;
+    min-width: 30.5rem;
     background: v.$pf-yellow;
     padding: v.$space-xl;
     border-radius: v.$base-border-radius;
@@ -49,7 +50,7 @@
       background-size: 100%;
       width: 16.625rem;
       height: 16.625rem;
-      animation: turning 8s linear infinite;
+      animation: turning 20s linear infinite;
       @include for-size(tablet-landscape){
         width: 16.625rem;
         height: 16.625rem;
@@ -64,6 +65,9 @@
     @include for-size(tablet-landscape){
       max-width: 30.5rem;
     }
+  }
+  .reference-details{
+    width: 60%;
   }
   @include for-size(tablet-landscape){
     flex-direction: row;
@@ -83,7 +87,7 @@
     .showcase-box{
       background: v.$pf-orange;
       &:before{
-        animation: turning 8s linear infinite;
+        animation: turning 20s linear infinite;
         background-image: url(../../../../public/assets/images/wheel_yellow.svg);
       }
     }
@@ -100,6 +104,7 @@
 .ref-links{
   display: flex;
   gap: 2rem;
+  margin-top: 2rem;
 }
 
 #carousel-wrapper{

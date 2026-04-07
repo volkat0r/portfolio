@@ -8,11 +8,35 @@
       "text": "Zum Kontaktformular"
     }
   },
+  "about":{
+    "headline": "Über mich",
+    "text": "Hey, Ich bin Pepe und ich hasse Hühner. Besonders den großen Idioten am Ende meines Spiels. Ich springe gerne auf Hühner und werfe zufällig Salsa-Flaschen herum... Ich schlafe auch gerne und renne durch die Wüste.",
+    "connect": "Lass uns verbinden, wenn du auch Hühner hasst!",
+    "button": "Zum Kontaktformular",
+    "dialog": {
+      "headline": "Mehr über mich",
+      "list": {
+        "teamPlayer": "Team Player",
+        "learning": "Kontinuierlich lernend",
+        "creativeMind": "Kreativer Kopf",
+        "base": "Basis in Köln",
+        "remote": "Offen für Remote-Arbeit"
+      }
+    }
+  },
+  "tech":{
+    "headline" :"Tech",
+    "text": "Hier finden Sie eine Übersicht meiner technischen Fähigkeiten und Kenntnisse.",
+    "dialog": {
+      "headline": "Du findest die gesuchte Fähigkeit nicht?",
+      "text": "Zögern Sie nicht, mich zu kontaktieren. Ich freue mich darauf, mein bisheriges Wissen zu erweitern. Außerdem habe ich ein besonderes Interesse daran, zu lernen:"
+    }
+  },
   "contact":{
     "intro":{
-      "headline":"Lass ma quatschen!",
-      "subheadline": "Got a problem to solve?",
-      "introtext": "Encourage people Ato contact you and describe what role you are interested in. Show that you will add value to their projects through your work."
+      "headline":"Lass mal quatschen!",
+      "subheadline": "Hast du ein Projekt für mich?",
+      "introtext": "Wenn du mit mir in Kontakt treten möchtest, beschreibe bitte, welche Rolle dich interessiert. Zeige, dass du durch deine Arbeit einen Mehrwert für ihre Projekte schaffen wirst."
     },
     "form":{
       "label":{
@@ -22,15 +46,15 @@
       },
       "placeholder":{
         "name": "Max Mustermann",
-        "name-error": "Name Error",
+        "name-error": "Fehler beim Namen",
         "email": "yourmail@domain.com",
-        "email-error": "Email Error",
-        "message": "Hey, I'm interested in...",
-        "message-error": "Message Error"
+        "email-error": "Fehler bei der E-Mail",
+        "message": "Hey, ich bin interessiert an...",
+        "message-error": "Fehler bei der Nachricht"
       },
       "checkbox":{
-        "label": "I've read the <a href='https://www.google.com' target='_blank'>privacy policy</a> and agree to the processing of my data.",
-        "error": "checkbox Error"
+        "label": "Ich habe die <a href='https://www.google.com' target='_blank'>Datenschutzrichtlinie</a> gelesen und stimme der Verarbeitung meiner Daten zu.",
+        "error": "Fehler bei der Checkbox"
       },
       "button":{
         "text": "Anfrage senden"
@@ -38,33 +62,50 @@
     }
   },
   "work":{
+    "headline": "Projekte",
+    "intro": "Hier finden Sie eine Auswahl meiner bisherigen Projekte.",
+    "project01":{
+      "headline": "El Pollo Loco",
+      "tech": "HTML, CSS, JavaScript",
+      "description": "El Polo Loco ist ein browserbasiertes Jump‑and‑Run‑Spiel, das ich im Rahmen der Developer Akademie entwickelt habe. Das Projekt demonstriert meine Fähigkeiten in JavaScript, objektorientierter Strukturierung und der Umsetzung von Animationen und Game‑Logic im Frontend. Ziel war es, ein leichtgewichtiges, responsives Spiel mit klarer Code‑Architektur zu erstellen."
+    },
+    "project02":{
+      "headline": "Join",
+      "tech": "HTML, SCSS, Angular",
+      "description": "Join ist ein kollaboratives Task‑Management‑Tool, das ich im Team im Rahmen der Developer Akademie entwickelt habe. Das Projekt bildet typische Arbeitsabläufe moderner Web‑Apps nach – inklusive Kanban‑Board, Nutzerverwaltung und dynamischer UI‑Interaktionen. Dabei lag der Fokus auf sauberer Code‑Struktur, agiler Zusammenarbeit und der Umsetzung einer skalierbaren JavaScript‑Architektur."
+    },
+    "project03":{
+      "headline": "DailyDash",
+      "tech": "HTML, CSS, Vue.js",
+      "description": "DailyDash ist ein persönliches Dashboard‑Projekt, das ich entwickle, um meinen Tagesablauf, meine Aufgaben und meine sportlichen Ziele übersichtlich zu strukturieren. Das Tool soll verschiedene Datenquellen wie Kalender‑, Wetter‑ und Fitness‑APIs bündeln und in einer klaren, modernen Oberfläche darstellen. Das Projekt befindet sich aktuell noch in der Entwicklung, erste Screendesigns und API‑Konzepte sind jedoch bereits umgesetzt."
+    },
     "button":{
       "github": "Github",
       "livetest": "Live Test",
-      "prev": "<< vorheriges Project",
-      "next": "nächstes Project >>"
+      "prev": "<< vorheriges Projekt",
+      "next": "nächstes Projekt >>"
     }
   },
   "testimonial":{
     "headline":{
-      "text": "What my colleagues say about me"
+      "text": "Was meine Kollegen über mich sagen"
     },
     "link":{
       "text": "Zum Linked-In Profil"
     },
     "ref1":{
       "name": "Arno Nym",
-      "text": "Hanna has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the success of our project.",
+      "text": "Hanna hat sich als zuverlässiger Gruppenpartner erwiesen. Seine technischen Fähigkeiten und sein proaktiver Ansatz waren entscheidend für den Erfolg unseres Projekts.",
       "position": "arbeitsloooos 4 ever"
     },
     "ref2":{
       "name": "Max Mustermann",
-      "text": "I had the good fortune of working with Hanna in a group project at the Developer Akademie that involved a lot of effort. He always stayed calm, cool, and focused, and made sure our team was set up for success. He's super knowledgeable, easy to work with, and I'd happily work with him again given the chance.",
+      "text": "Ich hatte das Glück, mit Hanna in einem Gruppenprojekt an der Developer Akademie zu arbeiten, das viel Einsatz erforderte. Er blieb immer ruhig, cool und konzentriert und sorgte dafür, dass unser Team erfolgreich aufgestellt war. Er ist sehr kompetent, leicht im Umgang und ich würde jederzeit wieder mit ihm arbeiten, wenn sich die Gelegenheit bietet.",
       "position": "Frontend Developer"
     },
     "ref3":{
       "name": "Lirum Larum",
-      "text": "Our project benefited enormously from Simon efficient way of working.",
+      "text": "Unser Projekt profitierte enorm von Simons effizienter Arbeitsweise.",
       "position": "Pixelschubser"
     }
   }

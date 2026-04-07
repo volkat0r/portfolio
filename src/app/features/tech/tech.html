@@ -6,9 +6,7 @@
     <div class="content-wrapper">
       <ui-content-box variant="blue" id="tech-box">
         <p>
-          Emphasise that you have used a variety of front-end technologies in your projects. Where
-          have you used these skills: static or dynamic websites, responsive layouts, data
-          visualization interfaces, smooth user experiences?
+          {{ 'tech.text' | translate }}
         </p>
       </ui-content-box>
       <div class="techStackIcons">
@@ -23,22 +21,29 @@
       </div>
     </div>
     <div class="infoIcon">
-      <button type="button">
+      <span
+        class="icon"
+        (mouseenter)="techDialog.openPreview()"
+        (mouseleave)="techDialog.closePreview()"
+        (click)="techDialog.openPreview()"
+      >
         <img src="/assets/images/icon_study.svg" />
         <span class="wheel"></span>
-      </button>
-      <dialog id="dialog">
-        <button type="button">X</button>
-        <h4>Don't see the skill you are looking for?</h4>
-        <p>
-          Feel free to contact me. I look forward to expanding on my previous knowledge. Also I have
-          a special interest in learning:
-        </p>
-        <ul>
-          <li>react</li>
-          <li>vue.js</li>
-        </ul>
-      </dialog>
+        <ui-dialog #techDialog variant="yellow" id="techDialog">
+          <h4>{{ 'tech.dialog.headline' | translate }}</h4>
+          <p>
+            {{ 'tech.dialog.text' | translate }}
+          </p>
+          <ul class="tech-learning-list">
+            <li>
+              <img src="/assets/images/icons/react.svg" alt="React" />
+            </li>
+            <li>
+              <img src="/assets/images/icons/vue.svg" alt="Vue.js" />
+            </li>
+          </ul>
+        </ui-dialog>
+      </span>
     </div>
   </div>
 </section>

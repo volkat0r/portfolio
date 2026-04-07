@@ -10,12 +10,33 @@ import { Component, Input, ViewChild, ElementRef } from '@angular/core';
 export class Dialog {
   @Input() variant: 'blue' | 'yellow' = 'blue';
   @ViewChild('dialogElement') nativeDialog!: ElementRef<HTMLDialogElement>;
+  private isPreviewOpen = false;
 
   dialog = document.getElementById('dialog');
   closeBtn = document.getElementById('close');
 
   openDialog() {
-    this.nativeDialog.nativeElement.showModal();
+    if (this.isPreviewOpen && this.nativeDialog.nativeElement.open) {
+      this.nativeDialog.nativeElement.close();
+      this.isPreviewOpen = false;
+    }
+
+    if (!this.nativeDialog.nativeElement.open) {
+      this.nativeDialog.nativeElement.showModal();
+    }
+  }
+
+  openPreview() {
+    if (!this.nativeDialog.nativeElement.open) {
+      this.nativeDialog.nativeElement.show();
+      this.isPreviewOpen = true;
+    }
+  }
+
+  closePreview() {
+    if (this.isPreviewOpen) {
+      this.closeDialog();
+    }
   }
 
   onDialogClick(event: MouseEvent) {
@@ -33,8 +54,11 @@ export class Dialog {
   }
 
   closeDialog() {
+    this.isPreviewOpen = false;
     setTimeout(() => {
-      this.nativeDialog.nativeElement.close();
+      if (this.nativeDialog.nativeElement.open) {
+        this.nativeDialog.nativeElement.close();
+      }
     });
   }
 }

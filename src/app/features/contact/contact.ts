@@ -24,7 +24,7 @@ export class Contact {
     name: '',
     email: '',
     message: '',
-    privacypolicy: '',
+    privacypolicy: false,
   };
 
   mailTest = true;
@@ -41,7 +41,14 @@ export class Contact {
   };
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+    if (ngForm.invalid) {
+      Object.values(ngForm.controls).forEach((control) => {
+        control.markAsTouched();
+      });
+      return;
+    }
+
+    if (!this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData)).subscribe({
         next: (response) => {
           ngForm.resetForm();
@@ -51,7 +58,7 @@ export class Contact {
         },
         complete: () => console.info('send post complete'),
       });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+    } else {
       ngForm.resetForm();
     }
   }

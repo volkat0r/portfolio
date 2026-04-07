@@ -10,25 +10,23 @@
       <div id="about-text">
         <div class="contentbox-wrapper">
           <ui-content-box variant="black" id="aboutText">
-            <p>
-              Hey there, I'm Pepe and I hate chickens. Espacially the huge moron at the end of my
-              game. I like to jump on chickens aswell and throw around random salsa bottles... I
-              also like to sleep & running around in the desert.
-            </p>
+            <p>{{ 'about.text' | translate }}</p>
             <br />
-            <p>Let's connect if you also hate chickens!</p>
+            <p>{{ 'about.connect' | translate }}</p>
             <div class="btn-wrapper">
-              <ui-button (click)="scrollToSection('contact')">Let's talk!</ui-button>
+              <ui-button (click)="scrollToSection('contact')">{{
+                'about.button' | translate
+              }}</ui-button>
               <span class="icon" (click)="aboutDialog.openDialog()">
                 <img src="/assets/images/smiley_mute.svg" />
                 <ui-dialog #aboutDialog variant="blue" id="aboutDialog">
-                  <h4>More about me</h4>
+                  <h4>{{ 'about.dialog.headline' | translate }}</h4>
                   <ul id="social">
-                    <li>Team Player</li>
-                    <li>Continuosly learning</li>
-                    <li>Creative Mind</li>
-                    <li>Base in Cologne</li>
-                    <li>Open to work remote</li>
+                    <li>{{ 'about.dialog.list.teamPlayer' | translate }}</li>
+                    <li>{{ 'about.dialog.list.learning' | translate }}</li>
+                    <li>{{ 'about.dialog.list.creativeMind' | translate }}</li>
+                    <li>{{ 'about.dialog.list.base' | translate }}</li>
+                    <li>{{ 'about.dialog.list.remote' | translate }}</li>
                   </ul>
                 </ui-dialog>
               </span>

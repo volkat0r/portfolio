@@ -42,7 +42,8 @@
       "label":{
         "name": "Wie ist dein Name?",
         "email": "Deine E-Mail-Adresse?",
-        "message": "Wie kann ich dir helfen?"
+        "message": "Wie kann ich dir helfen?",
+        "error": "Fehler beim Ausfüllen des Formulars"
       },
       "placeholder":{
         "name": "Max Mustermann",
@@ -50,11 +51,9 @@
         "email": "yourmail@domain.com",
         "email-error": "Fehler bei der E-Mail",
         "message": "Hey, ich bin interessiert an...",
-        "message-error": "Fehler bei der Nachricht"
-      },
-      "checkbox":{
-        "label": "Ich habe die <a href='https://www.google.com' target='_blank'>Datenschutzrichtlinie</a> gelesen und stimme der Verarbeitung meiner Daten zu.",
-        "error": "Fehler bei der Checkbox"
+        "message-error": "Fehler bei der Nachricht",
+        "privacyPolicy": "Ich habe die <a href='https://www.google.com' target='_blank'>Datenschutzrichtlinie</a> gelesen und stimme der Verarbeitung meiner Daten zu.",
+        "privacyPolicy-error": "Bitte lesen und akzeptieren Sie die Datenschutzrichtlinie!"
       },
       "button":{
         "text": "Anfrage senden"

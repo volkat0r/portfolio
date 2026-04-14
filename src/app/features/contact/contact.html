@@ -78,19 +78,20 @@
           />
           <label
             for="privacypolicy"
-            [innerHTML]="'contact.form.checkbox.label' | translate"
+            [innerHTML]="'contact.form.placeholder.privacyPolicy' | translate"
           ></label>
           @if (!privacypolicy.valid && privacypolicy.touched) {
-            <span class="formError"
-              >Bidde die Datenschutzbestimmungen durchlesen und bestätigen!</span
-            >
+            <span
+              class="formError"
+              [innerHTML]="'contact.form.placeholder.privacyPolicy-error' | translate"
+            ></span>
           }
         </div>
         <button class="btn--primary" type="submit">
           {{ 'contact.form.button.text' | translate }}
         </button>
         @if (contactForm.submitted && contactForm.invalid) {
-          <span class="formError">Bitte fülle alle Pflichtfelder korrekt aus.</span>
+          <span class="formError" [innerHTML]="'contact.form.label.error' | translate"></span>
         }
         <button class="scroll-up" type="button" (click)="scrollToSection('home')">
           {{ 'contact.form.button.text' | translate }}

@@ -93,8 +93,13 @@
         @if (contactForm.submitted && contactForm.invalid) {
           <span class="formError" [innerHTML]="'contact.form.label.error' | translate"></span>
         }
-        <button class="scroll-up" type="button" (click)="scrollToSection('home')">
-          {{ 'contact.form.button.text' | translate }}
+        <button
+          class="scroll-up"
+          type="button"
+          (click)="scrollToSection('home')"
+          aria-label="Nach oben"
+        >
+          <img src="/assets/images/arrow_down.svg" alt="" aria-hidden="true" />
         </button>
       </form>
     </div>

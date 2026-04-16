@@ -5,7 +5,13 @@
   background-color: v.$pf-black;
   color: white;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  padding-bottom: v.$space-xl;
+
+  @include for-size(tablet-landscape){
+    align-items: center;
+    padding-bottom: 0;
+  }
 
   h2{
     color: v.$pf-yellow;
@@ -16,32 +22,35 @@
     flex-direction: column;
     justify-content: space-between;
     align-content: center;
-    max-height: 80vh;
+    max-height: none;
+    gap: v.$space-xl;
+
     @include for-size(tablet-landscape){
       flex-direction: row;
-      height: 70vh;
+      height: auto;
       gap: v.$space-xxl;
-    }
-    @include for-size(big-desktop){
-      flex-direction: row;
-      height: 60vh;
     }
 
     .headline-wrapper{
       flex: 0 0 100%;
+
       h2{
         margin-bottom: v.$space-xl;
       }
+
       h4{
         margin-bottom: v.$space-md;
         color: v.$pf-orange;
       }
+
       @include for-size(tablet-landscape){
         flex: 0 0 40%;
       }
     }
+
     .content-wrapper{
       flex: 0 0 100%;
+
       @include for-size(tablet-landscape){
         flex: 0 0 50%;
       }
@@ -49,77 +58,82 @@
   }
 
   form{
+    width: 100%;
+    max-width: 42rem;
+
     div.field{
       display: flex;
       flex-direction: column;
 
       &.message,
       &.checkbox{
-        flex-direction: row;
         margin-top: v.$space-xl;
       }
+
       &.message{
-        flex-direction: row;
         display: block;
         width: 100%;
-        margin-top: v.$space-xl;
       }
+
       &.checkbox{
-        margin-top: v.$space-xl;
+        flex-direction: row;
+        align-items: flex-start;
       }
 
       @include for-size(tablet-landscape){
         max-width: 37.5rem;
       }
     }
+
     div.two-fields{
       display: flex;
-      gap: 0;
-      flex-direction: row;
       justify-content: space-between;
       flex-wrap: wrap;
+
       @include for-size(tablet-landscape){
         flex-wrap: nowrap;
         gap: v.$space-xl;
       }
+
       div{
-        flex: auto;
+        flex: 1 1 100%;
+
         @include for-size(tablet-landscape){
           flex: 0 0 50%;
         }
       }
     }
+
     .name,
     .email,
     .message{
       margin-top: v.$space-xl;
+
       div.field{
         width: 100%;
+
         &.input-error{
           label{
             color: v.$pf-orange;
           }
-          input,
-          textarea{
-            &::placeholder{
-              font-size: v.$pf-red;
-            }
-            &.ng-invalid{
-              &::placeholder{
-                font-size: v.$pf-red;
-              }
-            }
+
+          input::placeholder,
+          textarea::placeholder{
+            color: v.$pf-orange;
           }
         }
       }
+
       label{
         font-size: 1.25rem;
         font-weighT: 700;
         padding: 0 v.$space-md;
+
         @include for-size(tablet-landscape){
           font-size: 1.5rem;
         }
       }
+
       input, textarea{
         padding: v.$space-md;
         min-height: 3rem;
@@ -128,20 +142,27 @@
         line-height: 1.4;
         border-bottom: 1px solid v.$pf-yellow;
       }
+
+      textarea{
+        min-height: 8rem;
+        resize: vertical;
+      }
     }
     .checkbox{
       display: flex;
       gap: 1rem;
+
       .formError{
         display: flex;
         flex-wrap: wrap;
       }
+
       input{
-        background-color: none;
         border: 0;
         position: relative;
         visibility: hidden;
         cursor: pointer;
+
         &:before{
           visibility: visible;
           position: absolute;
@@ -154,10 +175,9 @@
           width: 1rem;
           height: 1rem;
         }
-        &.ng-valid{
-          &:before{
-            background-image: url(../../../../public/assets/images/checkox_checked.svg);
-          }
+
+        &.ng-valid:before{
+          background-image: url(../../../../public/assets/images/checkox_checked.svg);
         }
       }
     }
@@ -175,6 +195,7 @@
   font-weight: 700;
   font-size:1.125rem;
   transition: all 0.125s ease-in;
+  width: fit-content;
   &:hover{
     background-color: v.$pf-orange;
   }

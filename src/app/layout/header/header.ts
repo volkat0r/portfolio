@@ -13,6 +13,7 @@ import { ScrollService } from '../../shared/services/scroll.service';
 })
 export class Header implements AfterViewInit, OnDestroy {
   private onWindowScroll = () => this.updateTopState();
+  private vvHandler: (() => void) | null = null;
 
   constructor(private scrollService: ScrollService) {}
 
@@ -25,6 +26,7 @@ export class Header implements AfterViewInit, OnDestroy {
   ngAfterViewInit() {
     window.addEventListener('scroll', this.onWindowScroll, { passive: true });
     this.updateTopState();
+    this.initVisualViewport();
 
     const sections = document.querySelectorAll<HTMLElement>('section[id]');
 
@@ -52,6 +54,10 @@ export class Header implements AfterViewInit, OnDestroy {
 
   ngOnDestroy() {
     window.removeEventListener('scroll', this.onWindowScroll);
+    if (this.vvHandler && window.visualViewport) {
+      window.visualViewport.removeEventListener('resize', this.vvHandler);
+      window.visualViewport.removeEventListener('scroll', this.vvHandler);
+    }
   }
 
   private updateSectionClass(activeId: string) {
@@ -73,5 +79,17 @@ export class Header implements AfterViewInit, OnDestroy {
     } else {
       body.classList.remove('at-top');
     }
+  }
+
+  private initVisualViewport() {
+    if (!window.visualViewport) return;
+    const update = () => {
+      const offsetTop = window.visualViewport!.offsetTop;
+      document.documentElement.style.setProperty('--pf-vv-top', `${offsetTop}px`);
+    };
+    this.vvHandler = update;
+    window.visualViewport.addEventListener('resize', update, { passive: true });
+    window.visualViewport.addEventListener('scroll', update, { passive: true });
+    update();
   }
 }

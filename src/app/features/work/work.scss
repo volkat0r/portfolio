@@ -9,6 +9,12 @@
   color: v.$pf-black;
   .container{
     display: block;
+    padding-top: v.$space-lg;
+    padding-bottom: v.$space-xl;
+    @include for-size(tablet-landscape){
+      padding-top: 0;
+      padding-bottom: 0;
+    }
   }
 }
 
@@ -30,12 +36,12 @@
 
   .showcase-box{
     display: flex;
-    max-width: 40%;
+    max-width: min(32rem, 100%);
     aspect-ratio: 1 / 1;
     width: 100%;
-    min-width: 30.5rem;
+    min-width: 0;
     background: v.$pf-yellow;
-    padding: v.$space-xl;
+    padding: clamp(1rem, 4vw, 2rem);
     border-radius: v.$base-border-radius;
     border: 1px solid v.$pf-black;
     position: relative;
@@ -48,8 +54,8 @@
       background-image: url(../../../../public/assets/images/wheel_orange_big.svg);
       background-repeat: no-repeat;
       background-size: 100%;
-      width: 16.625rem;
-      height: 16.625rem;
+      width: clamp(9rem, 40vw, 16.625rem);
+      height: clamp(9rem, 40vw, 16.625rem);
       animation: turning 20s linear infinite;
       @include for-size(tablet-landscape){
         width: 16.625rem;
@@ -67,7 +73,10 @@
     }
   }
   .reference-details{
-    width: 60%;
+    width: 100%;
+    @include for-size(tablet-landscape){
+      width: 60%;
+    }
   }
   @include for-size(tablet-landscape){
     flex-direction: row;
@@ -121,7 +130,7 @@
   .slide{
     display: flex;
     width: 100%;
-    gap: 2rem;
+    gap: clamp(1rem, 3vw, 2rem);
     align-items: center;
     position: absolute;
     top: 0;
@@ -146,6 +155,7 @@
 }
 
 #workBox{
+  width: 100%;
   @include for-size(tablet-landscape){
     max-width: 37.5rem;
   }
@@ -153,11 +163,17 @@
 }
 ul.reference-nav{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin: v.$space-md 0;
   gap: v.$space-lg;
+  flex-wrap: wrap;
   li{
     cursor: pointer;
     font-weight:700;
   }
+}
+
+.ref-links{
+  flex-wrap: wrap;
+  gap: 1rem;
 }

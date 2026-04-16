@@ -5,6 +5,8 @@ header{
   flex-direction: row;
   align-items: center;
   position: fixed;
+  top: var(--pf-vv-top, 0px);
+  left: 0;
   width:100%;
   z-index: 5;
 
@@ -23,8 +25,29 @@ header{
 
 #logo{
   display: flex;
+
+  img {
+    display: block;
+  }
+
+  .logo-light {
+    display: none;
+  }
+
   li{
     cursor: pointer;
+  }
+}
+
+:host-context(.theme-light) {
+  #logo {
+    .logo-default {
+      display: none;
+    }
+
+    .logo-light {
+      display: block;
+    }
   }
 }
 

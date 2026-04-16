@@ -1,7 +1,7 @@
-<svg width="192" height="40" viewBox="0 0 192 40" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="umgestalt logo">
+<svg width="192" height="40" viewBox="0 0 192 40" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="umgestalt logo light theme">
   <style>
     .wordmark {
-      fill: #F8F7E5;
+      fill: #000000;
       font-family: 'Quicksand', sans-serif;
       font-size: 35px;
       font-weight: 500;

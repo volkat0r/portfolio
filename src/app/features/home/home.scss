@@ -150,6 +150,8 @@ div.rotatingWheel{
   bottom: -1.5rem;
   left: 0;
   z-index: 2;
+  background-color: v.$pf-blue;
+  border-radius: 100%;
 
   @include for-size(tablet-landscape){
     margin-top: v.$space-xxxl;
@@ -163,8 +165,8 @@ div.rotatingWheel{
   @include for-size(phone){
     width: 4.7rem;
     height: 4.7rem;
-    bottom: -1rem;
-    left: 0.2rem;
+    bottom: 2rem;
+    left: 1rem;
   }
   img{
     animation: turning 8s linear infinite;

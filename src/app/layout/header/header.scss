@@ -40,6 +40,14 @@ div.header-left{
   }
 }
 
+:host-context(.sector-home:not(.at-top)) {
+  div.header-left{
+    @include for-size(tablet-landscape){
+      display: none;
+    }
+  }
+}
+
 div.header-right{
   display: flex;
   flex-direction: row;

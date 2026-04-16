@@ -128,17 +128,6 @@
   }
 }
 
-:host-context(.sector-home) {
-  .overlay{
-    #contact-links{
-      display: none;
-      @include for-size(desktop){
-        display:block;
-      }
-    }
-  }
-}
-
 :host-context(.sector-about) .overlay .mainNav a.about,
 :host-context(.sector-tech) .overlay .mainNav a.tech,
 :host-context(.sector-work) .overlay .mainNav a.work,

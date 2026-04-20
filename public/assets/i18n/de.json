@@ -10,8 +10,8 @@
   },
   "about":{
     "headline": "Über mich",
-    "text": "Hey, Ich bin Pepe und ich hasse Hühner. Besonders den großen Idioten am Ende meines Spiels. Ich springe gerne auf Hühner und werfe zufällig Salsa-Flaschen herum... Ich schlafe auch gerne und renne durch die Wüste.",
-    "connect": "Lass uns verbinden, wenn du auch Hühner hasst!",
+    "text": "Ich bin Volker, Frontend-Entwickler aus Köln, mit langjähriger Erfahrung an der Schnittstelle von Design und Entwicklung. Durch meinen Hintergrund im Grafikdesign verbinde ich visuelle Qualität mit technischer Umsetzung und entwickle moderne, responsive Interfaces, die intuitiv nutzbar und wartbar sind.",
+    "connect": "Ich freue mich auf Projekte, bei denen klare UX, saubere Code-Struktur und starke Teamarbeit gefragt sind.",
     "button": "Zum Kontaktformular",
     "dialog": {
       "headline": "Mehr über mich",
@@ -26,17 +26,17 @@
   },
   "tech":{
     "headline" :"Tech",
-    "text": "Hier finden Sie eine Übersicht meiner technischen Fähigkeiten und Kenntnisse.",
+    "text": "Ich entwickle Frontends mit Fokus auf Performance, Usability und klare Architektur. Mein Stack reicht von HTML, CSS/SCSS, JavaScript und TypeScript bis zu Angular, REST APIs, Git und Supabase. Gleichzeitig bringe ich Designkompetenz mit, um Corporate-Vorgaben präzise in funktionale Interfaces zu übersetzen.",
     "dialog": {
       "headline": "Du findest die gesuchte Fähigkeit nicht?",
-      "text": "Zögern Sie nicht, mich zu kontaktieren. Ich freue mich darauf, mein bisheriges Wissen zu erweitern. Außerdem habe ich ein besonderes Interesse daran, zu lernen:"
+      "text": "Melde dich gerne bei mir. Ich erweitere mein Skillset kontinuierlich und arbeite mich schnell in neue Tools ein - sowohl in der Entwicklung als auch im Design-Workflow. Aktuell interessiert mich besonders:"
     }
   },
   "contact":{
     "intro":{
       "headline":"Lass mal quatschen!",
       "subheadline": "Hast du ein Projekt für mich?",
-      "introtext": "Wenn du mit mir in Kontakt treten möchtest, beschreibe bitte, welche Rolle dich interessiert. Zeige, dass du durch deine Arbeit einen Mehrwert für ihre Projekte schaffen wirst."
+      "introtext": "Ob Projekt, Frage oder einfach Hallo – ich freue mich von dir zu hören. Schreib mir gerne, ich antworte schnell."
     },
     "form":{
       "label":{
@@ -52,7 +52,7 @@
         "email-error": "Fehler bei der E-Mail",
         "message": "Hey, ich bin interessiert an...",
         "message-error": "Fehler bei der Nachricht",
-        "privacyPolicy": "Ich habe die <a href='https://www.google.com' target='_blank'>Datenschutzrichtlinie</a> gelesen und stimme der Verarbeitung meiner Daten zu.",
+        "privacyPolicy": "Ich habe die <a href='/legal#privacy'>Datenschutzerklaerung</a> gelesen und stimme der Verarbeitung meiner Daten zu.",
         "privacyPolicy-error": "Bitte lesen und akzeptieren Sie die Datenschutzrichtlinie!"
       },
       "button":{
@@ -62,7 +62,7 @@
   },
   "work":{
     "headline": "Projekte",
-    "intro": "Hier finden Sie eine Auswahl meiner bisherigen Projekte.",
+    "intro": "Ein paar Dinge, die ich zuletzt gebaut habe – schau gerne rein!",
     "project01":{
       "headline": "El Pollo Loco",
       "tech": "HTML, CSS, JavaScript",
@@ -93,19 +93,65 @@
       "text": "Zum Linked-In Profil"
     },
     "ref1":{
-      "name": "Arno Nym",
-      "text": "Hanna hat sich als zuverlässiger Gruppenpartner erwiesen. Seine technischen Fähigkeiten und sein proaktiver Ansatz waren entscheidend für den Erfolg unseres Projekts.",
-      "position": "arbeitsloooos 4 ever"
+      "name": "Dominik Koniorczyk",
+      "text": "Ich habe Volker als einen Menschen mit Blick fürs Detail kennen gelernt. Seine CSS Skills übertreffen alles was ich bisher gesehen habe. Seine Lernbereitschaft ist sehr hoch und für Kritik hat er immer ein offenes Ohr. Seine freundliche und offene Art macht die Zusammenarbeit sehr angenehm.",
+      "position": "Spiele-Entwickler | Frontend-Entwickler"
     },
     "ref2":{
-      "name": "Max Mustermann",
-      "text": "Ich hatte das Glück, mit Hanna in einem Gruppenprojekt an der Developer Akademie zu arbeiten, das viel Einsatz erforderte. Er blieb immer ruhig, cool und konzentriert und sorgte dafür, dass unser Team erfolgreich aufgestellt war. Er ist sehr kompetent, leicht im Umgang und ich würde jederzeit wieder mit ihm arbeiten, wenn sich die Gelegenheit bietet.",
-      "position": "Frontend Developer"
+      "name": "Martin Trzaskalik",
+      "text": "Volker bewies stets eine ausgeprägte Kundenorientierung und war sehr stolz auf seine Arbeit. Er lieferte hochwertige Lösungen, die nicht nur optisch überzeugten, sondern auch messbare Verbesserungen bei Konversionsraten und Kundenzufriedenheit bewirkten. Seine Fähigkeit, komplexe Anforderungen klar und effizient zu managen, machte ihn zu einem gefragten Experten, insbesondere wenn es darum ging, sich in den Feinheiten unserer umfassenden Plattform zurechtzufinden.",
+      "position": "Co-Founder | Senior Advisor"
     },
     "ref3":{
-      "name": "Lirum Larum",
-      "text": "Unser Projekt profitierte enorm von Simons effizienter Arbeitsweise.",
-      "position": "Pixelschubser"
+      "name": "Patrick Schauer",
+      "text": "Volker ist ein Adlerauge was Design und UX angeht. Aufgrund seiner umfangreichen Erfahrung, weiss er, wie man in der CSS-Welt professionell gestylte, wiederverwendbare UI-Komponenten baut. Ich schätze seine lockere Art und und die vielen passgenauen Fragen, die das Projekt verbessern.",
+      "position": "Physiker | Frontend-Entwickler"
+    }
+  },
+  "legal": {
+    "headline": "Rechtliches",
+    "intro": "Hier findest du alle Pflichtangaben zu Impressum und Datenschutz fuer dieses Portfolio.",
+    "imprint": {
+      "headline": "Impressum",
+      "subtitle": "Angaben gemaess Paragraf 5 TMG",
+      "name": "Volker Derksen",
+      "street": "Luxemburger Strasse 177",
+      "city": "50939 Koeln",
+      "country": "Deutschland",
+      "emailLabel": "E-Mail:",
+      "responsible": "Verantwortlich fuer den Inhalt nach Paragraf 18 Abs. 2 MStV: Volker Derksen, Anschrift wie oben."
+    },
+    "privacy": {
+      "headline": "Datenschutzerklaerung",
+      "general": {
+        "headline": "1. Allgemeine Hinweise",
+        "text": "Der Schutz deiner personenbezogenen Daten ist mir wichtig. Personenbezogene Daten werden auf dieser Website nur im technisch notwendigen Umfang sowie bei aktiver Kontaktaufnahme verarbeitet."
+      },
+      "controller": {
+        "headline": "2. Verantwortliche Stelle",
+        "text": "Verantwortlich fuer die Datenverarbeitung auf dieser Website ist:"
+      },
+      "hosting": {
+        "headline": "3. Hosting und Server-Logfiles",
+        "text": "Beim Aufruf der Website koennen durch den Hostinganbieter automatisch Informationen in sogenannten Server-Logfiles erfasst werden (z. B. Browsertyp, Betriebssystem, Referrer-URL, Uhrzeit der Serveranfrage, IP-Adresse). Diese Daten dienen der technischen Stabilitaet und Sicherheit und werden nicht mit anderen Datenquellen zusammengefuehrt."
+      },
+      "contact": {
+        "headline": "4. Kontaktformular",
+        "text": "Wenn du mir ueber das Kontaktformular schreibst, werden deine Angaben aus dem Formular (Name, E-Mail, Nachricht) zur Bearbeitung deiner Anfrage verarbeitet. Die Verarbeitung erfolgt auf Grundlage deiner Einwilligung bzw. zur Bearbeitung deiner Anfrage."
+      },
+      "storage": {
+        "headline": "5. Speicherdauer",
+        "text": "Ich speichere personenbezogene Daten nur so lange, wie es fuer die Bearbeitung deiner Anfrage erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen."
+      },
+      "rights": {
+        "headline": "6. Deine Rechte",
+        "text": "Du hast jederzeit das Recht auf Auskunft ueber deine gespeicherten personenbezogenen Daten sowie auf Berichtigung, Loeschung, Einschraenkung der Verarbeitung und Widerspruch gegen die Verarbeitung im Rahmen der gesetzlichen Vorgaben."
+      },
+      "links": {
+        "headline": "7. Externe Links",
+        "text": "Diese Website enthaelt Links zu externen Plattformen wie LinkedIn oder GitHub. Beim Anklicken dieser Links gelten die Datenschutzbestimmungen der jeweiligen Anbieter."
+      },
+      "updated": "Stand: April 2026"
     }
   }
 }

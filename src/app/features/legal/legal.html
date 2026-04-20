@@ -1,15 +1,78 @@
 <app-header></app-header>
 
 <main>
-  <section id="legal">
+  <section id="legal" data-theme="dark">
     <div class="container">
-      <h1>Legal notice</h1>
-      <h4>Imprint</h4>
-      <ul>
-        <li>Volker Derksen</li>
-        <li>Luxemburger Straße 177</li>
-        <li>50939 Cologne | Germany</li>
-      </ul>
+      <div class="headline-wrapper">
+        <h1>{{ 'legal.headline' | translate }}</h1>
+        <p>
+          {{ 'legal.intro' | translate }}
+        </p>
+      </div>
+
+      <div class="legal-grid">
+        <article class="legal-card" id="imprint">
+          <h2>{{ 'legal.imprint.headline' | translate }}</h2>
+          <p>{{ 'legal.imprint.subtitle' | translate }}</p>
+          <ul>
+            <li>{{ 'legal.imprint.name' | translate }}</li>
+            <li>{{ 'legal.imprint.street' | translate }}</li>
+            <li>{{ 'legal.imprint.city' | translate }}</li>
+            <li>{{ 'legal.imprint.country' | translate }}</li>
+          </ul>
+          <p>
+            {{ 'legal.imprint.emailLabel' | translate }}
+            <a href="mailto:hallo@umgestalt.de">hallo@umgestalt.de</a>
+          </p>
+          <p>
+            {{ 'legal.imprint.responsible' | translate }}
+          </p>
+        </article>
+
+        <article class="legal-card" id="privacy">
+          <h2>{{ 'legal.privacy.headline' | translate }}</h2>
+          <h4>{{ 'legal.privacy.general.headline' | translate }}</h4>
+          <p>
+            {{ 'legal.privacy.general.text' | translate }}
+          </p>
+
+          <h4>{{ 'legal.privacy.controller.headline' | translate }}</h4>
+          <p>
+            {{ 'legal.privacy.controller.text' | translate }}
+            <br />
+            {{ 'legal.imprint.name' | translate }}, {{ 'legal.imprint.street' | translate }},
+            {{ 'legal.imprint.city' | translate }},
+            <a href="mailto:hallo@umgestalt.de">hallo@umgestalt.de</a>
+          </p>
+
+          <h4>{{ 'legal.privacy.hosting.headline' | translate }}</h4>
+          <p>
+            {{ 'legal.privacy.hosting.text' | translate }}
+          </p>
+
+          <h4>{{ 'legal.privacy.contact.headline' | translate }}</h4>
+          <p>
+            {{ 'legal.privacy.contact.text' | translate }}
+          </p>
+
+          <h4>{{ 'legal.privacy.storage.headline' | translate }}</h4>
+          <p>
+            {{ 'legal.privacy.storage.text' | translate }}
+          </p>
+
+          <h4>{{ 'legal.privacy.rights.headline' | translate }}</h4>
+          <p>
+            {{ 'legal.privacy.rights.text' | translate }}
+          </p>
+
+          <h4>{{ 'legal.privacy.links.headline' | translate }}</h4>
+          <p>
+            {{ 'legal.privacy.links.text' | translate }}
+          </p>
+
+          <p class="legal-date">{{ 'legal.privacy.updated' | translate }}</p>
+        </article>
+      </div>
     </div>
   </section>
 </main>

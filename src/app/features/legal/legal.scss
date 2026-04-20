@@ -1,12 +1,89 @@
 @use 'styles/variables' as v;
 @use 'styles/mixins' as *;
 
-#legal{
-  display: flex;
+#legal {
+  display: block;
   background-color: v.$pf-black;
   color: v.$pf-beige;
+  min-height: 100vh;
+  height: auto;
+  padding-bottom: v.$space-xxxl;
 
-  h4{
-    color: v.$pf-yellow;
+  @include for-size(tablet-landscape) {
+    min-height: auto;
+    height: auto;
+  }
+
+  .headline-wrapper {
+    max-width: 60rem;
+    margin-bottom: v.$space-xxl;
+
+    h1 {
+      color: v.$pf-yellow;
+      margin-bottom: v.$space-md;
+    }
+
+    p {
+      color: v.$pf-beige;
+      font-size: 1.125rem;
+      line-height: 1.7;
+      opacity: 0.92;
+    }
+  }
+
+  .legal-grid {
+    display: grid;
+    gap: v.$space-lg;
+    grid-template-columns: 1fr;
+
+    @include for-size(tablet-landscape) {
+      grid-template-columns: 1fr;
+      gap: v.$space-xl;
+    }
+  }
+
+  .legal-card {
+    border: 1px solid rgba(248, 247, 229, 0.2);
+    border-radius: 1rem;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+    padding: v.$space-xl;
+
+    h2 {
+      color: v.$pf-orange;
+      margin-bottom: v.$space-lg;
+    }
+
+    h4 {
+      color: v.$pf-yellow;
+      margin-top: v.$space-lg;
+      margin-bottom: v.$space-sm;
+      font-size: 1.1rem;
+    }
+
+    p,
+    li {
+      line-height: 1.75;
+      color: v.$pf-beige;
+      opacity: 0.95;
+    }
+
+    ul {
+      margin: 0 0 v.$space-md 0;
+      padding-left: 1.15rem;
+    }
+
+    a {
+      color: v.$pf-blue;
+
+      &:hover {
+        color: v.$pf-orange;
+      }
+    }
+  }
+
+  .legal-date {
+    margin-top: v.$space-xl;
+    font-size: 0.95rem;
+    opacity: 0.8;
   }
 }

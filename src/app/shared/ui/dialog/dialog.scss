@@ -6,15 +6,21 @@ dialog{
   display: block;
   opacity: 0;
   pointer-events: none;
-  top:0;
-  transform: translateY(8rem);
+  top: 50%;
+  left: 50%;
+  width: min(26rem, calc(100vw - 2rem));
+  margin: 0;
+  transform: translate(-50%, calc(-50% + 4rem));
   transition: opacity 0.3s ease-out, transform 0.3s ease-out;
   padding: v.$space-xl;
+  max-height: calc(100vh - 2rem);
+  overflow: auto;
 
   &[open]{
     opacity: 1;
-    transform: translateY(0);
+    transform: translate(-50%, -50%);
     pointer-events: auto;
+    z-index: 500;
   }
 
   @include for-size(tablet-landscape){
@@ -26,8 +32,16 @@ dialog{
     color: v.$pf-beige;
     border-radius: v.$base-border-radius;
     border: 1px solid v.$pf-black;
-    left: 43%;
-    top: 47%;
+
+    @include for-size(tablet-landscape){
+      left: 43%;
+      top: 47%;
+      transform: translateY(8rem);
+
+      &[open]{
+        transform: translateY(0);
+      }
+    }
   }
 
   &.dl--yellow{

@@ -12,31 +12,37 @@
           <div class="slide work1" [class.active]="current_slide_index === 0">
             <div class="showcase-box">
               <img
-                src="/assets/images/example_work_small.png"
+                src="/assets/images/epl-screenshot.webp"
                 width="700"
                 height="538"
                 loading="lazy"
               />
             </div>
-            <div class="reference-details">
-              <ui-content-box variant="work" id="workBox">
-                <h4>{{ 'work.project01.headline' | translate }}</h4>
-                <span class="technology">{{ 'work.project01.tech' | translate }}</span>
-                <p>
-                  {{ 'work.project01.description' | translate }}
-                </p>
-                <div class="ref-links">
-                  <ui-button
-                    variant="primary"
-                    target="_blank"
-                    href="https://github.com/volkat0r/el_polo_loco"
-                    >{{ 'work.button.github' | translate }}</ui-button
-                  >
-                  <ui-button variant="primary" target="_blank" href="http://epl.umgestalt.de/">
-                    {{ 'work.button.livetest' | translate }}</ui-button
-                  >
-                </div>
-              </ui-content-box>
+            <div class="reference-content">
+              <div class="reference-details">
+                <ui-content-box variant="work" id="workBox">
+                  <h4>{{ 'work.project01.headline' | translate }}</h4>
+                  <span class="technology">{{ 'work.project01.tech' | translate }}</span>
+                  <p>
+                    {{ 'work.project01.description' | translate }}
+                  </p>
+                  <div class="ref-links">
+                    <ui-button
+                      variant="primary"
+                      target="_blank"
+                      href="https://github.com/volkat0r/el_polo_loco"
+                      >{{ 'work.button.github' | translate }}</ui-button
+                    >
+                    <ui-button variant="primary" target="_blank" href="http://epl.umgestalt.de/">
+                      {{ 'work.button.livetest' | translate }}</ui-button
+                    >
+                  </div>
+                </ui-content-box>
+              </div>
+              <ul class="reference-nav">
+                <li (click)="btnPrev()">{{ 'work.button.prev' | translate }}</li>
+                <li (click)="btnNext()">{{ 'work.button.next' | translate }}</li>
+              </ul>
             </div>
           </div>
 
@@ -49,18 +55,26 @@
                 loading="lazy"
               />
             </div>
-            <div class="reference-details">
-              <ui-content-box variant="work" id="workBox">
-                <h4>{{ 'work.project02.headline' | translate }}</h4>
-                <span class="technology">{{ 'work.project02.tech' | translate }}</span>
-                <p>
-                  {{ 'work.project02.description' | translate }}
-                </p>
-                <div class="ref-links">
-                  <ui-button variant="primary">{{ 'work.button.github' | translate }}</ui-button>
-                  <ui-button variant="primary">{{ 'work.button.livetest' | translate }}</ui-button>
-                </div>
-              </ui-content-box>
+            <div class="reference-content">
+              <div class="reference-details">
+                <ui-content-box variant="work" id="workBox">
+                  <h4>{{ 'work.project02.headline' | translate }}</h4>
+                  <span class="technology">{{ 'work.project02.tech' | translate }}</span>
+                  <p>
+                    {{ 'work.project02.description' | translate }}
+                  </p>
+                  <div class="ref-links">
+                    <ui-button variant="primary">{{ 'work.button.github' | translate }}</ui-button>
+                    <ui-button variant="primary">{{
+                      'work.button.livetest' | translate
+                    }}</ui-button>
+                  </div>
+                </ui-content-box>
+              </div>
+              <ul class="reference-nav">
+                <li (click)="btnPrev()">{{ 'work.button.prev' | translate }}</li>
+                <li (click)="btnNext()">{{ 'work.button.next' | translate }}</li>
+              </ul>
             </div>
           </li>
 
@@ -73,24 +87,28 @@
                 loading="lazy"
               />
             </div>
-            <div class="reference-details">
-              <ui-content-box variant="work" id="workBox">
-                <h4>{{ 'work.project03.headline' | translate }}</h4>
-                <span class="technology">{{ 'work.project03.tech' | translate }}</span>
-                <p>
-                  {{ 'work.project03.description' | translate }}
-                </p>
-                <div class="ref-links">
-                  <ui-button variant="primary">{{ 'work.button.github' | translate }}</ui-button>
-                  <ui-button variant="primary">{{ 'work.button.livetest' | translate }}</ui-button>
-                </div>
-              </ui-content-box>
+            <div class="reference-content">
+              <div class="reference-details">
+                <ui-content-box variant="work" id="workBox">
+                  <h4>{{ 'work.project03.headline' | translate }}</h4>
+                  <span class="technology">{{ 'work.project03.tech' | translate }}</span>
+                  <p>
+                    {{ 'work.project03.description' | translate }}
+                  </p>
+                  <div class="ref-links">
+                    <ui-button variant="primary">{{ 'work.button.github' | translate }}</ui-button>
+                    <ui-button variant="primary">{{
+                      'work.button.livetest' | translate
+                    }}</ui-button>
+                  </div>
+                </ui-content-box>
+              </div>
+              <ul class="reference-nav">
+                <li (click)="btnPrev()">{{ 'work.button.prev' | translate }}</li>
+                <li (click)="btnNext()">{{ 'work.button.next' | translate }}</li>
+              </ul>
             </div>
           </li>
-        </ul>
-        <ul class="reference-nav">
-          <li (click)="btnPrev()" class="prev">{{ 'work.button.prev' | translate }}</li>
-          <li (click)="btnNext()" class="next">{{ 'work.button.next' | translate }}</li>
         </ul>
       </div>
     </div>

@@ -55,17 +55,39 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  img{
-    height: auto;
-    width: min(100%, 24rem);
-    border-radius: v.$base-border-radius;
-    @include for-size(tablet-landscape){
-      width: min(100%, 32rem);
-    }
-  }
   @include for-size(tablet-landscape){
     width: 48%;
     justify-content: flex-start;
+  }
+
+  .profile-img-wrapper{
+    position: relative;
+    width: min(100%, 24rem);
+    @include for-size(tablet-landscape){
+      width: min(100%, 32rem);
+    }
+
+    img{
+      display: block;
+      height: auto;
+      width: 100%;
+      border-radius: v.$base-border-radius;
+      transition: opacity 0.4s ease;
+    }
+
+    .img-color{
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+    }
+
+    &:hover .img-color{
+      opacity: 1;
+    }
+
+    &:hover .img-sw{
+      opacity: 0;
+    }
   }
 }
 
@@ -118,8 +140,10 @@
 
 #aboutDialog{
   .dl--blue{
-    left: 43%;
-    top: 47%;
+    @include for-size(tablet-landscape){
+      left: 43%;
+      top: 47%;
+    }
   }
 }
 

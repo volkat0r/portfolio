@@ -13,7 +13,7 @@ export const routes: Routes = [
       },
     ],
   },
+  { path: 'legal', component: Legal },
   { path: '', redirectTo: 'de', pathMatch: 'full' },
   { path: '**', redirectTo: 'de' },
-  { path: 'legal', component: Legal },
 ];

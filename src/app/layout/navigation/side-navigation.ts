@@ -1,4 +1,4 @@
-import { Component, HostBinding } from '@angular/core';
+import { Component } from '@angular/core';
 import { ScrollService } from '../../shared/services/scroll.service';
 
 @Component({
@@ -8,8 +8,6 @@ import { ScrollService } from '../../shared/services/scroll.service';
   styleUrl: './side-navigation.scss',
 })
 export class SideNavigation {
-  @HostBinding('class') activeTheme = 'theme-dark';
-
   constructor(private scrollService: ScrollService) {}
 
   scrollToSection(id: string) {

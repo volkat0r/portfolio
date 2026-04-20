@@ -1,59 +1,58 @@
-import { Component, AfterViewInit, HostBinding, OnDestroy } from '@angular/core';
+import { Component, AfterViewInit, OnDestroy } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { ContactLinks } from './contact-links/contact-links';
 import { LanguageToggle } from './language-toggle/language-toggle';
 import { MainNav } from './main-nav/main-nav';
-import { ScrollService } from '../../shared/services/scroll.service';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [ContactLinks, LanguageToggle, MainNav],
+  imports: [ContactLinks, LanguageToggle, MainNav, RouterLink],
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })
 export class Header implements AfterViewInit, OnDestroy {
-  private onWindowScroll = () => this.updateTopState();
+  private onWindowScroll = () => {
+    this.updateTopState();
+    this.scheduleActiveSectionSync();
+  };
   private vvHandler: (() => void) | null = null;
-
-  constructor(private scrollService: ScrollService) {}
-
-  scrollToSection(id: string) {
-    this.scrollService.scrollToElementById(id);
-  }
-
-  @HostBinding('class') activeTheme = 'theme-dark';
+  private sectionObserver: IntersectionObserver | null = null;
+  private frameId: number | null = null;
+  private sections: HTMLElement[] = [];
+  private sectionRatios = new Map<string, number>();
+  private activeSectionId = '';
+  private activeTheme = '';
 
   ngAfterViewInit() {
     window.addEventListener('scroll', this.onWindowScroll, { passive: true });
     this.updateTopState();
     this.initVisualViewport();
 
-    const sections = document.querySelectorAll<HTMLElement>('section[id]');
+    this.sections = Array.from(document.querySelectorAll<HTMLElement>('section[id]'));
 
-    const observer = new IntersectionObserver(
+    this.sectionObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const target = entry.target as HTMLElement;
-            const sectionId = target.id;
-            const theme = target.dataset['theme'];
-            this.updateSectionClass(sectionId);
-            if (theme) {
-              document.body.classList.remove('theme-light', 'theme-dark');
-              document.body.classList.add(`theme-${theme}`);
-              this.activeTheme = `theme-${theme}`;
-            }
-          }
+          const target = entry.target as HTMLElement;
+          this.sectionRatios.set(target.id, entry.isIntersecting ? entry.intersectionRatio : 0);
         });
+
+        this.scheduleActiveSectionSync();
       },
-      { threshold: 0.6 },
+      { threshold: this.buildThresholds() },
     );
 
-    sections.forEach((section) => observer.observe(section));
+    this.sections.forEach((section) => this.sectionObserver?.observe(section));
+    this.syncActiveSection();
   }
 
   ngOnDestroy() {
     window.removeEventListener('scroll', this.onWindowScroll);
+    this.sectionObserver?.disconnect();
+    if (this.frameId !== null) {
+      window.cancelAnimationFrame(this.frameId);
+    }
     if (this.vvHandler && window.visualViewport) {
       window.visualViewport.removeEventListener('resize', this.vvHandler);
       window.visualViewport.removeEventListener('scroll', this.vvHandler);
@@ -91,5 +90,74 @@ export class Header implements AfterViewInit, OnDestroy {
     window.visualViewport.addEventListener('resize', update, { passive: true });
     window.visualViewport.addEventListener('scroll', update, { passive: true });
     update();
+  }
+
+  private scheduleActiveSectionSync() {
+    if (this.frameId !== null) {
+      return;
+    }
+
+    this.frameId = window.requestAnimationFrame(() => {
+      this.frameId = null;
+      this.syncActiveSection();
+    });
+  }
+
+  private syncActiveSection() {
+    const activeSection = this.getMostRelevantSection();
+
+    if (!activeSection) {
+      return;
+    }
+
+    if (activeSection.id !== this.activeSectionId) {
+      this.activeSectionId = activeSection.id;
+      this.updateSectionClass(activeSection.id);
+    }
+
+    const theme = activeSection.dataset['theme'];
+
+    if (theme && theme !== this.activeTheme) {
+      this.activeTheme = theme;
+      document.body.classList.remove('theme-light', 'theme-dark');
+      document.body.classList.add(`theme-${theme}`);
+    }
+  }
+
+  private getMostRelevantSection() {
+    const headerOffset = this.getHeaderOffset();
+    const visibleSections = this.sections.filter((section) => {
+      const rect = section.getBoundingClientRect();
+      return rect.bottom > headerOffset && rect.top < window.innerHeight;
+    });
+
+    if (!visibleSections.length) {
+      return this.sections.at(-1) ?? null;
+    }
+
+    return visibleSections.reduce((bestSection, section) => {
+      const bestScore = this.getSectionScore(bestSection, headerOffset);
+      const currentScore = this.getSectionScore(section, headerOffset);
+
+      return currentScore > bestScore ? section : bestSection;
+    });
+  }
+
+  private getSectionScore(section: HTMLElement, headerOffset: number) {
+    const rect = section.getBoundingClientRect();
+    const ratio = this.sectionRatios.get(section.id) ?? 0;
+    const distanceToHeader = Math.abs(rect.top - headerOffset);
+
+    return ratio * 1000 - distanceToHeader;
+  }
+
+  private getHeaderOffset() {
+    const header = document.querySelector('header');
+
+    return header instanceof HTMLElement ? header.offsetHeight : 0;
+  }
+
+  private buildThresholds() {
+    return Array.from({ length: 21 }, (_, index) => index / 20);
   }
 }

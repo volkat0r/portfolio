@@ -74,8 +74,17 @@
   }
   .reference-details{
     width: 100%;
+  }
+
+  .reference-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: v.$space-md;
+
     @include for-size(tablet-landscape){
       width: 60%;
+      max-width: 37.5rem;
     }
   }
   @include for-size(tablet-landscape){
@@ -164,9 +173,13 @@
 ul.reference-nav{
   display: flex;
   justify-content: center;
-  margin: v.$space-md 0;
+  margin: 0;
   gap: v.$space-lg;
   flex-wrap: wrap;
+  @include for-size(tablet-landscape){
+    justify-content: space-between;
+    gap: v.$space-md;
+  }
   li{
     cursor: pointer;
     font-weight:700;

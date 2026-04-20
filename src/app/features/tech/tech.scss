@@ -102,16 +102,21 @@
 
 #techDialog {
   ::ng-deep dialog.dl--yellow {
-    position: absolute;
-    top: auto;
-    left: 50%;
-    bottom: 100%;
-    width: min(26rem, 88vw);
-    transform: translate(-50%, 2.5rem);
+    @include for-size(tablet-landscape) {
+      position: absolute;
+      top: auto;
+      left: 50%;
+      bottom: 100%;
+      width: min(26rem, 88vw);
+      transform: translate(-50%, 2.5rem);
+    }
   }
 
   ::ng-deep dialog.dl--yellow[open] {
-    transform: translate(-50%, 0);
+    @include for-size(tablet-landscape) {
+      transform: translate(-50%, 0);
+      z-index: 500;
+    }
   }
 }
 

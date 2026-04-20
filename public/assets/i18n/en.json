@@ -10,8 +10,8 @@
   },
   "about":{
     "headline": "About me",
-    "text": "Hey there, I'm Pepe and I hate chickens. Espacially the huge moron at the end of my game. I like to jump on chickens aswell and throw around random salsa bottles... I also like to sleep & running around in the desert.",
-    "connect": "Let's connect if you also hate chickens!",
+    "text": "I'm Volker, a frontend developer based in Cologne with extensive experience at the intersection of design and development. With a background in graphic design, I combine visual quality with technical execution to build modern, responsive interfaces that are intuitive and maintainable.",
+    "connect": "I enjoy projects where strong UX, clean code architecture, and close cross-functional collaboration make the difference.",
     "button": "To the contact form",
     "dialog": {
       "headline": "More about me",
@@ -26,17 +26,17 @@
   },
   "tech":{
     "headline" :"Tech",
-    "text": "Emphasise that you have used a variety of front-end technologies in your projects. Where have you used these skills: static or dynamic websites, responsive layouts, data visualization interfaces, smooth user experiences?",
+    "text": "I build frontends with a strong focus on performance, usability, and clear architecture. My stack includes HTML, CSS/SCSS, JavaScript, TypeScript, Angular, REST APIs, Git, and Supabase. In addition, I bring design expertise to translate corporate design requirements into functional, user-friendly interfaces.",
     "dialog": {
       "headline": "Don't see the skill you are looking for?",
-      "text": "Feel free to contact me. I look forward to expanding on my previous knowledge. Also I have a special interest in learning:"
+      "text": "Feel free to reach out. I continuously expand my skill set and adapt quickly to new tools - across both engineering and design workflows. Right now, I am especially interested in:"
     }
   },
   "contact":{
     "intro":{
       "headline":"Let's build something Cool together!",
       "subheadline": "Got a problem to solve?",
-      "introtext": "Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work."
+      "introtext": "Whether you have a project in mind, a question, or just want to say hi – I'm always happy to hear from you. Let's see what we can build together."
     },
     "form":{
       "label":{
@@ -52,7 +52,7 @@
         "email-error": "Email Error",
         "message": "Hey, I'm interested in...",
         "message-error": "Message Error",
-        "privacyPolicy": "I've read the <a href='https://www.google.com' target='_blank'>privacy policy</a> and agree to the processing of my data.",
+        "privacyPolicy": "I've read the <a href='/legal#privacy'>privacy policy</a> and agree to the processing of my data.",
         "privacyPolicy-error": "Please read and accept the privacy policy!"
       },
       "button":{
@@ -62,7 +62,7 @@
   },
   "work":{
     "headline": "Projects",
-    "intro": "Here you can find a selection of my previous projects.",
+    "intro": "A few things I've built recently – have a look!",
     "project01":{
       "headline": "El Pollo Loco",
       "tech": "HTML, CSS, JavaScript",
@@ -93,19 +93,65 @@
       "text": "To Linked-In Profile"
     },
     "ref1":{
-      "name": "Arno Nym",
-      "text": "Hanna has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the success of our project.",
-      "position": "unemployed 4 ever"
+      "name": "Dominik Koniorczyk",
+      "text": "Volker has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the success of our project.",
+      "position": "Game Developer"
     },
     "ref2":{
-      "name": "Max Mustermann",
-      "text": "I had the good fortune of working with Hanna in a group project at the Developer Akademie that involved a lot of effort. He always stayed calm, cool, and focused, and made sure our team was set up for success. He's super knowledgeable, easy to work with, and I'd happily work with him again given the chance.",
-      "position": "Frontend Developer"
+      "name": "Martin Trzaskalik",
+      "text": "Volker consistently demonstrated a strong customer-centric mindset and took real pride in his work. He delivered high-quality solutions that didn’t just look good, but drove measurable improvements in both conversion rates and customer satisfaction. His ability to manage complex requirements with clarity and efficiency made him a go-to expert, especially when it came to navigating the intricacies of our comprehensive platform.",
+      "position": "Co-Founder | Senior Advisor"
     },
     "ref3":{
-      "name": "Lirum Larum",
-      "text": "Our project benefited enormously from Simon's efficient way of working.",
-      "position": "Graphic Designer"
+      "name": "Patrick Schauer",
+      "text": "Volker is an eagle eye when it comes to design and UX. Due to his extensive experience, he knows how to build professionally styled, reusable UI components in the CSS world. I appreciate his relaxed manner and the many precise questions that improve the project.",
+      "position": "Physician | Frontend Developer"
+    }
+  },
+  "legal": {
+    "headline": "Legal",
+    "intro": "Here you can find the required legal information for this portfolio, including imprint and privacy policy.",
+    "imprint": {
+      "headline": "Imprint",
+      "subtitle": "Information according to Section 5 TMG",
+      "name": "Volker Derksen",
+      "street": "Luxemburger Strasse 177",
+      "city": "50939 Cologne",
+      "country": "Germany",
+      "emailLabel": "Email:",
+      "responsible": "Responsible for content according to Section 18 para. 2 MStV: Volker Derksen, address as above."
+    },
+    "privacy": {
+      "headline": "Privacy Policy",
+      "general": {
+        "headline": "1. General information",
+        "text": "Protecting your personal data is important to me. Personal data is processed on this website only to the technically necessary extent and when you actively contact me."
+      },
+      "controller": {
+        "headline": "2. Data controller",
+        "text": "The controller responsible for data processing on this website is:"
+      },
+      "hosting": {
+        "headline": "3. Hosting and server log files",
+        "text": "When this website is accessed, the hosting provider may automatically collect information in server log files (e.g. browser type, operating system, referrer URL, time of request, IP address). This data is used for technical stability and security and is not combined with other data sources."
+      },
+      "contact": {
+        "headline": "4. Contact form",
+        "text": "If you contact me via the contact form, your form data (name, email, message) will be processed to handle your request. Processing is based on your consent and for the purpose of responding to your inquiry."
+      },
+      "storage": {
+        "headline": "5. Storage period",
+        "text": "Personal data is stored only as long as necessary to process your request or as required by statutory retention obligations."
+      },
+      "rights": {
+        "headline": "6. Your rights",
+        "text": "You have the right to access your stored personal data at any time, as well as rights to rectification, deletion, restriction of processing, and objection to processing within the legal framework."
+      },
+      "links": {
+        "headline": "7. External links",
+        "text": "This website contains links to external platforms such as LinkedIn or GitHub. When you click these links, the privacy policies of the respective providers apply."
+      },
+      "updated": "Updated: April 2026"
     }
   }
 }

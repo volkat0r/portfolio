@@ -37,6 +37,11 @@ header{
   li{
     cursor: pointer;
   }
+
+  a {
+    display: block;
+    cursor: pointer;
+  }
 }
 
 :host-context(.theme-light) {

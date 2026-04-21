@@ -87,20 +87,28 @@
             ></span>
           }
         </div>
-        <button class="btn--primary" type="submit">
-          {{ 'contact.form.button.text' | translate }}
-        </button>
+        <div class="button-wrapper">
+          <button class="btn--primary" type="submit">
+            {{ 'contact.form.button.text' | translate }}
+          </button>
+          <button
+            class="scroll-up"
+            type="button"
+            (click)="scrollToSection('home')"
+            aria-label="Nach oben"
+          >
+            <img class="default-img" src="/assets/images/arrow-up.svg" alt="" aria-hidden="true" />
+            <img
+              class="hover-img"
+              src="/assets/images/arrow-up_hover.svg"
+              alt=""
+              aria-hidden="true"
+            />
+          </button>
+        </div>
         @if (contactForm.submitted && contactForm.invalid) {
           <span class="formError" [innerHTML]="'contact.form.label.error' | translate"></span>
         }
-        <button
-          class="scroll-up"
-          type="button"
-          (click)="scrollToSection('home')"
-          aria-label="Nach oben"
-        >
-          <img src="/assets/images/arrow_down.svg" alt="" aria-hidden="true" />
-        </button>
       </form>
     </div>
   </div>

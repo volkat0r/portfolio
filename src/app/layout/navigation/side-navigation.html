@@ -1,5 +1,16 @@
 <nav id="sidebar-navigation">
   <div class="container">
+    @if (currentSection() === 'contact') {
+      <button
+        class="scroll-up"
+        type="button"
+        (click)="scrollToSection('home')"
+        aria-label="Nach oben"
+      >
+        <img class="default-img" src="/assets/images/arrow-up.svg" alt="" aria-hidden="true" />
+        <img class="hover-img" src="/assets/images/arrow-up_hover.svg" alt="" aria-hidden="true" />
+      </button>
+    }
     <ul id="sidebarList">
       <li><a (click)="scrollToSection('home')" class="home"></a></li>
       <li><a (click)="scrollToSection('about')" class="about"></a></li>

@@ -2,16 +2,34 @@
 
 // Media Queries
 @mixin for-size($size) {
-  @if $size == phone {
-    @media (max-width: 37.43rem) { @content; }
-  } @else if $size == tablet-portrait {
-    @media (min-width: 37.5rem) { @content; }
-  } @else if $size == tablet-landscape {
-    @media (min-width: 56.25rem) { @content; }
-  } @else if $size == desktop {
-    @media (min-width: 75rem) { @content; }
-  } @else if $size == big-desktop {
-    @media (min-width: 112.5rem) { @content; }
+  @if $size ==phone {
+    @media (max-width: 37.43rem) {
+      @content;
+    }
+  }
+
+  @else if $size ==tablet-portrait {
+    @media (min-width: 37.5rem) {
+      @content;
+    }
+  }
+
+  @else if $size ==tablet-landscape {
+    @media (min-width: 56.25rem) {
+      @content;
+    }
+  }
+
+  @else if $size ==desktop {
+    @media (min-width: 75rem) {
+      @content;
+    }
+  }
+
+  @else if $size ==big-desktop {
+    @media (min-width: 112.5rem) {
+      @content;
+    }
   }
 }
 
@@ -24,21 +42,39 @@
 }
 
 // Main Menu
-@mixin activeMainMenu{
+@mixin activeMainMenu {
   color: v.$pf-blue;
-  padding-left:20px;
+  padding-left: 20px;
   transition: padding-left 0.2s ease-in-out, visibility 0s 0.2s;
-  &:before{
+
+  &:before {
     visibility: visible;
   }
 }
 
 // Side Menu
-@mixin activeSideMenu{
+@mixin activeSideMenu {
   background-color: v.$pf-yellow;
   transition: all 0.2s ease-in-out;
   zoom: 1.6;
   border-radius: 0;
   transform: rotate(45deg);
   margin-left: -1px;
+}
+
+// Bouncy
+@mixin bounce($duration, $timing, $iteration-count) {
+  animation: bounce $duration $timing $iteration-count;
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-0.5rem);
+  }
 }

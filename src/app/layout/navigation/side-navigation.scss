@@ -10,6 +10,52 @@
       padding-right: v.$space-lg;
     }
   }
+
+  .scroll-up {
+    display: none;
+    position: fixed;
+    top: calc(50% - 17rem);
+    margin-right:-1.8rem;
+    width: 5rem;
+    height: 5rem;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    @include bounce(1.2s, ease-in-out, infinite);
+
+    img{
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: opacity 0.2s ease-in-out;
+    }
+
+    .default-img {
+      opacity: 1;
+    }
+
+    .hover-img {
+      opacity: 0;
+    }
+
+    &:hover {
+      .default-img {
+        opacity: 0;
+      }
+
+      .hover-img {
+        opacity: 1;
+      }
+    }
+
+    @include for-size(tablet-landscape){
+      display: block;
+    }
+  }
 }
 
 #sidebarList{

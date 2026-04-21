@@ -182,6 +182,56 @@
       }
     }
   }
+  .button-wrapper {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-end;
+    margin-top: v.$space-lg;
+  }
+
+  .scroll-up {
+    display: none;
+    width: 5rem;
+    height: 5rem;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    @include bounce(1.2s, ease-in-out, infinite);
+
+    img{
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: opacity 0.2s ease-in-out;
+    }
+
+    .default-img {
+      opacity: 1;
+    }
+
+    .hover-img {
+      opacity: 0;
+    }
+
+    &:hover {
+      .default-img {
+        opacity: 0;
+      }
+      .hover-img {
+        opacity: 1;
+      }
+    }
+
+    @include for-size(phone){
+      display: block;
+      position: relative;
+    }
+  }
 }
 
 .btn--primary{

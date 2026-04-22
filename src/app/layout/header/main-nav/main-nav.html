@@ -1,39 +1,41 @@
 <nav id="main-menu">
-  <button class="burgerMenu" (click)="toggleNav()">
-    <img src="/assets/images/menu.svg" class="icon-dark-bg" />
-    <img src="/assets/images/menu_black.svg" class="icon-light-bg" />
-    <img src="/assets/images/menu_red.svg" class="icon-hover" />
-  </button>
-  <div class="overlay" [class.is-open]="isNavOpen">
-    <div class="container">
-      <h4>Menu</h4>
-      <a href="javascript:void(0)" class="closeMenu" (click)="closeNav()">
-        <img src="/assets/images/menu-close.svg"
-      /></a>
-    </div>
-    <ul class="mainNav">
-      <li><a (click)="scrollToSection('about')" class="about">About me</a></li>
-      <li><a (click)="scrollToSection('tech')" class="tech">Skillset</a></li>
-      <li><a (click)="scrollToSection('work')" class="work">Portfolio</a></li>
-      <li><a (click)="scrollToSection('testimonials')" class="testimonials">References</a></li>
-      <li><a (click)="scrollToSection('contact')" class="contact">Contact</a></li>
-    </ul>
-    <nav id="contact-links">
-      <ul>
-        <li class="contactlink github">
-          <a href="https://github.com/volkat0r" target="_blank"
-            ><img src="/assets/images/github_black.svg"
-          /></a>
-        </li>
-        <li class="contactlink linkedin">
-          <a href="https://www.linkedin.com/in/volker-derksen-2a340633a/" target="_blank"
-            ><img src="/assets/images/linkedin_black.svg"
-          /></a>
-        </li>
-        <li class="contactlink mail">
-          <a href=""><img src="/assets/images/mail_black.svg" /></a>
-        </li>
+  @if (!isLegalPage()) {
+    <button class="burgerMenu" (click)="toggleNav()">
+      <img src="/assets/images/menu.svg" class="icon-dark-bg" />
+      <img src="/assets/images/menu_black.svg" class="icon-light-bg" />
+      <img src="/assets/images/menu_red.svg" class="icon-hover" />
+    </button>
+    <div class="overlay" [class.is-open]="isNavOpen">
+      <div class="container">
+        <h4>Menu</h4>
+        <a href="javascript:void(0)" class="closeMenu" (click)="closeNav()">
+          <img src="/assets/images/menu-close.svg"
+        /></a>
+      </div>
+      <ul class="mainNav">
+        <li><a (click)="scrollToSection('about')" class="about">About me</a></li>
+        <li><a (click)="scrollToSection('tech')" class="tech">Skillset</a></li>
+        <li><a (click)="scrollToSection('work')" class="work">Portfolio</a></li>
+        <li><a (click)="scrollToSection('testimonials')" class="testimonials">References</a></li>
+        <li><a (click)="scrollToSection('contact')" class="contact">Contact</a></li>
       </ul>
-    </nav>
-  </div>
+      <nav id="contact-links">
+        <ul>
+          <li class="contactlink github">
+            <a href="https://github.com/volkat0r" target="_blank"
+              ><img src="/assets/images/github_black.svg"
+            /></a>
+          </li>
+          <li class="contactlink linkedin">
+            <a href="https://www.linkedin.com/in/volker-derksen-2a340633a/" target="_blank"
+              ><img src="/assets/images/linkedin_black.svg"
+            /></a>
+          </li>
+          <li class="contactlink mail">
+            <a href=""><img src="/assets/images/mail_black.svg" /></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  }
 </nav>

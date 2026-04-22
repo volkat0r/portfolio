@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ScrollService } from '../../../shared/services/scroll.service';
 
 @Component({
@@ -12,7 +12,14 @@ import { ScrollService } from '../../../shared/services/scroll.service';
 export class MainNav {
   isNavOpen: boolean = false;
 
-  constructor(private scrollService: ScrollService) {}
+  constructor(
+    private scrollService: ScrollService,
+    private router: Router,
+  ) {}
+
+  isLegalPage(): boolean {
+    return this.router.url.startsWith('/legal');
+  }
 
   scrollToSection(id: string) {
     this.scrollService.scrollToElementById(id);

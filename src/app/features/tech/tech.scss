@@ -39,7 +39,7 @@
 
   @include for-size(tablet-landscape) {
     gap: 3rem 2rem;
-    grid-template-columns: 7rem 7rem 7rem 7rem;
+    grid-template-columns: 6rem 6rem 6rem 6rem 6rem 6rem;
     justify-content: end;
   }
 
@@ -97,6 +97,11 @@
         animation: turning 8s linear infinite;
       }
     }
+  }
+  margin-top: 2.5rem;
+
+  @include for-size(tablet-landscape) {
+    margin-top: -7.5rem;
   }
 }
 

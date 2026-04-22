@@ -2,6 +2,7 @@
 @use 'styles/mixins' as *;
 
 .btn {
+  display: inline-block;
   padding: v.$space-sm v.$space-lg;
   border-radius: v.$button-border-radius;
   border: 1px solid white;

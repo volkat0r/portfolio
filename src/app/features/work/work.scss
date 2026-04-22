@@ -122,7 +122,6 @@
 .ref-links{
   display: flex;
   gap: 2rem;
-  margin-top: 2rem;
 }
 
 #carousel-wrapper{
@@ -172,7 +171,7 @@
 }
 ul.reference-nav{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   margin: 0;
   gap: v.$space-lg;
   flex-wrap: wrap;

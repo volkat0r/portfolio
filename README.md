@@ -1,59 +1,88 @@
-# Portfolio
+# Volker Derksen – Portfolio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.0.
+Personal portfolio website of **Volker Derksen**, Frontend Developer based in Cologne.  
+Built with Angular 21, SCSS, and ngx-translate (DE / EN).
 
-## Development server
+🌐 **Live:** [umgestalt.de](https://umgestalt.de)
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
-```
+## About the project
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+This portfolio showcases selected frontend projects and reflects my approach to building clean, responsive, and accessible web interfaces. The design is custom, the copy is bilingual, and the entire codebase is written in Angular 21 with standalone components.
 
-## Code scaffolding
+**Sections:**
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- **Home** – Hero / entry point with animated section navigation
+- **About** – Short bio, skills dialog, links
+- **Tech** – Technology stack overview
+- **Work** – Project carousel (El Pollo Loco, Join, DailyDash, …)
+- **Testimonials** – Feedback from colleagues and clients
+- **Contact** – Validated contact form with success/error feedback
+- **Legal** – Imprint & Privacy policy
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Tech stack
 
-```bash
-ng generate --help
-```
+| Layer     | Technology                          |
+| --------- | ----------------------------------- |
+| Framework | Angular 21 (standalone components)  |
+| Styling   | SCSS with custom design tokens      |
+| i18n      | ngx-translate (DE default, EN)      |
+| Forms     | Angular template-driven forms       |
+| HTTP      | Angular HttpClient → `sendMail.php` |
+| Routing   | Angular Router (lazy-loaded home)   |
+| Build     | Angular CLI / esbuild               |
 
-## Building
+---
 
-To build the project run:
+## Getting started
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+**Prerequisites:** Node.js ≥ 18, npm ≥ 9
 
 ```bash
-ng e2e
+# Install dependencies
+npm install
+
+# Start dev server (opens browser automatically)
+npm start
+
+# Production build
+npm run build
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+The dev server runs at `http://localhost:4200`.  
+The production build output goes to `dist/portfolio/`.
 
-## Additional Resources
+---
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Project structure
+
+```
+src/
+  app/
+    features/       # Page sections (home, about, tech, work, …)
+    layout/         # Shell, header, footer, navigation
+    shared/         # UI components, services, directives
+  styles/           # Global SCSS tokens, mixins, typography
+public/
+  assets/
+    i18n/           # de.json / en.json translation files
+    images/         # Icons, project screenshots, logos
+    fonts/          # Eczar, Quicksand
+```
+
+---
+
+## Contact form
+
+The form POSTs to `https://umgestalt.de/sendMail.php`.  
+During local development, set `mailTest = true` in `contact.ts` to suppress actual HTTP requests.
+
+---
+
+## License
+
+This project is personal and not intended for reuse or redistribution.  
+© 2026 Volker Derksen

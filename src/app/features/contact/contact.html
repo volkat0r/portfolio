@@ -88,7 +88,12 @@
           }
         </div>
         <div class="button-wrapper">
-          <button class="btn--primary" type="submit">
+          <button
+            class="btn--primary"
+            type="submit"
+            [disabled]="contactForm.invalid || contactForm.pending"
+            [attr.aria-disabled]="contactForm.invalid || contactForm.pending"
+          >
             {{ 'contact.form.button.text' | translate }}
           </button>
           <button
@@ -108,6 +113,16 @@
         </div>
         @if (contactForm.submitted && contactForm.invalid) {
           <span class="formError" [innerHTML]="'contact.form.label.error' | translate"></span>
+        }
+        @if (submitStatus === 'success') {
+          <div class="form-feedback form-feedback--success">
+            {{ 'contact.form.successMessage' | translate }}
+          </div>
+        }
+        @if (submitStatus === 'error') {
+          <div class="form-feedback form-feedback--error">
+            {{ 'contact.form.errorMessage' | translate }}
+          </div>
         }
       </form>
     </div>

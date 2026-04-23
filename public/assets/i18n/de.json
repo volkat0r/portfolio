@@ -9,7 +9,7 @@
     }
   },
   "about":{
-    "headline": "Über mich",
+    "headline": "Wer ich bin",
     "text": "Ich bin Volker, Frontend-Entwickler aus Köln, mit langjähriger Erfahrung an der Schnittstelle von Design und Entwicklung. Durch meinen Hintergrund im Grafikdesign verbinde ich visuelle Qualität mit technischer Umsetzung und entwickle moderne, responsive Interfaces, die intuitiv nutzbar und wartbar sind.",
     "connect": "Ich freue mich auf Projekte, bei denen klare UX, saubere Code-Struktur und starke Teamarbeit gefragt sind.",
     "button": "Zum Kontaktformular",
@@ -35,7 +35,7 @@
   "contact":{
     "intro":{
       "headline":"Lass mal quatschen!",
-      "subheadline": "Hast du ein Projekt für mich?",
+      "subheadline": "Hast du ein Projekt im Kopf?",
       "introtext": "Ob Projekt, Frage oder einfach Hallo – ich freue mich von dir zu hören. Schreib mir gerne, ich antworte schnell."
     },
     "form":{
@@ -52,12 +52,14 @@
         "email-error": "Fehler bei der E-Mail",
         "message": "Hey, ich bin interessiert an...",
         "message-error": "Fehler bei der Nachricht",
-        "privacyPolicy": "Ich habe die <a href='/legal#privacy'>Datenschutzerklaerung</a> gelesen und stimme der Verarbeitung meiner Daten zu.",
+        "privacyPolicy": "Ich habe die <a href='/legal#privacy'>Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.",
         "privacyPolicy-error": "Bitte lesen und akzeptieren Sie die Datenschutzrichtlinie!"
       },
       "button":{
         "text": "Anfrage senden"
-      }
+      },
+      "successMessage": "Deine Nachricht wurde erfolgreich gesendet! Ich melde mich so bald wie möglich bei dir.",
+      "errorMessage": "Beim Senden ist ein Fehler aufgetreten. Bitte versuche es später noch einmal oder schreib mir direkt per E-Mail."
     }
   },
   "work":{
@@ -87,7 +89,7 @@
   },
   "testimonial":{
     "headline":{
-      "text": "Was meine Kollegen über mich sagen"
+      "text": "Feedback"
     },
     "link":{
       "text": "Zum Linked-In Profil"

@@ -4,6 +4,23 @@ import { ContactLinks } from './contact-links/contact-links';
 import { LanguageToggle } from './language-toggle/language-toggle';
 import { MainNav } from './main-nav/main-nav';
 
+/**
+ * Header component.
+ *
+ * Sticky site header that tracks the currently visible section via
+ * an `IntersectionObserver` and exposes two pieces of state on
+ * `<body>` as CSS classes:
+ *
+ * - `sector-<id>` – identifies the most prominent section in the
+ *   viewport, used to switch the header's visual theme.
+ * - `theme-light` / `theme-dark` – reflects the active section's
+ *   `data-theme` attribute for global colour-scheme switching.
+ * - `at-top` – present when the page scroll position is at or near
+ *   the very top, used to hide the header background.
+ *
+ * All event listeners and the observer are cleaned up in
+ * `ngOnDestroy` to prevent memory leaks.
+ */
 @Component({
   selector: 'app-header',
   standalone: true,

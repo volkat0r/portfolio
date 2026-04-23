@@ -1,7 +1,7 @@
 {
   "home":{
     "copy":{
-      "hey there": "Hello there! I'm",
+      "hey there": "Hi, I'm",
       "frontend": "Frontend-Developer"
     },
     "button":{
@@ -12,7 +12,7 @@
     "headline": "About me",
     "text": "I'm Volker, a frontend developer based in Cologne with extensive experience at the intersection of design and development. With a background in graphic design, I combine visual quality with technical execution to build modern, responsive interfaces that are intuitive and maintainable.",
     "connect": "I enjoy projects where strong UX, clean code architecture, and close cross-functional collaboration make the difference.",
-    "button": "To the contact form",
+    "button": "Get in touch",
     "dialog": {
       "headline": "More about me",
       "list": {
@@ -34,8 +34,8 @@
   },
   "contact":{
     "intro":{
-      "headline":"Let's build something Cool together!",
-      "subheadline": "Got a problem to solve?",
+      "headline":"Let's build something cool together!",
+      "subheadline": "Got a project in mind?",
       "introtext": "Whether you have a project in mind, a question, or just want to say hi – I'm always happy to hear from you. Let's see what we can build together."
     },
     "form":{
@@ -57,7 +57,9 @@
       },
       "button":{
         "text": "Get in touch"
-      }
+      },
+      "successMessage": "Your message was sent successfully! I'll get back to you as soon as possible.",
+      "errorMessage": "Something went wrong while sending your message. Please try again later or reach out to me directly via email."
     }
   },
   "work":{
@@ -87,14 +89,14 @@
   },
   "testimonial":{
     "headline":{
-      "text": "What my colleagues say about me"
+      "text": "Feedback"
     },
     "link":{
-      "text": "To Linked-In Profile"
+      "text": "View LinkedIn Profile"
     },
     "ref1":{
       "name": "Dominik Koniorczyk",
-      "text": "Volker has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the success of our project.",
+      "text": "Working with Volker has shown me that he has an exceptional eye for detail. His CSS skills surpass anything I've seen before. His eagerness to learn is remarkable, and he always has an open ear for feedback. His friendly and open nature makes collaboration a real pleasure.",
       "position": "Game Developer"
     },
     "ref2":{

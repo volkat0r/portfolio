@@ -1,5 +1,6 @@
 @use 'styles/variables' as v;
 @use 'styles/mixins' as *;
+@use 'sass:color';
 
 #contact{
   background-color: v.$pf-black;
@@ -80,9 +81,6 @@
         align-items: flex-start;
       }
 
-      @include for-size(tablet-landscape){
-        max-width: 37.5rem;
-      }
     }
 
     div.two-fields{
@@ -99,7 +97,8 @@
         flex: 1 1 100%;
 
         @include for-size(tablet-landscape){
-          flex: 0 0 50%;
+          flex: 1 1 0;
+          min-width: 0;
         }
       }
     }
@@ -187,6 +186,7 @@
     gap: 1rem;
     align-items: flex-end;
     margin-top: v.$space-lg;
+    justify-content: center;
   }
 
   .scroll-up {
@@ -246,8 +246,19 @@
   font-size:1.125rem;
   transition: all 0.125s ease-in;
   width: fit-content;
+
   &:hover{
     background-color: v.$pf-orange;
+  }
+
+  &:disabled{
+    opacity: 0.45;
+    cursor: not-allowed;
+    background-color: transparent;
+  }
+
+  &:disabled:hover{
+    background-color: transparent;
   }
 }
 
@@ -255,4 +266,33 @@ span.formError{
   color: v.$pf-orange;
   font-size: 0.8rem;
   margin: v.$space-sm 0;
+}
+
+.form-feedback{
+  margin-top: v.$space-md;
+  padding: v.$space-md v.$space-lg;
+  border-radius: v.$base-border-radius;
+  font-size: 0.9rem;
+  line-height: 1.5;
+
+  &--success{
+    background-color: rgba(103, 154, 172, 0.2);
+    border: 1px solid v.$pf-blue;
+    color: color.adjust(v.$pf-blue, $lightness: 20%);
+  }
+
+  &--error{
+    background-color: rgba(236, 123, 123, 0.15);
+    border: 1px solid v.$pf-red;
+    color: v.$pf-red;
+  }
+}
+
+// Prevent Webkit autofill from overriding the dark form background
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px v.$pf-black inset !important;
+  -webkit-text-fill-color: white !important;
+  caret-color: white;
 }

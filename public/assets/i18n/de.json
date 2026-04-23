@@ -112,46 +112,46 @@
   },
   "legal": {
     "headline": "Rechtliches",
-    "intro": "Hier findest du alle Pflichtangaben zu Impressum und Datenschutz fuer dieses Portfolio.",
+    "intro": "Hier findest du alle Pflichtangaben zu Impressum und Datenschutz für dieses Portfolio.",
     "imprint": {
       "headline": "Impressum",
-      "subtitle": "Angaben gemaess Paragraf 5 TMG",
+      "subtitle": "Angaben gemäß Paragraf 5 TMG",
       "name": "Volker Derksen",
-      "street": "Luxemburger Strasse 177",
-      "city": "50939 Koeln",
+      "street": "Luxemburger Straße 177",
+      "city": "50939 Köln",
       "country": "Deutschland",
       "emailLabel": "E-Mail:",
-      "responsible": "Verantwortlich fuer den Inhalt nach Paragraf 18 Abs. 2 MStV: Volker Derksen, Anschrift wie oben."
+      "responsible": "Verantwortlich für den Inhalt nach Paragraf 18 Abs. 2 MStV: Volker Derksen, Anschrift wie oben."
     },
     "privacy": {
-      "headline": "Datenschutzerklaerung",
+      "headline": "Datenschutzerklärung",
       "general": {
         "headline": "1. Allgemeine Hinweise",
         "text": "Der Schutz deiner personenbezogenen Daten ist mir wichtig. Personenbezogene Daten werden auf dieser Website nur im technisch notwendigen Umfang sowie bei aktiver Kontaktaufnahme verarbeitet."
       },
       "controller": {
         "headline": "2. Verantwortliche Stelle",
-        "text": "Verantwortlich fuer die Datenverarbeitung auf dieser Website ist:"
+        "text": "Verantwortlich für die Datenverarbeitung auf dieser Website ist:"
       },
       "hosting": {
         "headline": "3. Hosting und Server-Logfiles",
-        "text": "Beim Aufruf der Website koennen durch den Hostinganbieter automatisch Informationen in sogenannten Server-Logfiles erfasst werden (z. B. Browsertyp, Betriebssystem, Referrer-URL, Uhrzeit der Serveranfrage, IP-Adresse). Diese Daten dienen der technischen Stabilitaet und Sicherheit und werden nicht mit anderen Datenquellen zusammengefuehrt."
+        "text": "Beim Aufruf der Website können durch den Hostinganbieter automatisch Informationen in sogenannten Server-Logfiles erfasst werden (z. B. Browsertyp, Betriebssystem, Referrer-URL, Uhrzeit der Serveranfrage, IP-Adresse). Diese Daten dienen der technischen Stabilität und Sicherheit und werden nicht mit anderen Datenquellen zusammengeführt."
       },
       "contact": {
         "headline": "4. Kontaktformular",
-        "text": "Wenn du mir ueber das Kontaktformular schreibst, werden deine Angaben aus dem Formular (Name, E-Mail, Nachricht) zur Bearbeitung deiner Anfrage verarbeitet. Die Verarbeitung erfolgt auf Grundlage deiner Einwilligung bzw. zur Bearbeitung deiner Anfrage."
+        "text": "Wenn du mir über das Kontaktformular schreibst, werden deine Angaben aus dem Formular (Name, E-Mail, Nachricht) zur Bearbeitung deiner Anfrage verarbeitet. Die Verarbeitung erfolgt auf Grundlage deiner Einwilligung bzw. zur Bearbeitung deiner Anfrage."
       },
       "storage": {
         "headline": "5. Speicherdauer",
-        "text": "Ich speichere personenbezogene Daten nur so lange, wie es fuer die Bearbeitung deiner Anfrage erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen."
+        "text": "Ich speichere personenbezogene Daten nur so lange, wie es für die Bearbeitung deiner Anfrage erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen."
       },
       "rights": {
         "headline": "6. Deine Rechte",
-        "text": "Du hast jederzeit das Recht auf Auskunft ueber deine gespeicherten personenbezogenen Daten sowie auf Berichtigung, Loeschung, Einschraenkung der Verarbeitung und Widerspruch gegen die Verarbeitung im Rahmen der gesetzlichen Vorgaben."
+        "text": "Du hast jederzeit das Recht auf Auskunft über deine gespeicherten personenbezogenen Daten sowie auf Berichtigung, Löschung, Einschränkung der Verarbeitung und Widerspruch gegen die Verarbeitung im Rahmen der gesetzlichen Vorgaben."
       },
       "links": {
         "headline": "7. Externe Links",
-        "text": "Diese Website enthaelt Links zu externen Plattformen wie LinkedIn oder GitHub. Beim Anklicken dieser Links gelten die Datenschutzbestimmungen der jeweiligen Anbieter."
+        "text": "Diese Website enthält Links zu externen Plattformen wie LinkedIn oder GitHub. Beim Anklicken dieser Links gelten die Datenschutzbestimmungen der jeweiligen Anbieter."
       },
       "updated": "Stand: April 2026"
     }

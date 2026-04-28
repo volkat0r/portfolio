@@ -12,7 +12,6 @@ footer{
     position: relative;
     margin-top: 2rem;
     min-height:16.44rem;
-    overflow: hidden;
 
     @include for-size(tablet-landscape){
       flex-direction: row;

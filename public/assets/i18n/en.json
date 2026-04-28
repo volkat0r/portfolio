@@ -52,7 +52,7 @@
         "email-error": "Email Error",
         "message": "Hey, I'm interested in...",
         "message-error": "Message Error",
-        "privacyPolicy": "I've read the <a href='/legal#privacy'>privacy policy</a> and agree to the processing of my data.",
+        "privacyPolicy": "I've read the <a href='/privacy'>privacy policy</a> and agree to the processing of my data.",
         "privacyPolicy-error": "Please read and accept the privacy policy!"
       },
       "button":{

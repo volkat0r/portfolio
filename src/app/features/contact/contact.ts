@@ -38,7 +38,7 @@ export class Contact {
    * Controls whether the mail is actually sent.
    * Set to `false` in production to enable the HTTP request.
    */
-  mailTest = true;
+  mailTest = false;
 
   /**
    * Reflects the current submission state.

@@ -21,7 +21,7 @@ export class Work {
   current_slide_index: number = 0;
 
   /** Total number of project slides. */
-  readonly total_slides: number = 3;
+  readonly total_slides: number = 2;
 
   /** Advances to the next slide, wrapping back to the first when the end is reached. */
   btnNext() {

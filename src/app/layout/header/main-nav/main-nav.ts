@@ -26,9 +26,13 @@ export class MainNav {
     private router: Router,
   ) {}
 
-  /** Returns `true` when the current route is the legal page. */
+  /** Returns `true` when the current route is a legal page (imprint or privacy). */
   isLegalPage(): boolean {
-    return this.router.url.startsWith('/legal');
+    return (
+      this.router.url.startsWith('/legal') ||
+      this.router.url.startsWith('/imprint') ||
+      this.router.url.startsWith('/privacy')
+    );
   }
 
   /**

@@ -52,7 +52,7 @@
         "email-error": "Fehler bei der E-Mail",
         "message": "Hey, ich bin interessiert an...",
         "message-error": "Fehler bei der Nachricht",
-        "privacyPolicy": "Ich habe die <a href='/legal#privacy'>Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.",
+        "privacyPolicy": "Ich habe die <a href='/privacy'>Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.",
         "privacyPolicy-error": "Bitte lesen und akzeptieren Sie die Datenschutzrichtlinie!"
       },
       "button":{

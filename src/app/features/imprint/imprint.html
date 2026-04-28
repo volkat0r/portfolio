@@ -1,0 +1,30 @@
+<app-header></app-header>
+
+<main>
+  <section id="imprint" data-theme="dark">
+    <div class="container">
+      <div class="headline-wrapper">
+        <h1>{{ 'legal.imprint.headline' | translate }}</h1>
+        <p>{{ 'legal.imprint.subtitle' | translate }}</p>
+      </div>
+
+      <article class="legal-card">
+        <ul>
+          <li>{{ 'legal.imprint.name' | translate }}</li>
+          <li>{{ 'legal.imprint.street' | translate }}</li>
+          <li>{{ 'legal.imprint.city' | translate }}</li>
+          <li>{{ 'legal.imprint.country' | translate }}</li>
+        </ul>
+        <p>
+          {{ 'legal.imprint.emailLabel' | translate }}
+          <a href="mailto:hallo@umgestalt.de">hallo@umgestalt.de</a>
+        </p>
+        <p>
+          {{ 'legal.imprint.responsible' | translate }}
+        </p>
+      </article>
+    </div>
+  </section>
+</main>
+
+<app-footer></app-footer>

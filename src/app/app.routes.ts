@@ -1,14 +1,15 @@
 import { Routes } from '@angular/router';
 import { Layout } from './layout/layout';
-import { Legal } from './features/legal/legal';
 
 /**
  * Application route configuration.
  *
- * - `/`      – Renders the main {@link Layout} shell with the home page
- *             (`Home` component) lazy-loaded as a child route.
- * - `/legal` – Renders the {@link Legal} page (Impressum + Datenschutz).
- * - `**`     – Wildcard redirect to the root (German default).
+ * - `/`        – Renders the main {@link Layout} shell with the home page
+ *               (`Home` component) lazy-loaded as a child route.
+ * - `/imprint` – Renders the Imprint (Impressum) page.
+ * - `/privacy` – Renders the Privacy Policy (Datenschutz) page.
+ * - `/legal`   – Redirects to `/imprint` for backwards compatibility.
+ * - `**`       – Wildcard redirect to the root.
  */
 export const routes: Routes = [
   {
@@ -21,7 +22,15 @@ export const routes: Routes = [
       },
     ],
   },
-  { path: 'legal', component: Legal },
+  {
+    path: 'imprint',
+    loadComponent: () => import('./features/imprint/imprint').then((m) => m.Imprint),
+  },
+  {
+    path: 'privacy',
+    loadComponent: () => import('./features/privacy/privacy').then((m) => m.Privacy),
+  },
+  { path: 'legal', redirectTo: 'imprint', pathMatch: 'full' },
   { path: '', redirectTo: 'de', pathMatch: 'full' },
   { path: '**', redirectTo: 'de' },
 ];

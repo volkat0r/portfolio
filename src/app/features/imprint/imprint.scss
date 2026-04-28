@@ -1,0 +1,75 @@
+@use 'styles/variables' as v;
+@use 'styles/mixins' as *;
+
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: v.$pf-black;
+
+  main {
+    flex: 1;
+  }
+}
+
+
+#imprint {
+  display: block;
+  background-color: v.$pf-black;
+  color: v.$pf-beige;
+  height: 100%;
+  padding-bottom: v.$space-xxxl;
+
+  .headline-wrapper {
+    max-width: 60rem;
+    margin-bottom: v.$space-xxl;
+
+    h1 {
+      color: v.$pf-yellow;
+      margin-bottom: v.$space-md;
+    }
+
+    p {
+      color: v.$pf-beige;
+      font-size: 1.125rem;
+      line-height: 1.7;
+      opacity: 0.92;
+    }
+  }
+
+  .legal-card {
+    border: 1px solid rgba(248, 247, 229, 0.2);
+    border-radius: 1rem;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+    padding: v.$space-xl;
+    max-width: 60rem;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: v.$space-md;
+
+      li {
+        color: v.$pf-beige;
+        opacity: 0.92;
+        line-height: 1.8;
+      }
+    }
+
+    p {
+      color: v.$pf-beige;
+      line-height: 1.7;
+      opacity: 0.85;
+      margin-bottom: v.$space-sm;
+
+      a {
+        color: v.$pf-yellow;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

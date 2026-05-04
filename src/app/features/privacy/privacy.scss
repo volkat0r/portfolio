@@ -16,7 +16,11 @@
   background-color: v.$pf-black;
   color: v.$pf-beige;
   height: 100%;
-  padding-bottom: v.$space-xxxl;
+  padding-bottom: v.$space-xxl;
+
+  @include for-size(tablet-landscape){
+    padding-bottom: 17rem;
+  }
 
   .headline-wrapper {
     max-width: 60rem;

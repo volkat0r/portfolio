@@ -4,27 +4,23 @@
 footer{
   background-color: v.$pf-black;
   color: white;
-  height: auto;
+  height: 3.625rem;
   display: block;
   padding: v.$space-md 0;
   position: relative;
   overflow: visible;
 
-  &:before {
+  &:after {
     position: absolute;
     content: "";
-    top: 0;
+    bottom: -6rem;
     left: 0;
+    height:3rem;
     width: 100%;
-    height: 16.44rem;
     transform: translateY(-100%);
     background-color: v.$pf-black;
     z-index: 1;
     pointer-events: none;
-
-    @include for-size(phone) {
-      height: 11rem;
-    }
   }
 
   div.wheels{

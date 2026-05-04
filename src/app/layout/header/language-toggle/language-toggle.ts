@@ -1,4 +1,4 @@
-import { Component, ElementRef, inject, ViewChild } from '@angular/core';
+import { Component, ElementRef, inject, OnInit, ViewChild } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 /**
@@ -13,7 +13,7 @@ import { TranslateService } from '@ngx-translate/core';
   templateUrl: './language-toggle.html',
   styleUrl: './language-toggle.scss',
 })
-export class LanguageToggle {
+export class LanguageToggle implements OnInit {
   private translate = inject(TranslateService);
 
   /** Reference to the German language button element. */
@@ -21,6 +21,11 @@ export class LanguageToggle {
 
   /** Reference to the English language button element. */
   @ViewChild('enBtn', { static: true }) buttonEn!: ElementRef<HTMLLIElement>;
+
+  ngOnInit(): void {
+    const current = this.translate.currentLang ?? this.translate.defaultLang;
+    this.activeLanguage(current);
+  }
 
   /**
    * Activates the given language in ngx-translate and updates the

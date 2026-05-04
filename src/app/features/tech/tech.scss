@@ -16,19 +16,24 @@
 .content-wrapper {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 
   @include for-size(tablet-landscape) {
     flex-direction: row;
     flex-wrap: wrap;
     align-content: space-between;
     height: 70vh;
+    justify-content: start;
   }
 }
 
 #tech-box {
   display: block;
   margin: v.$space-xl 0;
-  max-width: 37.5rem;
+  max-width: 100%;
+  @include for-size(tablet-landscape) {
+    max-width: 37.5rem;
+  }
 }
 
 .techStackIcons {
@@ -36,6 +41,7 @@
   width: 100%;
   gap: 1rem;
   grid-template-columns: 5rem 5rem 5rem 5rem;
+  justify-content: center;
 
   @include for-size(tablet-landscape) {
     gap: 3rem 2rem;

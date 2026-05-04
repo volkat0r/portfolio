@@ -43,6 +43,11 @@
                     : ('contact.form.placeholder.email' | translate)
                 "
               />
+              @if (!email.valid && email.touched && contactData.email) {
+                <span class="formError">{{
+                  'contact.form.placeholder.email-format-error' | translate
+                }}</span>
+              }
             </div>
           </div>
         </div>

@@ -25,6 +25,23 @@
   }
 }
 
+@media (max-width: 56.24rem) {
+  #language-switch {
+    li {
+      border: 1px solid v.$pf-black;
+      color: v.$pf-black;
+    }
+  }
+
+  :host-context(.at-top) #language-switch {
+    li {
+      border: 1px solid white;
+      color: white;
+      background-color: transparent;
+    }
+  }
+}
+
 :host-context(.theme-light) {
   #language-switch {
     li {

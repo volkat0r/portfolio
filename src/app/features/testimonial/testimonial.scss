@@ -24,8 +24,14 @@
     min-height: 10rem;
     height: auto;
     align-items: center;
+    @include for-size(big-desktop){
+      height: 50vh;
+      flex-direction: row;
+      gap: 2rem;
+    }
+
     @include for-size(tablet-landscape){
-      height: 40vh;
+      height: 80vh;
       flex-direction: row;
       gap: 2rem;
     }
@@ -48,6 +54,7 @@
     a.linkedinLink{
       display: flex;
       margin-top: v.$space-lg;
+      justify-content: end;
 
       @include for-size(tablet-landscape){
         margin-top: v.$space-xl;

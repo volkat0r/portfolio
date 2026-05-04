@@ -40,6 +40,50 @@
   }
 }
 
+@media (max-width: 56.24rem) {
+  .burgerMenu {
+    img.icon-light-bg {
+      display: block;
+    }
+
+    img.icon-dark-bg,
+    img.icon-hover {
+      display: none;
+    }
+
+    &:hover {
+      img.icon-light-bg {
+        display: none;
+      }
+
+      img.icon-hover {
+        display: block;
+      }
+    }
+  }
+
+  :host-context(.at-top) .burgerMenu {
+    img.icon-dark-bg {
+      display: block;
+    }
+
+    img.icon-light-bg,
+    img.icon-hover {
+      display: none;
+    }
+
+    &:hover {
+      img.icon-dark-bg {
+        display: none;
+      }
+
+      img.icon-hover {
+        display: block;
+      }
+    }
+  }
+}
+
 .overlay{
   position: relative;
   z-index: 20;

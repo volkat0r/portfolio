@@ -8,11 +8,15 @@
   display: flex;
   align-items: flex-start;
   padding-bottom: v.$space-xl;
-  height: calc(100vh - 3.5rem);
+  min-height: calc(100vh - 3.5rem);
+  height: auto;
+  position: relative;
+  z-index: 2;
 
   @include for-size(tablet-landscape){
     align-items: center;
     padding-bottom: 0;
+    min-height: calc(100vh - 5.5rem);
   }
 
   h2{

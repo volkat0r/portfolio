@@ -23,6 +23,12 @@ footer{
     pointer-events: none;
   }
 
+  @include for-size(tablet-landscape){
+      &:after {
+        display: none;
+      }
+  }
+
   div.wheels{
     position: absolute;
     top: 0;

@@ -43,9 +43,11 @@
                     : ('contact.form.placeholder.email' | translate)
                 "
               />
-              <span class="formError" [class.formError--hidden]="!((!email.valid && email.touched) && contactData.email)">{{
-                'contact.form.placeholder.email-format-error' | translate
-              }}</span>
+              <span
+                class="formError"
+                [class.formError--hidden]="!(!email.valid && email.touched && contactData.email)"
+                >{{ 'contact.form.placeholder.email-format-error' | translate }}</span
+              >
             </div>
           </div>
         </div>
@@ -113,7 +115,11 @@
             />
           </button>
         </div>
-        <span class="formError" [class.formError--hidden]="!(contactForm.submitted && contactForm.invalid)" [innerHTML]="'contact.form.label.error' | translate"></span>
+        <span
+          class="formError"
+          [class.formError--hidden]="!(contactForm.submitted && contactForm.invalid)"
+          [innerHTML]="'contact.form.label.error' | translate"
+        ></span>
         @if (submitStatus === 'success') {
           <div class="form-feedback form-feedback--success">
             {{ 'contact.form.successMessage' | translate }}

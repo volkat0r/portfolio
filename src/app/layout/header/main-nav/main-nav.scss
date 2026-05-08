@@ -40,7 +40,7 @@
   }
 }
 
-@media (max-width: 56.24rem) {
+@include for-size(below-tablet-landscape) {
   .burgerMenu {
     img.icon-light-bg {
       display: block;

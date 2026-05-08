@@ -185,6 +185,15 @@
         }
       }
     }
+
+    .formError {
+      min-height: 1.25rem;
+      display: block;
+
+      &--hidden {
+        visibility: hidden;
+      }
+    }
   }
   .button-wrapper {
     display: flex;

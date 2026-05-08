@@ -99,7 +99,7 @@ footer{
   }
 
   @include for-size(phone) {
-    padding-bottom: 12rem;
+    padding-bottom: 20rem;
 
     div.footerLinks,
     div.corporateInfo {
@@ -129,6 +129,10 @@ footer{
     display: flex;
     justify-content: space-between;
     gap: 1rem;
+    flex-direction: column;
+    @include for-size(tablet-landscape){
+      flex-direction: row;
+    }
     li{
       display: flex;
       gap: 1rem;

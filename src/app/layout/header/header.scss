@@ -23,7 +23,7 @@ header{
   }
 }
 
-@media (max-width: 56.24rem) {
+@include for-size(below-tablet-landscape) {
   header {
     background-color: rgba(248, 247, 229, 0.32);
     backdrop-filter: blur(14px) saturate(130%);
@@ -44,9 +44,7 @@ header{
       display: block;
     }
   }
-}
 
-@media (max-width: 56.24rem) {
   :host-context(.at-top) {
     header {
       background-color: transparent;
@@ -71,7 +69,11 @@ header{
 
   img {
     display: block;
-    max-width: 200px;
+    max-width: 140px;
+
+    @include for-size(tablet-portrait) {
+      max-width: 200px;
+    }
   }
 
   .logo-light {

@@ -43,11 +43,9 @@
                     : ('contact.form.placeholder.email' | translate)
                 "
               />
-              @if (!email.valid && email.touched && contactData.email) {
-                <span class="formError">{{
-                  'contact.form.placeholder.email-format-error' | translate
-                }}</span>
-              }
+              <span class="formError" [class.formError--hidden]="!((!email.valid && email.touched) && contactData.email)">{{
+                'contact.form.placeholder.email-format-error' | translate
+              }}</span>
             </div>
           </div>
         </div>
@@ -85,12 +83,11 @@
             for="privacypolicy"
             [innerHTML]="'contact.form.placeholder.privacyPolicy' | translate"
           ></label>
-          @if (!privacypolicy.valid && privacypolicy.touched) {
-            <span
-              class="formError"
-              [innerHTML]="'contact.form.placeholder.privacyPolicy-error' | translate"
-            ></span>
-          }
+          <span
+            class="formError"
+            [class.formError--hidden]="!(!privacypolicy.valid && privacypolicy.touched)"
+            [innerHTML]="'contact.form.placeholder.privacyPolicy-error' | translate"
+          ></span>
         </div>
         <div class="button-wrapper">
           <button
@@ -116,9 +113,7 @@
             />
           </button>
         </div>
-        @if (contactForm.submitted && contactForm.invalid) {
-          <span class="formError" [innerHTML]="'contact.form.label.error' | translate"></span>
-        }
+        <span class="formError" [class.formError--hidden]="!(contactForm.submitted && contactForm.invalid)" [innerHTML]="'contact.form.label.error' | translate"></span>
         @if (submitStatus === 'success') {
           <div class="form-feedback form-feedback--success">
             {{ 'contact.form.successMessage' | translate }}

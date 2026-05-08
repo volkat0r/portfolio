@@ -46,10 +46,10 @@
         "error": "Fehler beim Ausfüllen des Formulars"
       },
       "placeholder":{
-        "name": "Max Mustermann",
-        "name-error": "Fehler beim Namen",
-        "email": "yourmail@domain.com",
-        "email-error": "Bitte E-Mail-Adresse angeben",
+        "name": "Dein Name",
+        "name-error": "Bitte trage deinen Namen ein",
+        "email": "deineEmail@domain.de",
+        "email-error": "Bitte trage deine E-Mail-Adresse ein",
         "email-format-error": "Bitte eine gültige E-Mail-Adresse eingeben (z. B. name@domain.de)",
         "message": "Hey, ich bin interessiert an...",
         "message-error": "Fehler bei der Nachricht",

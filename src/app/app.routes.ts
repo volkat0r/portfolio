@@ -31,6 +31,5 @@ export const routes: Routes = [
     loadComponent: () => import('./features/privacy/privacy').then((m) => m.Privacy),
   },
   { path: 'legal', redirectTo: 'imprint', pathMatch: 'full' },
-  { path: '', redirectTo: 'de', pathMatch: 'full' },
-  { path: '**', redirectTo: 'de' },
+  { path: '**', redirectTo: '', pathMatch: 'full' },
 ];

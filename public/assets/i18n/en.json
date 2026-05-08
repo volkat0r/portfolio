@@ -34,7 +34,7 @@
   },
   "contact":{
     "intro":{
-      "headline":"Let's build something cool together!",
+      "headline":"Let's talk!",
       "subheadline": "Got a project in mind?",
       "introtext": "Whether you have a project in mind, a question, or just want to say hi – I'm always happy to hear from you. Let's see what we can build together."
     },
@@ -47,7 +47,7 @@
       },
       "placeholder":{
         "name": "Your name goes here",
-        "name-error": "Name Error",
+        "name-error": "Please enter your name",
         "email": "yourmail@domain.com",
         "email-error": "Please enter your email address",
         "email-format-error": "Please enter a valid email address (e.g. name@domain.com)",

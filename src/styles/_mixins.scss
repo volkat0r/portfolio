@@ -14,8 +14,20 @@
     }
   }
 
+  @else if $size ==below-tablet-landscape {
+    @media (max-width: 56.24rem) {
+      @content;
+    }
+  }
+
   @else if $size ==tablet-landscape {
     @media (min-width: 56.25rem) {
+      @content;
+    }
+  }
+
+  @else if $size ==laptop {
+    @media (min-width: 56.25rem) and (max-width: 74.99rem) {
       @content;
     }
   }

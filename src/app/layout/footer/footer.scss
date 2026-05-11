@@ -8,52 +8,38 @@ footer{
   display: block;
   padding: v.$space-md 0;
   position: relative;
-  overflow: visible;
-
-  &:after {
-    position: absolute;
-    content: "";
-    bottom: -6rem;
-    left: 0;
-    height:3rem;
-    width: 100%;
-    transform: translateY(-100%);
-    background-color: v.$pf-black;
-    z-index: 1;
-    pointer-events: none;
-  }
 
   @include for-size(tablet-landscape){
+    height: auto;
       &:after {
         display: none;
       }
   }
 
   div.wheels{
-    position: absolute;
-    top: 0;
-    left: 0;
     min-height: 16.44rem;
     width: 24.5rem;
-    transform: translateY(-100%);
     z-index: 3;
     pointer-events: none;
     overflow: hidden;
     contain: paint;
-
+    margin-top: 1rem;
     @include for-size(phone){
       min-height: 11rem;
       width: 17rem;
       z-index: 2;
-      top: auto;
-      bottom: 0;
-      transform: translateY(100%);
+      overflow: hidden;
     }
 
     @include for-size(tablet-landscape){
+      position: absolute;
+      top: 0;
+      left: 0;
       flex-direction: row;
       min-height: 16.44rem;
       width: 24.5rem;
+      transform: translateY(-100%);
+      overflow: hidden;
     }
     &:before,
     &:after{
@@ -67,6 +53,7 @@ footer{
       width: 10.75rem;
       height: 10.75rem;
       animation: turning 8s linear infinite;
+      overflow: hidden;
 
       @include for-size(phone){
         width: 7.5rem;
@@ -114,6 +101,7 @@ footer{
     z-index: 4;
     flex-direction: column-reverse;
     justify-content: flex-end;
+    background-color: v.$pf-black;
     @include for-size(tablet-landscape){
       flex-direction: row;
     }
@@ -121,8 +109,9 @@ footer{
   div.corporateInfo{
     display: flex;
     justify-content: center;
+    margin: 1rem 0;
     @include for-size(tablet-landscape){
-      margin-right: 20%;
+      margin: 0 20% 0 0;
     }
   }
   ul{
@@ -130,7 +119,7 @@ footer{
     justify-content: space-between;
     gap: 1rem;
     flex-direction: column;
-    @include for-size(tablet-landscape){
+    @include for-size(tablet-portrait){
       flex-direction: row;
     }
     li{

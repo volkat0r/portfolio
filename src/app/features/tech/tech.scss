@@ -131,7 +131,7 @@
 
   ::ng-deep dialog.dl--yellow[open] {
     @include for-size(tablet-landscape) {
-      transform: translate(-50%, 0);
+      transform: translate(0, 0);
       z-index: 500;
     }
   }

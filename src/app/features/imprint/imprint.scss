@@ -18,7 +18,6 @@
   background-color: v.$pf-black;
   color: v.$pf-beige;
   height: 100%;
-  padding-bottom: v.$space-xxxl;
 
   .headline-wrapper {
     margin-bottom: v.$space-xxl;
@@ -33,6 +32,12 @@
       font-size: 1.125rem;
       line-height: 1.7;
       opacity: 0.92;
+    }
+  }
+
+  .container{
+    @include for-size(tablet-landscape) {
+      margin-bottom: 14rem;
     }
   }
 

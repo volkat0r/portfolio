@@ -52,7 +52,7 @@
         "email-error": "Bitte trage deine E-Mail-Adresse ein",
         "email-format-error": "Bitte eine gültige E-Mail-Adresse eingeben (z. B. name@domain.de)",
         "message": "Hey, ich bin interessiert an...",
-        "message-error": "Fehler bei der Nachricht",
+        "message-error": "Bitte trage mindestens 5 Zeichen ein",
         "privacyPolicy": "Ich habe die <a href='/privacy'>Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.",
         "privacyPolicy-error": "Bitte lesen und akzeptieren Sie die Datenschutzrichtlinie!"
       },

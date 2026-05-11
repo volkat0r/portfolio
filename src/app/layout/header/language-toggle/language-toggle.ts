@@ -15,6 +15,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class LanguageToggle implements OnInit {
   private translate = inject(TranslateService);
+  private readonly languageStorageKey = 'preferred-language';
 
   /** Reference to the German language button element. */
   @ViewChild('deBtn', { static: true }) buttonDe!: ElementRef<HTMLLIElement>;
@@ -23,7 +24,8 @@ export class LanguageToggle implements OnInit {
   @ViewChild('enBtn', { static: true }) buttonEn!: ElementRef<HTMLLIElement>;
 
   ngOnInit(): void {
-    const current = this.translate.currentLang ?? this.translate.defaultLang;
+    const current = this.getStoredLanguage();
+    this.translate.use(current);
     this.activeLanguage(current);
   }
 
@@ -35,6 +37,7 @@ export class LanguageToggle implements OnInit {
    */
   useLanguage(language: string): void {
     this.translate.use(language);
+    window.localStorage.setItem(this.languageStorageKey, language);
     this.activeLanguage(language);
   }
 
@@ -53,5 +56,11 @@ export class LanguageToggle implements OnInit {
       this.buttonEn.nativeElement.classList.add('active');
       this.buttonDe.nativeElement.classList.remove('active');
     }
+  }
+
+  private getStoredLanguage(): string {
+    const storedLanguage = window.localStorage.getItem(this.languageStorageKey);
+
+    return storedLanguage === 'en' ? 'en' : 'de';
   }
 }

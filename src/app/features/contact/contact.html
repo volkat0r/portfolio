@@ -60,7 +60,7 @@
                 [(ngModel)]="contactData.message"
                 required
                 #message="ngModel"
-                minlength="4"
+                minlength="5"
                 [placeholder]="
                   !message.valid && message.touched
                     ? ('contact.form.placeholder.message-error' | translate)

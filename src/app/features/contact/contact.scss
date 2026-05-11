@@ -16,7 +16,8 @@
   @include for-size(tablet-landscape){
     align-items: center;
     padding-bottom: 0;
-    min-height: calc(100vh - 3.625rem);
+    height: calc(100vh - 3.625rem);
+    min-height: 0;
   }
 
   h2{
@@ -51,6 +52,7 @@
 
       @include for-size(tablet-landscape){
         flex: 0 0 40%;
+        padding-top: 3rem;
       }
     }
 

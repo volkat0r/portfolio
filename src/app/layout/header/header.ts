@@ -41,6 +41,10 @@ export class Header implements AfterViewInit, OnDestroy {
   private activeSectionId = '';
   private activeTheme = '';
 
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
   ngAfterViewInit() {
     window.addEventListener('scroll', this.onWindowScroll, { passive: true });
     this.updateTopState();

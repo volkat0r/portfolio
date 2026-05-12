@@ -52,7 +52,7 @@
 
       @include for-size(tablet-landscape){
         flex: 0 0 40%;
-        padding-top: 3rem;
+        padding-top: 4rem;
       }
     }
 
@@ -68,6 +68,7 @@
   form{
     width: 100%;
     max-width: 42rem;
+    position: relative;
 
     div.field{
       display: flex;
@@ -81,12 +82,17 @@
       &.message{
         display: block;
         width: 100%;
+        margin-top: 0;
+        .message{
+          margin-top: 0;
+        }
       }
 
       &.checkbox{
         flex-direction: column;
         align-items: flex-start;
         width: 100%;
+        margin-top: 0;
       }
 
     }
@@ -271,7 +277,6 @@
   border: 1px solid white;
   color: white;
   cursor: pointer;
-  margin-top: v.$space-lg;
   line-height: 1.2;
   font-weight: 700;
   font-size:1.125rem;
@@ -310,6 +315,11 @@ span.formError{
     background-color: rgba(103, 154, 172, 0.2);
     border: 1px solid v.$pf-blue;
     color: color.adjust(v.$pf-blue, $lightness: 20%);
+
+    @include for-size(tablet-landscape){
+        position: absolute;
+        bottom: 6rem
+    }
   }
 
   &--error{

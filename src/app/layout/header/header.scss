@@ -132,3 +132,12 @@ div.header-right{
     gap: 1.5rem;
   }
 }
+
+:host-context(.sector-imprint),
+:host-context(.sector-privacy) {
+  div.header-right {
+    @include for-size(tablet-landscape) {
+      gap: 4rem;
+    }
+  }
+}

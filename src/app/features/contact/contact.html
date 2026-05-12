@@ -61,12 +61,15 @@
                 required
                 #message="ngModel"
                 minlength="5"
-                [placeholder]="
-                  !message.valid && message.touched
-                    ? ('contact.form.placeholder.message-error' | translate)
-                    : ('contact.form.placeholder.message' | translate)
-                "
+                [placeholder]="'contact.form.placeholder.message' | translate"
               ></textarea>
+              <span
+                class="formError"
+                [class.formError--hidden]="
+                  !(message.touched && message.errors?.['minlength'] && contactData.message)
+                "
+                >{{ 'contact.form.placeholder.message-error' | translate }}</span
+              >
             </div>
           </div>
         </div>
@@ -74,17 +77,19 @@
           class="field checkbox"
           [class.input-error]="!privacypolicy.valid && privacypolicy.touched"
         >
-          <input
-            type="checkbox"
-            name="privacypolicy"
-            #privacypolicy="ngModel"
-            [(ngModel)]="contactData.privacypolicy"
-            required
-          />
-          <label
-            for="privacypolicy"
-            [innerHTML]="'contact.form.placeholder.privacyPolicy' | translate"
-          ></label>
+          <div class="checkbox-row">
+            <input
+              type="checkbox"
+              name="privacypolicy"
+              #privacypolicy="ngModel"
+              [(ngModel)]="contactData.privacypolicy"
+              required
+            />
+            <label
+              for="privacypolicy"
+              [innerHTML]="'contact.form.placeholder.privacyPolicy' | translate"
+            ></label>
+          </div>
           <span
             class="formError"
             [class.formError--hidden]="!(!privacypolicy.valid && privacypolicy.touched)"

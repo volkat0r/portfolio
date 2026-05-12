@@ -10,7 +10,6 @@ h1, h2, h3 {
   font-family: 'Eczar';
   font-weight: 700;
   line-height: 100%;
-  line-break: anywhere;
   @include for-size(tablet-landscape){
     line-break: auto;
   }
